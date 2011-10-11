@@ -1,5 +1,0 @@
-alias mkdir='mkdir -p'
-alias top='htop'
-alias refresh='source /home/anthony/.bashrc'
-alias shutdown='sudo shutdown -h now'
-alias minecraft='java -Xmx1024M -Xms1024M -jar /media/one/games/minecraft/minecraft_server.jar nogui'
