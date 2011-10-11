@@ -1,0 +1,93 @@
+syntax on
+set autoindent
+set ts=4 sw=4
+set expandtab
+" Auto indents after '{', etc., except if a comment char is placed afterwards
+"set si
+set wrap
+set backspace=indent,eol,start
+"set hlsearch
+set incsearch
+set ruler
+"set columns=80
+set wildmenu
+
+set ignorecase
+set smartcase
+
+set linebreak
+" Always show at least 5 lines at the top and the bottom
+set scrolloff=5
+" Show what mode your in (insert, etc.)
+set warn
+
+" Map <ctrl> + <up> and <ctrl> + <down> to scroll the page without moving the
+" cursor, using <ctrl> + <e> and <ctrl> + <y> respectively.
+" map <C-Down> 
+" map <C-Up> 
+" imap <C-Down> a
+" imap <C-Up> a
+
+" Map <F2> (in normal mode) to toggle the highlighting of the current search
+nmap <F2> :set hls!:set hls?
+
+" Map =x to filter the file through xmllint to indent XML
+map =x :%!xmllint -format -
+
+" Dos2Unix
+map =m :%s/\r//g
+
+" This automatically puts chars > 80 on the next line
+"set textwidth=80
+
+" This is for line numbers along the side:
+"set nu
+
+" ANTHONISMS
+set number
+set mouse=a
+
+" windowisms
+map <C-C> "+y
+imap <C-C> "+yi
+map <C-X> "+x
+imap <C-X> "+xi
+"map <C-V> "+gp
+"imap <C-V> "+gpi
+map <C-Z> u
+imap <C-Z> ui
+map <C-Y> 
+imap <C-Y> i
+"map <C-S> :w 
+"imap <C-S> :wi 
+map <C-Q> :q
+imap <C-Q> :q
+
+" line management
+map <C-D> yyp
+imap <C-D> yypi
+map <C-Up> kddpk
+imap <C-Up> kddpki
+map <C-Down> ddp
+imap <C-Down> ddpi
+map <C-Right> w
+imap <C-Right> wi
+map <C-Left> b
+imap <C-Left> bi
+
+" tab management
+map <C-T> :tabnew
+imap <C-T> :tabnewi
+map <C-O> :tabe 
+imap <C-O> :tabe 
+map <C-W> :tabc
+imap <C-W> :tabci
+map <C-.> :tabn
+imap <C-.> :tabni
+map <C-,> :tabp
+imap <C-,> :tabp
+
+" plugins
+filetype plugin on
+
+"au FileType xhtml,xml so ~/.vim/ftplugin/html_autoclosetag.vim
