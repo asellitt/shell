@@ -6,7 +6,9 @@ fi
 
 export PATH=$HOME/.rbenv/bin:$PATH
 export CC=/usr/local/bin/gcc-4.2
+export CLICOLOR=1
 eval "$(rbenv init -)"
+
 
 function current-branch {
     git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1 /'
