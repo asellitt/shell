@@ -14,7 +14,7 @@ function current-branch {
     git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1 /'
 }
 
-export PS1="$CYAN\u$CLEAR@$MAGENTA\h$CLEAR [$GREEN\$(current-branch)$CLEAR] : $RED\w\n$BLUE\d \@$CLEAR \$ > "
+export PS1="$CYAN\u$CLEAR@$MAGENTA\h$CLEAR [ $GREEN\$(current-branch)$CLEAR] : $RED\w\n$BLUE\d \@$CLEAR \$ > "
 
 # git checkout fuzzy
 function gcf {
