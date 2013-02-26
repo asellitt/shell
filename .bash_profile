@@ -14,6 +14,16 @@ function current-branch {
     git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1 /'
 }
 
+# git easy push
+function geps {
+    git push $* origin $(current-branch)
+}
+
+# git easy pull
+function gepl {
+    git pull --rebase $* origin $(current-branch)
+}
+
 export PS1="$CYAN\u$CLEAR@$MAGENTA\h$CLEAR [ $GREEN\$(current-branch)$CLEAR] : $RED\w\n$BLUE\d \@$CLEAR \$ > "
 
 # git checkout fuzzy
