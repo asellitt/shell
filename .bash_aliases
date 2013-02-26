@@ -1,3 +1,5 @@
+alias ..='cd ..'
+alias ~='cd ~'
 alias mkdir='mkdir -p'
 alias top='htop'
 alias refresh='source ~/.bashrc'

@@ -58,7 +58,6 @@ unset color_prompt force_color_prompt
 
 # Prompt 
 
-
 # Prompt colors
 BLACK='\[\e[00;30m\]'
 BOLD_BLACK='\[\e[01;30m\]'
@@ -125,4 +124,4 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-PATH="$PATH:/home/anthony/jre/bin"
+PATH="$PATH:/home/asellitt/jre/bin"

@@ -2,7 +2,7 @@ if [ -r /etc/bashrc ]; then
     . /etc/bashrc 
 fi
 
-. .bashrc
+. ~/.bashrc
 
 export PATH=$HOME/.rbenv/bin:$PATH
 export CC=/usr/local/bin/gcc-4.2
