@@ -39,3 +39,8 @@ function gcf {
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+  complete -o default -o nospace -F _git g
+fi
