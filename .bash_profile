@@ -36,6 +36,11 @@ function gcf {
     fi
 }
 
+#tab name changer
+function tabname() { 
+    echo -ne "\033]0;$@\007" 
+}
+
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
