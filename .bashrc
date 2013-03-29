@@ -122,3 +122,7 @@ if [ -f ~/.git-completion.bash ]; then
     complete -o default -o nospace -F _git g
 fi
 
+export PATH=$HOME/.rbenv/bin:$PATH
+export CC=/usr/local/bin/gcc-4.2
+export CLICOLOR=1
+eval "$(rbenv init -)"
