@@ -24,6 +24,22 @@ function gepl {
     git pull --rebase $* origin $(current-branch)
 }
 
+# bundle install, db:migrate, db:test prepare
+function bimp {
+    echo '####################################'
+    echo '  bundle install'
+    echo '####################################'
+    bundle install
+    echo '####################################'
+    echo '  bundle exec rake db:migrate'
+    echo '####################################'
+    bundle exec rake db:migrate
+    echo '####################################'
+    echo '  bundle exec rake db:test:prepare'
+    echo '####################################'
+    bundle exec rake db:test:prepare
+}
+
 export PS1="$CYAN\u$CLEAR@$MAGENTA\h$CLEAR [ $GREEN\$(current-branch)$CLEAR] : $RED\w\n$BLUE\d \@$CLEAR \$ > "
 
 # git checkout fuzzy

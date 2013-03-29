@@ -15,6 +15,7 @@
   sm = submodule
   sa = stash
   df = diff
+  fe = fetch
   ff = pull origin
   a = add
 [alias]
