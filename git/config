@@ -32,4 +32,4 @@
 [color]
   ui = true
 [core]
-  excludesfile = /Users/asellitt/.gitignore
+  excludesfile = ~/.gitignore
