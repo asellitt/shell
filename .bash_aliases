@@ -1,6 +1,5 @@
 # defaults
 alias mkdir='mkdir -p'
-alias ls='ls -al'
 alias sed='gsed'
 alias top='htop'
 
@@ -12,8 +11,12 @@ alias shutdown='sudo shutdown -h now'
 alias restart='sudo reboot now'
 alias cls='clear'
 alias x='exit'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 
 # development
+alias v='vim'
 alias b='bundle'
 alias be='b exec'
 alias ber='be rake'

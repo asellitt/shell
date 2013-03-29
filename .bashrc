@@ -78,8 +78,6 @@ BOLD_WHITE='\[\e[01;37m\]'
 CLEAR='\[\e[0m\]'
 
 # Set the prompt using the colors above
-#export PS1="\[\e[0;0m\][\[\e[0;32m\]\d \@\[\e[0;0m\]][\[\e[0;37m\]\u@\h\[\e[0;0m\]][\[\e[0;31m\]`pwd | sed "s;.*\(/[^/]*/[^/]*/[^/]*$\);/\1;g"`\[\e[0;0m\]]>"
-#export PS1="\[\e[0;0m\][\[\e[0;32m\]\d \@\[\e[0;0m\]][\[\e[0;37m\]\u@\h\[\e[0;0m\]][\[\e[0;31m\]\W\[\e[0;0m\]]>"
 export PS1="$CYAN\u$CLEAR@$MAGENTA\h$CLEAR : $RED\w\n$BLUE\d \@$CLEAR \$ > "
 
 # If this is an xterm set the title to user@host:dir
@@ -103,16 +101,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 if [ -f ~/.bash_include ]; then
     . ~/.bash_include
 fi
@@ -124,4 +112,12 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-PATH="$PATH:/home/asellitt/jre/bin"
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
+if [ -f ~/.git-completion.bash ]; then
+    . ~/.git-completion.bash
+    complete -o default -o nospace -F _git g
+fi
+
