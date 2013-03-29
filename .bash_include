@@ -1,0 +1,15 @@
+# Header definitions
+if [ -f ~/.bash_header ]; then
+    . ~/.bash_header
+fi
+
+# Function definitions
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
+
+# Alias definitions
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
