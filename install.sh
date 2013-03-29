@@ -40,8 +40,21 @@ if [[ -z "$1" ]]; then
     echo 'Installing Pow config'
     rm ~/.pow* 2>/dev/null
     ln -s $DIR/pow/config ~/.powconfig
+#
+# header: install a bash header
+#
 elif [[ "$1" == "header" ]]; then
-    echo $1
+    if [[ -z "$2" ]]; then
+        echo 'Install which header?'
+    else
+        if [[ -f $2 ]]; then
+            echo "Installing header: ${DIR}/${2}"
+            rm ~/.bash_header 2>/dev/null
+            ln -s $DIR/$2 ~/.bash_header
+        else
+            echo "${DIR}/${2} doesnt exist..."
+        fi
+    fi
 else
     echo "Dont know what ${1} means"
 fi
