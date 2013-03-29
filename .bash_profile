@@ -9,5 +9,9 @@ export CC=/usr/local/bin/gcc-4.2
 export CLICOLOR=1
 eval "$(rbenv init -)"
 
-export PS1="$CYAN\u$CLEAR@$MAGENTA\h$CLEAR [ $GREEN\$(current-branch)$CLEAR] : $RED\w\n$BLUE\d \@$CLEAR \$ > "
+if type current-branch &>/dev/null; then
+    echo 'errmahgerd'
+fi
+
+#export PS1="$CYAN\u$CLEAR@$MAGENTA\h$CLEAR [ $GREEN\$(current-branch)$CLEAR] : $RED\w\n$BLUE\d \@$CLEAR \$ > "
 
