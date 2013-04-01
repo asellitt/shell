@@ -1,0 +1,42 @@
+# header
+echo -en "\033[1;32m"
+echo -n '                  `..............                                               '
+echo -n '              `...``............-.                                              '
+echo -n '            ..``...`                                                            '
+echo -n '            : -.                                         ````             ````  '
+echo -n '            -``..``````  `                           .:++:::://:`     `.:::--:/`'
+echo -n '            `.--``````````.-                         `:so`   `:so-   -+/.     :+'
+echo -n '       ``...````````.......`                          os:     `sso `+o-       .+'
+echo -n '    `..`````...````      ``.``        ``.``          -so`     -ss/`os-         `'
+echo -n '  ..` ``..``          .:+/-..++`   .:+/-..+/`        os:    .:ss/`+s/           '
+echo -n '`-` ..``           `:+o/.   -oo. -+o/`   -so`       -ss:-:/+o+:. .ss.           '
+echo -n ':  -`            .-+so-`.-://:``+so-`.-://:`        os/....``    .ss`           '
+echo -n ':  :`        `...`-so-...```   :so-...```          -so`          `os-       `   '
+echo -n '`-` `.......`` `..-so.      .-::so`     `.`        os:            .os-`   ./:   '
+echo -n '  `............`   `:////:::.`  `://:::-.`        .o+`             `-/+//:-`    '
+echo -en "\033[0m"
+echo ''
+echo ''
+echo -n '                         '
+echo -en "\033[1;32m"
+echo -n 'E'
+echo -en "\033[0m"
+echo -n 'cky '
+echo -en "\033[1;32m"
+echo -n 'E'
+echo -en "\033[0m"
+echo -n 'cky '
+echo -en "\033[1;32m"
+echo -n 'E'
+echo -en "\033[0m"
+echo -n 'cky '
+echo -en "\033[1;32m"
+echo -n 'P'
+echo -en "\033[0m"
+echo -n 'atang ('
+echo -en "\033[1;32m"
+echo -n 'C'
+echo -en "\033[0m"
+echo -n ')                         '
+echo ''
+echo ''

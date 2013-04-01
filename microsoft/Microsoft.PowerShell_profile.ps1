@@ -1,0 +1,81 @@
+###
+# header
+###
+
+write-host " 1                                                                                             0" -foregroundcolor "darkblue"
+write-host " 11                                                                                           00" -foregroundcolor "darkblue"
+write-host "  100                                                                                       010 " -foregroundcolor "darkblue"
+write-host "  01000                        01                               1                         01010 " -foregroundcolor "darkblue"
+write-host "  010101                        110                           010                        111110 " -foregroundcolor "darkblue"
+write-host "   0110101                      00001                       10010                      0101110  " -foregroundcolor "darkblue"
+write-host "   11010110                     110000                    1111111                     00000111  " -foregroundcolor "darkblue"
+write-host "   0101011000                   00001011                 1000001                    0110101110  " -foregroundcolor "darkblue"
+write-host "   11101110000                   100111001             101111011                  000111000110  " -foregroundcolor "darkblue"
+write-host "    111111011111                 01111000111         01100110010                 001110011010   " -foregroundcolor "darkblue"
+write-host "    00101011000111011            0110110010000010110101100100110            11111001101100001   " -foregroundcolor "darkblue"
+write-host "    011011100000110011101010      10100111101010100111101111010      000000110011110111100010   " -foregroundcolor "darkblue"
+write-host "     000110011011110100011111     00001001111100101110001100100     011111110111110010101101    " -foregroundcolor "darkblue"
+write-host "     110111111001111011000110     10001000000100011001101101001     000010000011011010100000    " -foregroundcolor "darkblue"
+write-host "     010100100101011011010010     1111101001100110010110110100     0001110111101100101011010    " -foregroundcolor "darkblue"
+write-host "     0001101001101010011110001     001001110111001111100010001     001001010011001101000111     " -foregroundcolor "darkblue"
+write-host "      001001010110111100100010     010001011011001010011001001     111000001011100111011010     " -foregroundcolor "darkblue"
+write-host "      110010111010001100101011     011101010101100110000110010     101101111110110111010110     " -foregroundcolor "darkblue"
+write-host "      0111101010        1101101     110011101       111111101     1000011        0111010011     " -foregroundcolor "darkblue"
+write-host "       0001101001                   1101011011     1001101110                   0110001100      " -foregroundcolor "darkblue"
+write-host "       0001001101                   1110001111     1011100001                   0101110101      " -foregroundcolor "darkblue"
+write-host "       11101000011001001            01111001000   1100001000             01110010101101101      " -foregroundcolor "darkblue"
+write-host "        110000001100101100100110     01011000000 11000000001     110111011110111111001111       " -foregroundcolor "darkblue"
+write-host "        011100011010010100110101     01001110000011100100001     111000110111110111111010       " -foregroundcolor "darkblue"
+write-host "        1000000101   01101101010     01011110110000011011001    111101100101   1111001111       " -foregroundcolor "darkblue"
+write-host "        1001011110             01     000101011011001111011     00             011111110        " -foregroundcolor "darkblue"
+write-host "         1101111011                     11001001111110001                     0010011110        " -foregroundcolor "darkblue"
+write-host "          0010110001                     000100011101000                     0110010000         " -foregroundcolor "darkblue"
+write-host "           10011001011010110               10010101100               11110110001000111          " -foregroundcolor "darkblue"
+write-host "             11010111000001011100100        000011010        00100101110011001111011            " -foregroundcolor "darkblue"
+write-host "              0100010101000000001111000                   1101000011110010110000001             " -foregroundcolor "darkblue"
+write-host "               10000011100100111010000000               11100001100000011011101110              " -foregroundcolor "darkblue"
+write-host "          00    00101101011011001111001010             10000001001001100111000110    10         " -foregroundcolor "darkblue"
+write-host "           10    10001011010110000111001111           0101011110010100110100011     11          " -foregroundcolor "darkblue"
+write-host "           100     011010110 011000101001111         111100001001111 000101010     101          " -foregroundcolor "darkblue"
+write-host "           0001     101010001   01010010111100     10110111001011   111110111     1010          " -foregroundcolor "darkblue"
+write-host "           01011     101011101     110101001111   10010011010      101111000     10100          " -foregroundcolor "darkblue"
+write-host "            011001    101101101        000011100 100100001        010100111    111010           " -foregroundcolor "darkblue"
+write-host "            1000000    110010010          0010111010111         100001011     1101110           " -foregroundcolor "darkblue"
+write-host "            10000101     000001110         11011111110         000010100     10000000           " -foregroundcolor "darkblue"
+write-host "            100111111     011000011        11100010010        010100111     000100000           " -foregroundcolor "darkblue"
+write-host "             1001011111    111101100      1000010001111      010101101    1100001010            " -foregroundcolor "darkblue"
+write-host "             10110111011    010110101     1000000001000     01000001     11011100001            " -foregroundcolor "darkblue"
+write-host "             011100001111     011111000   1101111001011   110010100     011100001010            " -foregroundcolor "darkblue"
+write-host "              100101000101     011010011 100111101110001 100011001     010100111001             " -foregroundcolor "darkblue"
+write-host "              11000100101011    000101100010101011011100001101100    10000101100000             " -foregroundcolor "darkblue"
+write-host "              101000100010010    0100010101001111001010010101101    100111001110101             " -foregroundcolor "darkblue"
+write-host "              1000111011100100    1001011011010001111101011011     1001100111000001             " -foregroundcolor "darkblue"
+write-host "               1100011111111111     0100010010001111000110010     0000001101000110              " -foregroundcolor "darkblue"
+write-host "               111001011111101111    11110111001111100001010    111100010101110001              " -foregroundcolor "darkblue"
+write-host "               1010110110110100000    001011101110000111101    1101000111000011110              " -foregroundcolor "darkblue"
+write-host "               01001001100111010111    0101011100110110011    0110011000110010100               " -foregroundcolor "darkblue"
+write-host "                00101000000000111011     101101000010101     01010001011110001100               " -foregroundcolor "darkblue"
+write-host "                0111000101101011010011    0011011010001    0100111111110101010010               " -foregroundcolor "darkblue"
+write-host "                00110011000100101111011    10111101011    11000110101000001101000               " -foregroundcolor "darkblue"
+write-host "                 11000011010000100010110    011011011    00000001011100010000110                " -foregroundcolor "darkblue"
+write-host "                         0001110010101001    111011     1010001101000011                        " -foregroundcolor "darkblue"
+write-host "                                 111000001     101     000001101                                " -foregroundcolor "darkblue"
+write-host "                                         01     1     10                                        " -foregroundcolor "darkblue"
+write-host " " -foregroundcolor "darkblue"
+
+# alias
+
+# function
+
+function x() {
+    exit
+}
+
+function prompt() {
+   write-host "[" -nonewline -foregroundcolor "darkblue"
+   write-host $(get-date -format "ddd MMM d h:mtt") -nonewline -foregroundcolor "darkgray"
+   write-host "][" -nonewline -foregroundcolor "darkblue"
+   write-host $(get-location) -nonewline -foregroundcolor "darkgray"
+   write-host "] >" -nonewline -foregroundcolor "darkblue"
+   return " "
+}
