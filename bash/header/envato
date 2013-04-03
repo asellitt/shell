@@ -1,0 +1,323 @@
+ERS="\033[1;0m"          # echo-friendly reset
+EGRN="\033[0;32m"        # echo-friendly foreground GREEN
+ELGRN="\033[1;32m"     # echo-friendly foreground LIGHT GREEN
+
+clear
+
+echo -en "$ERS"
+
+echo -en "$ELGRN"
+echo -n '                                                                     `..-::::-. '
+echo -e "$ERS"
+
+echo -en "$ELGRN"
+echo -n '                                                                   .-::::::::::-'
+echo -e "$ERS"
+
+echo -en "$ELGRN"
+echo -n '                                                                `-::::::::::::::'
+echo -e "$ERS"
+
+echo -en "$ELGRN"
+echo -n '                                                               .::::::::::::::::'
+echo -e "$ERS"
+
+echo -en "$ELGRN"
+echo -n '                                                             .::::::::::::::::::'
+echo -e "$ERS"
+
+echo -en "$ELGRN"
+echo -n '                                                           `:::::::::::::::::::'
+echo -en "$EGRN"
+echo -n '-'
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '                              `-:`'
+echo -en "$ELGRN"
+echo -n '                       `-:::::::::::::::::::'
+echo -en "$EGRN"
+echo -n '++'
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '                          .-/+++.'
+echo -en "$ELGRN"
+echo -n '                      `-::::::::::::::::::/'
+echo -en "$EGRN"
+echo -n '+os+'
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '                      `-/++++++-'
+echo -en "$ELGRN"
+echo -n '                      .://:::::::::::::::/'
+echo -en "$EGRN"
+echo -n 'ossss/'
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '                   ./+oooooooo:'
+echo -en "$ELGRN"
+echo -n '                     .:///////:::::::::/'
+echo -en "$EGRN"
+echo -n '+sssssss/'
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '                ./ooooooooooo:'
+echo -en "$ELGRN"
+echo -n '                    `:///////////:::::/'
+echo -en "$EGRN"
+echo -n 'osssssssss:'
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '             `:osssssooooooo/'
+echo -en "$ELGRN"
+echo -n '                    -/////////////////'
+echo -en "$EGRN"
+echo -n 'osssssssssss-'
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '           .+ssssssssssssso+'
+echo -en "$ELGRN"
+echo -n '                   .:///////////////'
+echo -en "$EGRN"
+echo -n '+oyyyyyyyssssss.'
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '         -oyysssssssssssss+'
+echo -en "$ELGRN"
+echo -n '                  `:///////////////'
+echo -en "$EGRN"
+echo -n '+syyyyyyyyyyyyyyy`'
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '       .oyyyyyyyysssssssso`'
+echo -en "$ELGRN"
+echo -n '                 -///////////////'
+echo -en "$EGRN"
+echo -n '+syyyyyyyyyyyyyyyyy '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '      /yyyyyyyyyyyyyyysss`'
+echo -en "$ELGRN"
+echo -n '                `://////////////'
+echo -en "$EGRN"
+echo -n '+syyyyyyyyyyyyyyyyyys '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '    `shhyyyyyyyyyyyyyyys.'
+echo -en "$ELGRN"
+echo -n '                -//////////////'
+echo -en "$EGRN"
+echo -n '+syyyyyyyyyyyyyyyyyyyy+ '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '   .yhhhhhhhhyyyyyyyyyy.'
+echo -en "$ELGRN"
+echo -n '               `/+////////////'
+echo -en "$EGRN"
+echo -n '+shhhhhhhyyyyyyyyyyyyyyy: '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '  .hhhhhhhhhhhhhhyyyyy-'
+echo -en "$ELGRN"
+echo -n '               -+++++////////'
+echo -en "$EGRN"
+echo -n '+shhhhhhhhhhhhhhhhhhyyyyyy. '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n ' `ydhhhhhhhhhhhhhhhhh:'
+echo -en "$ELGRN"
+echo -n '              `/+++++++++///'
+echo -en "$EGRN"
+echo -n '+shhhhhhhhhhhhhhhhhhhhhhhhhy  '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n ' oddddddhhhhhhhhhhhh/'
+echo -en "$ELGRN"
+echo -n '              -+++++++++++++'
+echo -en "$EGRN"
+echo -n 'shhhhhhhhhhhhhhhhhhhhhhhhhhho  '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '.ddddddddddddhhhhhh+'
+echo -en "$ELGRN"
+echo -n '             `/++++++++++++'
+echo -en "$EGRN"
+echo -n 'ohhhhhhhhhhhhhhhhhhhhhhhhhhhhh:  '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n 'oddddddddddddddddho'
+echo -en "$ELGRN"
+echo -n '             .++++++++++++'
+echo -en "$EGRN"
+echo -n 'ohddddddhdhhhhhhhhhhhhhhhhhhhhhh`  '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n 'hmddddddddddddddds'
+echo -en "$ELGRN"
+echo -n '             :++++++++++++'
+echo -en "$EGRN"
+echo -n 'ydddddddddddddddddddhhhhhhhhhhhhs   '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n 'mmmmmmmdddddddddy`'
+echo -en "$ELGRN"
+echo -n '           `/+++++++++++'
+echo -en "$EGRN"
+echo -n 'sdddddddddddddddddddddddddddddhhhh:   '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n 'mmmmmmmmmmmmdddh`'
+echo -en "$ELGRN"
+echo -n '           -+++++++++++'
+echo -en "$EGRN"
+echo -n 'ohdddddddddddddddddddddddddddddddddh`   '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n 'mmmmmmmmmmmmmmh.'
+echo -en "$ELGRN"
+echo -n '           :ooo+++++++'
+echo -en "$EGRN"
+echo -n 'oyddddddddddddddddddddddddddddddddddd+    '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n 'hmmmmmmmmmmmmd.'
+echo -en "$ELGRN"
+echo -n '          `/ooooooo+++'
+echo -en "$EGRN"
+echo -n 'sdmmmmdddddddddddddddddddddddddddddddd`    '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '+NNmmmmmmmmmm-'
+echo -en "$ELGRN"
+echo -n '          .+oooooooooo'
+echo -en "$EGRN"
+echo -n 'hmmmmmmmmmmmmmmmdddddddddddddddddddddd+     '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '.NNNNNNNmmmm:'
+echo -en "$ELGRN"
+echo -n '          -oooooooooo'
+echo -en "$EGRN"
+echo -n 'ymmmmmmmmmmmmmmmmmmmmmmmmmdddddddddddddh`     '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n ' yNNNNNNNNN/'
+echo -en "$ELGRN"
+echo -n '          :ooooooooos'
+echo -en "$EGRN"
+echo -n 'dmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmddddd:      '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n ' .NNNNNNNN+'
+echo -en "$ELGRN"
+echo -n '          /ooooooooo'
+echo -en "$EGRN"
+echo -n 'ymmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmms       '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '  oNNNNNNo'
+echo -en "$ELGRN"
+echo -n '         `+oooooooos'
+echo -en "$EGRN"
+echo -n 'dmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmh`       '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '   hNNNNy'
+echo -en "$ELGRN"
+echo -n '         `+oooooooo'
+echo -en "$EGRN"
+echo -n 'ymNNNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmd.        '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '   `mNNh'
+echo -en "$ELGRN"
+echo -n '         .oooooooosd'
+echo -en "$EGRN"
+echo -n 'NNNNNNNNNNNNNmmmmmmmmmmmmmmmmmmmmmmmmmmmmm-         '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '    -Nd`'
+echo -en "$ELGRN"
+echo -n '        .osssooooym'
+echo -en "$EGRN"
+echo -n 'NNNNNNNNNNNNNNNNNNNNNNmmmmmmmmmmmmmmmmmmmm-          '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '     -`'
+echo -en "$ELGRN"
+echo -n '        .osssssssd'
+echo -en "$EGRN"
+echo -n 'NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNmmmmmmmmmmmd-           '
+echo -e "$ERS"
+
+echo -en "$ELGRN"
+echo -n '              .sssssssym'
+echo -en "$EGRN"
+echo -n 'NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNmy`            '
+echo -e "$ERS"
+
+echo -en "$ELGRN"
+echo -n '             .sssssssh'
+echo -en "$EGRN"
+echo -n 'NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNm+              '
+echo -e "$ERS"
+
+echo -en "$ELGRN"
+echo -n '            .sssssssd'
+echo -en "$EGRN"
+echo -n 'NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNy.               '
+echo -e "$ERS"
+
+echo -en "$ELGRN"
+echo -n '            -ossssym'
+echo -en "$EGRN"
+echo -n 'NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNy-                 '
+echo -e "$ERS"
+
+echo -en "$ELGRN"
+echo -n '              -+sh'
+echo -en "$EGRN"
+echo -n 'NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNd+.                   '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '                `+hNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNh+.                      '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '                   `:ohmNNNNNNNNNNNNNNNNNNNNNNNNNNds+-                          '
+echo -e "$ERS"
+
+echo -en "$EGRN"
+echo -n '                        `-/osyhdmmNNNNNNmddhso+:.                               '
+echo -e "$ERS"
