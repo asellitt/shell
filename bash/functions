@@ -3,6 +3,11 @@ function tabname() {
     echo -ne "\033]0;$@\007" 
 }
 
+# history searcher
+function findhistory() {
+    history | grep -i "$@" ;
+}
+
 # bundle install, db:migrate, db:test prepare
 function bimp {
     echo '####################################'

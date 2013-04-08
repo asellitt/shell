@@ -13,14 +13,18 @@ alias cls='clear'
 alias x='exit'
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
+alias rf='rm -rf'
+alias v='vim'
+alias g='git'
+alias l='ll'
+alias f='findhistory'
+alias c='cd'
 
 # development
 alias v='vim'
 alias b='bundle'
 alias be='b exec'
 alias ber='be rake'
-alias g='git'
 alias powrestart='touch ~/.pow/restart.txt'
 
 # host specific
