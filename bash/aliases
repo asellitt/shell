@@ -25,7 +25,9 @@ alias v='vim'
 alias b='bundle'
 alias be='b exec'
 alias ber='be rake'
+alias s='be rspec --format documentation'
 alias powrestart='touch ~/.pow/restart.txt'
 
-# host specific
+# fun 
 alias minecraft='pushd .;cd /media/one/games/minecraft;./start.sh;popd'
+alias mud='emacs -batch -l dunnet'

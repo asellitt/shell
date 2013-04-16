@@ -32,6 +32,7 @@ function current-branch {
 # git easy push
 function geps {
     git push $* origin $(current-branch)
+    #git build
 }
 
 # git easy pull
