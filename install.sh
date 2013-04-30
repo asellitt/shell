@@ -40,6 +40,12 @@ if [[ -z "$1" ]]; then
     echo 'Installing Pow config'
     rm ~/.pow* 2>/dev/null
     ln -s $DIR/pow/config ~/.powconfig
+
+    # pry
+    echo 'Installing Pry config'
+    rm ~/.pry* 2>/dev/null
+    ln -s $DIR/pry/rc ~/.pryrc
+
 #
 # header: install a bash header
 #
