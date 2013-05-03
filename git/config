@@ -15,9 +15,10 @@
   sm = submodule
   sa = stash
   df = diff
-  fe = fetch
+  f = fetch
   ff = pull origin
   a = add
+  bd = build
 [alias]
   build = !git push -f origin HEAD:build/asellitt/$(openssl rand -hex 3)
   build-features = !git push -f origin HEAD:build-features/asellitt/$(openssl rand -hex 3)
