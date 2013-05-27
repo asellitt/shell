@@ -105,4 +105,4 @@ bind pad2:ctrl;alt;cmd nudge +0 +10%
 #bind down:cmd;alt focus behind
 #
 ## Window Hints
-bind esc:cmd hint
+#bind esc:cmd hint
