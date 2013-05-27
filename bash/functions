@@ -11,13 +11,17 @@ function findhistory() {
 # bundle install, db:migrate, db:test prepare
 function bimp {
     echo '####################################'
-    echo '  bundle install'
+    echo '  bundle install --local'
     echo '####################################'
-    bundle install
+    bundle install --local
     echo '####################################'
     echo '  bundle exec rake db:migrate'
     echo '####################################'
     bundle exec rake db:migrate
+    echo '####################################'
+    echo '  bundle exec rake db:migrate:online'
+    echo '####################################'
+    bundle exec rake db:migrate:online
     echo '####################################'
     echo '  bundle exec rake db:test:prepare'
     echo '####################################'

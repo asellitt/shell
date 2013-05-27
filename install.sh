@@ -46,6 +46,11 @@ if [[ -z "$1" ]]; then
     rm ~/.pry* 2>/dev/null
     ln -s $DIR/pry/rc ~/.pryrc
 
+    # slate
+    echo 'Installing Slate config'
+    rm ~/.slate 2>/dev/null
+    ln -s $DIR/slate/slate ~/.slate
+
 #
 # header: install a bash header
 #

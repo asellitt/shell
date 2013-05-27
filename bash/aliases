@@ -25,7 +25,9 @@ alias v='vim'
 alias b='bundle'
 alias be='b exec'
 alias ber='be rake'
+alias bez='be zeus'
 alias s='be rspec --format documentation'
+alias z='bez test --format documentation'
 alias powrestart='touch ~/.pow/restart.txt'
 
 # fun 
