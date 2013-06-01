@@ -124,6 +124,11 @@ fi
 
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
+# chipi's gems
+bind '"\e[A"':history-search-backward
+bind '"\e[B"':history-search-forward
+bind Space:magic-space
+
 export PATH=$HOME/.rbenv/bin:$PATH
 export CC=/usr/local/bin/gcc-4.2
 export CLICOLOR=1

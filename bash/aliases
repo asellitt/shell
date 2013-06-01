@@ -29,6 +29,7 @@ alias bez='be zeus'
 alias s='be rspec --format documentation'
 alias z='bez test --format documentation'
 alias powrestart='touch ~/.pow/restart.txt'
+alias irb='pry'
 
 # fun 
 alias minecraft='pushd .;cd /media/one/games/minecraft;./start.sh;popd'
