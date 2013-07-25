@@ -51,6 +51,20 @@ if [[ -z "$1" ]]; then
     rm ~/.slate 2>/dev/null
     ln -s $DIR/slate/slate ~/.slate
 
+    # sublime
+    echo 'Installing Sublime config'
+    rm ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Default\ \(OSX\).sublime-keymap 2>/dev/null
+    ln -s $DIR/sublime/keymap ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Default\ \(OSX\).sublime-keymap
+    rm ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings 2>/dev/null
+    ln -s $DIR/sublime/settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings
+    rm ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Ruby.sublime-settings 2>/dev/null
+    ln -s $DIR/sublime/ruby.settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Ruby.sublime-settings
+    rm ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Color\ Scheme\ -\ Default/Blackbolt.tmTheme* 2>/dev/null
+    ln -s $DIR/sublime/theme ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Color\ Scheme\ -\ Default/Blackbolt.tmTheme
+    rm ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/syntax_highlighting.py* 2>/dev/null
+    ln -s $DIR/sublime/syntax_highlighting.py ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/syntax_highlighting.py
+
+
 #
 # header: install a bash header
 #

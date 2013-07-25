@@ -1,0 +1,16 @@
+[
+  { "keys": ["super+v"], "command": "paste_and_indent" },
+  { "keys": ["ctrl+x"], "command": "cut" },
+  { "keys": ["ctrl+c"], "command": "copy" },
+  { "keys": ["ctrl+v"], "command": "paste_and_indent" },
+  { "keys": ["alt+up"], "command": "swap_line_up" },
+  { "keys": ["alt+down"], "command": "swap_line_down" },
+  { "keys": ["ctrl+shift+d"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Line.sublime-macro"} },
+  { "keys": ["super+escape"], "command": "toggle_side_bar" },
+  { "keys": ["super+f1"], "command": "reveal_in_side_bar" },
+  { "keys": ["super+f2"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"} },
+  { "keys": ["ctrl+alt+s"], "command": "save_all" },
+  { "keys": ["ctrl+alt+h"], "command": "htmlprettify" },
+  { "keys": ["ctrl+keypad0"], "command": "focus_side_bar" },
+  { "keys": ["super+shift+r"], "command": "filter_through_command", "args": { "cmdline": "/Users/asellitt/.rbenv/shims/ruby -e 'print eval($stdin.gets)'" } }
+]

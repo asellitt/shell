@@ -54,6 +54,7 @@ bind pad2:${trip} nudge +0 +5%
 # Single Monitor
 layout single 'Google Chrome':REPEAT  throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'LimeChat':REPEAT       throw ${mac} resize:screenSizeX;screenSizeY
+layout single 'Skype':REPEAT          throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'Sublime Text 2':REPEAT throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'iTerm':REPEAT          throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'Mail':REPEAT           throw ${mac} resize:screenSizeX;screenSizeY
@@ -63,7 +64,9 @@ layout single 'Twitter':REPEAT        throw ${mac} resize:screenSizeX/6;screenSi
 # Single Monitor
 layout dual 'Google Chrome':REPEAT  throw ${ext} resize:screenSizeX;screenSizeY
 layout dual 'LimeChat':REPEAT       throw ${mac}
-layout dual 'LimeChat':REPEAT       push right bar-resize:screenSizeX*5/6
+layout dual 'LimeChat':REPEAT       push right bar-resize:screenSizeX*2/3
+layout dual 'Skype':REPEAT          throw ${mac} resize:screenSizeX*2/3;screenSizeY
+layout dual 'Skype':REPEAT          nudge +15% +0
 layout dual 'Sublime Text 2':REPEAT throw ${ext} resize:screenSizeX;screenSizeY
 layout dual 'iTerm':REPEAT          throw ${mac}
 layout dual 'iTerm':REPEAT          push right bar-resize:screenSizeX*5/6
