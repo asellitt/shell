@@ -2,6 +2,7 @@
 alias mkdir='mkdir -p'
 alias sed='gsed'
 alias top='htop'
+alias du='du -ah'
 
 # handy
 alias ..='cd ..'
@@ -19,6 +20,9 @@ alias g='git'
 alias l='ll'
 alias f='findhistory'
 alias c='j'
+
+# diagnostic
+alias duh="sudo du --max-depth=2 | grep '^[0-9]*\.*[0-9]*G'"
 
 # development
 alias v='vim'
