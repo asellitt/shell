@@ -1,0 +1,19 @@
+#!/bin/bash
+
+CLEAR="\033[1;0m"
+GREEN="\033[0;32m"
+CYAN="\033[0;36m"
+BRANCH="$(git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1 /')"
+
+USERNAME="$(whoami)"
+RANDOM="$(openssl rand -hex 3)"
+BUILDBRANCH="build/${USERNAME}/${RANDOM}"
+
+echo -e "${GREEN}- Starting: personal-build on branch '${BRANCH}'-${CLEAR}"
+echo $'\nExecuting: git push'
+
+git push -f origin HEAD:$BUILDBRANCH
+
+echo -e "${GREEN}  ---------------------------------------------${CLEAR}"
+printf  "${GREEN} | Build branch: ${CYAN}%-30s${GREEN} |${CLEAR}\n" "${BUILDBRANCH}"
+echo -e "${GREEN}  ---------------------------------------------${CLEAR}"

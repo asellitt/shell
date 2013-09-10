@@ -2,10 +2,9 @@
 	"color_scheme": "Packages/Color Scheme - Default/Blackbolt.tmTheme",
 	"draw_white_space": "all",
 	"font_face": "Menlo",
-	"font_size": 12.0,
+	"font_size": 13.0,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
-	"show_minimap": false,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -16,6 +15,7 @@
 		105
 	],
 	"show_full_path": true,
+	"show_minimap": false,
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true
 }

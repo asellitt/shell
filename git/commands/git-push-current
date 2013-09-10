@@ -1,0 +1,10 @@
+#!/bin/bash
+
+CLEAR="\033[1;0m"
+GREEN="\033[0;32m"
+BRANCH="$(git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1 /')"
+
+echo -e "$GREEN- Starting: push-current on branch '$BRANCH' -$CLEAR"
+echo $'\nExecuting: git push'
+
+git push $* origin $BRANCH

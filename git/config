@@ -1,12 +1,12 @@
 [user]
-  name = Anthony Sellitti
+  name  = Anthony Sellitti
   email = anthony.sellitti@envato.com
 [alias]
   cl = clone
   cp = cherry-pick
-  ps = push
+  ps = push-current
   ci = commit
-  pl = pull
+  pl = smart-pull
   rb = rebase
   st = status
   co = checkout
@@ -15,12 +15,12 @@
   sm = submodule
   sa = stash
   df = diff
-  f = fetch
+  f  = fetch
   ff = pull origin
-  a = add
-  bd = build
+  a  = add
+  b  = personal-build
+  l  = smart-log
 [alias]
-  build = !git push -f origin HEAD:build/asellitt/$(openssl rand -hex 3)
   build-features = !git push -f origin HEAD:build-features/asellitt/$(openssl rand -hex 3)
   build-features-without-master = !git push -f origin HEAD:build-features/asellitt/$(openssl rand -hex 3)-without-master
   build-js = !git push -f origin HEAD:build-js/asellitt/$(openssl rand -hex 3)

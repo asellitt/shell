@@ -30,6 +30,8 @@ if [[ -z "$1" ]]; then
     ln -s $DIR/git/config ~/.gitconfig
     ln -s $DIR/git/ignore ~/.gitignore
     ln -s $DIR/git/completion.bash ~/.git-completion.bash
+    ln -s $DIR/git/commands ~/.git-commands
+    chmod -RH u+x ~/.git-commands
 
     # gem
     echo 'Installing Gem config'
@@ -63,7 +65,8 @@ if [[ -z "$1" ]]; then
     ln -s $DIR/sublime/theme ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Color\ Scheme\ -\ Default/Blackbolt.tmTheme
     rm ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/syntax_highlighting.py* 2>/dev/null
     ln -s $DIR/sublime/syntax_highlighting.py ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/syntax_highlighting.py
-
+    rm ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/pry_binding.sublime-macro* 2>/dev/null
+    ln -s $DIR/sublime/pry_binding.sublime-macro ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/pry_binding.sublime-macro
 
 #
 # header: install a bash header

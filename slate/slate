@@ -57,11 +57,11 @@ layout single 'LimeChat':REPEAT       throw ${mac} resize:screenSizeX;screenSize
 layout single 'Skype':REPEAT          throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'Sublime Text 2':REPEAT throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'iTerm':REPEAT          throw ${mac} resize:screenSizeX;screenSizeY
-layout single 'Mail':REPEAT           throw ${mac} resize:screenSizeX;screenSizeY
+layout single 'Airmail':REPEAT        throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'Calendar':REPEAT       throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'Twitter':REPEAT        throw ${mac} resize:screenSizeX/6;screenSizeY
 
-# Single Monitor
+# Dual Monitor
 layout dual 'Google Chrome':REPEAT  throw ${ext} resize:screenSizeX;screenSizeY
 layout dual 'LimeChat':REPEAT       throw ${mac}
 layout dual 'LimeChat':REPEAT       push right bar-resize:screenSizeX*2/3
@@ -70,7 +70,7 @@ layout dual 'Skype':REPEAT          nudge +15% +0
 layout dual 'Sublime Text 2':REPEAT throw ${ext} resize:screenSizeX;screenSizeY
 layout dual 'iTerm':REPEAT          throw ${mac}
 layout dual 'iTerm':REPEAT          push right bar-resize:screenSizeX*5/6
-layout dual 'Mail':REPEAT           throw ${ext} resize:screenSizeX;screenSizeY
+layout dual 'Airmail':REPEAT        throw ${ext} resize:screenSizeX;screenSizeY
 layout dual 'Calendar':REPEAT       throw ${mac}
 layout dual 'Calendar':REPEAT       push right bar-resize:screenSizeX*5/6
 layout dual 'Twitter':REPEAT        throw ${mac} resize:screenSizeX/6;screenSizeY
