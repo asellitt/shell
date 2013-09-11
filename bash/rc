@@ -76,7 +76,7 @@ CLEAR='\[\e[0m\]'
 
 if [ "$color_prompt" = yes ]; then
     if type current-branch &>/dev/null; then
-        export PS1="$CYAN\u$CLEAR@$MAGENTA\h$CLEAR [ $GREEN\$(current-branch)$CLEAR] : $RED\w\n$BLUE\d \@$CLEAR \$ > "
+        export PS1="$CYAN\u$CLEAR@$MAGENTA\h$CLEAR [ $GREEN\$(current-branch)$CLEAR ] : $RED\w\n$BLUE\d \@$CLEAR \$ > "
     else
         export PS1="$CYAN\u$CLEAR@$MAGENTA\h$CLEAR : $RED\w\n$BLUE\d \@$CLEAR \$ > "
     fi

@@ -30,7 +30,7 @@ function bimp {
 
 # current git branch
 function current-branch {
-    git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1 /'
+    git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1 /' | sed -e 's/^ *//g' -e 's/ *$//g'
 }
 
 # git easy push
