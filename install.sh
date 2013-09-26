@@ -76,11 +76,10 @@ if [[ -z "$1" ]]; then
     rm "$SUBLDIR"/User/*-settings 2>/dev/null
     rm "$SUBLDIR"/User/*-macro    2>/dev/null
     rm "$SUBLDIR"/User/*-snippet  2>/dev/null
-    ln -s $DIR/sublime/keymap        "$SUBLDIR"/User/Default\ \(OSX\).sublime-keymap
-    ln -s $DIR/sublime/settings      "$SUBLDIR"/User/Preferences.sublime-settings
-    ln -s $DIR/sublime/ruby.settings "$SUBLDIR"/User/Ruby.sublime-settings
-    ln -s $DIR/sublime/*macro        "$SUBLDIR"/User/
-    ln -s $DIR/sublime/*snippet      "$SUBLDIR"/User/
+    ln -s $DIR/sublime/*-keymap   "$SUBLDIR"/User/
+    ln -s $DIR/sublime/*-settings "$SUBLDIR"/User/
+    ln -s $DIR/sublime/*-macro    "$SUBLDIR"/User/
+    ln -s $DIR/sublime/*-snippet  "$SUBLDIR"/User/
    
     rm "$SUBLDIR"/Color\ Scheme\ -\ Default/Blackbolt.tmTheme* 2>/dev/null
     ln -s $DIR/sublime/theme "$SUBLDIR"/Color\ Scheme\ -\ Default/Blackbolt.tmTheme
