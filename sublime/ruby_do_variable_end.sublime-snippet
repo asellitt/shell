@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+do |${1:variable}|
+  $2
+end
+]]></content>
+  <tabTrigger>dov</tabTrigger>
+  <scope>source.ruby</scope>
+  <description>do |variable|..end</description>
+</snippet>

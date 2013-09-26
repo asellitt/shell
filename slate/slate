@@ -51,15 +51,20 @@ bind pad2:${trip} nudge +0 +5%
 # Layouts
 #
 
+# Layout Defaults
+default single  count:1
+default dual    count:2
+
 # Single Monitor
-layout single 'Google Chrome':REPEAT  throw ${mac} resize:screenSizeX;screenSizeY
-layout single 'LimeChat':REPEAT       throw ${mac} resize:screenSizeX;screenSizeY
-layout single 'Skype':REPEAT          throw ${mac} resize:screenSizeX;screenSizeY
-layout single 'Sublime Text 2':REPEAT throw ${mac} resize:screenSizeX;screenSizeY
-layout single 'iTerm':REPEAT          throw ${mac} resize:screenSizeX;screenSizeY
-layout single 'Airmail':REPEAT        throw ${mac} resize:screenSizeX;screenSizeY
-layout single 'Calendar':REPEAT       throw ${mac} resize:screenSizeX;screenSizeY
-layout single 'Twitter':REPEAT        throw ${mac} resize:screenSizeX/6;screenSizeY
+layout single 'Google Chrome':REPEAT    throw ${mac} resize:screenSizeX;screenSizeY
+layout single 'LimeChat':REPEAT         throw ${mac} resize:screenSizeX;screenSizeY
+layout single 'Skype':REPEAT            throw ${mac} resize:screenSizeX;screenSizeY
+layout single 'Sublime Text 2':REPEAT   throw ${mac} resize:screenSizeX;screenSizeY
+layout single 'iTerm':REPEAT            throw ${mac} resize:screenSizeX;screenSizeY
+layout single 'Airmail':REPEAT          throw ${mac} resize:screenSizeX;screenSizeY
+layout single 'GoogleCalendar':REPEAT   throw ${mac} resize:screenSizeX;screenSizeY
+layout single 'Pandora':REPEAT          throw ${mac} resize:screenSizeX;screenSizeY
+layout single 'Twitter':REPEAT          throw ${mac} resize:screenSizeX/6;screenSizeY
 
 # Dual Monitor
 layout dual 'Google Chrome':REPEAT  throw ${ext} resize:screenSizeX;screenSizeY
@@ -71,15 +76,13 @@ layout dual 'Sublime Text 2':REPEAT throw ${ext} resize:screenSizeX;screenSizeY
 layout dual 'iTerm':REPEAT          throw ${mac}
 layout dual 'iTerm':REPEAT          push right bar-resize:screenSizeX*5/6
 layout dual 'Airmail':REPEAT        throw ${ext} resize:screenSizeX;screenSizeY
-layout dual 'Calendar':REPEAT       throw ${mac}
-layout dual 'Calendar':REPEAT       push right bar-resize:screenSizeX*5/6
+layout dual 'GoogleCalendar':REPEAT throw ${mac}
+layout dual 'GoogleCalendar':REPEAT push right bar-resize:screenSizeX*5/6
+layout dual 'Pandora':REPEAT        throw ${mac}
+layout dual 'Pandora':REPEAT        push left bar-resize:screenSizeX*5/6
 layout dual 'Twitter':REPEAT        throw ${mac} resize:screenSizeX/6;screenSizeY
 layout dual 'Twitter':REPEAT        nudge -5% +0
 
 # Switch Layout Bindings
 bind 1:${trip} layout single
 bind 2:${trip} layout dual
-
-# Layout Defaults
-default single count:1
-default dual count:2

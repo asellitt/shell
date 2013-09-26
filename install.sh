@@ -8,6 +8,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 if [[ -z "$1" ]]; then
     echo "Working directory: ${DIR}"
 
+
+
     # bash
     echo 'Installing Bash config'
     rm ~/.bash* 2>/dev/null
@@ -18,11 +20,15 @@ if [[ -z "$1" ]]; then
     ln -s $DIR/bash/functions ~/.bash_functions
     ln -s $DIR/bash/logout ~/.bash_logout
 
+
+
     # vim
     echo 'Installing Vim config'
     rm ~/.vim* 2>/dev/null
     ln -s $DIR/vim/rc ~/.vimrc
     #ln -s $DIR/vim/vim/ ~/test/.vim
+
+
 
     # git
     echo 'Installing Git config'
@@ -33,40 +39,56 @@ if [[ -z "$1" ]]; then
     ln -s $DIR/git/commands ~/.git-commands
     chmod -RH u+x ~/.git-commands
 
+
+
     # gem
     echo 'Installing Gem config'
     rm ~/.gem* 2>/dev/null
     ln -s $DIR/gem/rc ~/.gemrc
+
+
 
     # pow
     echo 'Installing Pow config'
     rm ~/.pow* 2>/dev/null
     ln -s $DIR/pow/config ~/.powconfig
 
+
+
     # pry
     echo 'Installing Pry config'
     rm ~/.pry* 2>/dev/null
     ln -s $DIR/pry/rc ~/.pryrc
+
+
 
     # slate
     echo 'Installing Slate config'
     rm ~/.slate 2>/dev/null
     ln -s $DIR/slate/slate ~/.slate
 
+
+
     # sublime
     echo 'Installing Sublime config'
-    rm ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Default\ \(OSX\).sublime-keymap 2>/dev/null
-    ln -s $DIR/sublime/keymap ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Default\ \(OSX\).sublime-keymap
-    rm ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings 2>/dev/null
-    ln -s $DIR/sublime/settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings
-    rm ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Ruby.sublime-settings 2>/dev/null
-    ln -s $DIR/sublime/ruby.settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Ruby.sublime-settings
-    rm ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Color\ Scheme\ -\ Default/Blackbolt.tmTheme* 2>/dev/null
-    ln -s $DIR/sublime/theme ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Color\ Scheme\ -\ Default/Blackbolt.tmTheme
-    rm ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/syntax_highlighting.py* 2>/dev/null
-    ln -s $DIR/sublime/syntax_highlighting.py ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/syntax_highlighting.py
-    rm ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/pry_binding.sublime-macro* 2>/dev/null
-    ln -s $DIR/sublime/pry_binding.sublime-macro ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/pry_binding.sublime-macro
+    SUBLDIR="$HOME/Library/Application Support/Sublime Text 2/Packages"
+    rm "$SUBLDIR"/User/*-keymap   2>/dev/null
+    rm "$SUBLDIR"/User/*-settings 2>/dev/null
+    rm "$SUBLDIR"/User/*-macro    2>/dev/null
+    rm "$SUBLDIR"/User/*-snippet  2>/dev/null
+    ln -s $DIR/sublime/keymap        "$SUBLDIR"/User/Default\ \(OSX\).sublime-keymap
+    ln -s $DIR/sublime/settings      "$SUBLDIR"/User/Preferences.sublime-settings
+    ln -s $DIR/sublime/ruby.settings "$SUBLDIR"/User/Ruby.sublime-settings
+    ln -s $DIR/sublime/*macro        "$SUBLDIR"/User/
+    ln -s $DIR/sublime/*snippet      "$SUBLDIR"/User/
+   
+    rm "$SUBLDIR"/Color\ Scheme\ -\ Default/Blackbolt.tmTheme* 2>/dev/null
+    ln -s $DIR/sublime/theme "$SUBLDIR"/Color\ Scheme\ -\ Default/Blackbolt.tmTheme
+    
+    rm "$SUBLDIR"/User/syntax_highlighting.py* 2>/dev/null
+    ln -s $DIR/sublime/syntax_highlighting.py "$SUBLDIR"/User/syntax_highlighting.py
+
+
 
 #
 # header: install a bash header
