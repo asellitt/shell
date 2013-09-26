@@ -73,17 +73,15 @@ if [[ -z "$1" ]]; then
     echo 'Installing Sublime config'
     SUBLDIR="$HOME/Library/Application Support/Sublime Text 2/Packages"
     rm "$SUBLDIR"/User/*-keymap   2>/dev/null
-    rm "$SUBLDIR"/User/*-settings 2>/dev/null
-    rm "$SUBLDIR"/User/*-macro    2>/dev/null
-    rm "$SUBLDIR"/User/*-snippet  2>/dev/null
     ln -s $DIR/sublime/*-keymap   "$SUBLDIR"/User/
+    rm "$SUBLDIR"/User/*-settings 2>/dev/null
     ln -s $DIR/sublime/*-settings "$SUBLDIR"/User/
+    rm "$SUBLDIR"/User/*-macro    2>/dev/null
     ln -s $DIR/sublime/*-macro    "$SUBLDIR"/User/
+    rm "$SUBLDIR"/User/*-snippet  2>/dev/null
     ln -s $DIR/sublime/*-snippet  "$SUBLDIR"/User/
-   
     rm "$SUBLDIR"/Color\ Scheme\ -\ Default/Blackbolt.tmTheme* 2>/dev/null
     ln -s $DIR/sublime/theme "$SUBLDIR"/Color\ Scheme\ -\ Default/Blackbolt.tmTheme
-    
     rm "$SUBLDIR"/User/syntax_highlighting.py* 2>/dev/null
     ln -s $DIR/sublime/syntax_highlighting.py "$SUBLDIR"/User/syntax_highlighting.py
 
