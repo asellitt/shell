@@ -2,25 +2,6 @@
   name  = Anthony Sellitti
   email = anthony.sellitti@envato.com
 [alias]
-  cl = clone
-  cp = cherry-pick
-  ps = push-current
-  ci = commit
-  pl = smart-pull
-  rb = rebase
-  st = status
-  co = checkout
-  cm = commit
-  br = branch
-  sm = submodule
-  sa = stash
-  df = diff
-  f  = fetch
-  ff = pull origin
-  a  = add
-  b  = personal-build
-  l  = smart-log
-[alias]
   build-features = !git push -f origin HEAD:build-features/asellitt/$(openssl rand -hex 3)
   build-features-without-master = !git push -f origin HEAD:build-features/asellitt/$(openssl rand -hex 3)-without-master
   build-js = !git push -f origin HEAD:build-js/asellitt/$(openssl rand -hex 3)
@@ -28,18 +9,42 @@
   build-specs = !git push -f origin HEAD:build-specs/asellitt/$(openssl rand -hex 3)
   build-specs-without-master = !git push -f origin HEAD:build-specs/asellitt/$(openssl rand -hex 3)-without-master
   build-without-master = !git push -f origin HEAD:build/asellitt/$(openssl rand -hex 3)-without-master
+[alias]
+  a  = add
+  b  = personal-build
+  c  = commit
+  d  = diff
+  f  = fetch
+  l  = smart-log
+  p  = push-curent
+  s  = status
+  bd = personal-build
+  br = branch
+  cl = clone
+  cm = commit
+  cp = cherry-pick
+  pl = pull
+  ps = push-current
+  rb = reabse
+  sa = stash
+  sm = submodule
+  st = status
 [credential]
-  helper = osxkeychain
+  helper = /opt/boxen/bin/boxen-git-credential
 [color]
-  ui = true
+  ui = auto
 [core]
-  excludesfile = ~/.gitignore
+  excludesfile = /opt/boxen/config/git/gitignore
 [diff]
-	tool = diffmerge
+  tool = diffmerge
 [difftool "diffmerge"]
-	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+  cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
 [merge]
-	tool = diffmerge
+  tool = diffmerge
 [mergetool "diffmerge"]
-	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
-	trustExitCode = true
+  cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+  trustExitCode = true
+[push]
+  default = current
+[hub]
+  protocol = https
