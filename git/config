@@ -21,6 +21,7 @@
   bd = personal-build
   br = branch
   cl = clone
+  co = checkout
   cm = commit
   cp = cherry-pick
   pl = pull

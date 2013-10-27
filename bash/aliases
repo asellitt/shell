@@ -1,6 +1,5 @@
 # defaults
 alias mkdir='mkdir -p'
-alias sed='gsed'
 alias top='htop'
 alias du='du -ah'
 

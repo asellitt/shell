@@ -71,32 +71,32 @@ if [[ -z "$1" ]]; then
         # preferences
         echo '  Setting OSX preferences'
         chflags nohidden ~/Library
-        defaults write NSGlobalDomain            ApplePressAndHoldEnabled                       -bool FALSE
-        defaults write NSGlobalDomain            AppleKeyboardUIMode                            -int  3
-        defaults write NSGlobalDomain            PMPrintingExpandedStateForPrint                -bool TRUE
-        defaults write NSGlobalDomain            NSNavPanelExpandedStateForSaveMode             -bool TRUE
-        defaults write NSGlobalDomain            InitialKeyRepeat                               -int  35
-        defaults write NSGlobalDomain            KeyRepeat                                      -int  0
-        defaults write NSGlobalDomain            com.apple.swipescrolldirection                 -bool FALSE
-        defaults write NSGlobalDomain            com.apple.keyboard.fnState                     -bool TRUE
-        defaults write com.apple.dock            no-glass                                       -bool TRUE
-        defaults write com.apple.dock            autohide                                       -bool TRUE
-        defaults write com.apple.dock            checked-for-launchpad                          -bool TRUE
-        defaults write com.apple.dock            persistent-apps                                '()'
-        defaults write com.apple.dock            show-process-indicators                        -bool FALSE
-        defaults write com.apple.dock            tilesize                                       -int  36
-        defaults write com.apple.finder          ShowExternalHardDrivesOnDesktop                -bool TRUE
-        defaults write com.apple.finder          ShowHardDrivesOnDesktop                        -bool TRUE
-        defaults write com.apple.finder          ShowMountedServersOnDesktop                    -bool TRUE
-        defaults write com.apple.finder          ShowRemovableMediaOnDesktop                    -bool TRUE
-        defaults write com.apple.finder          EmptyTrashSecurely                             -bool TRUE
-        defaults write com.apple.universalaccess HIDScrollZoomModifierMask                      -int  262144
-        defaults write com.apple.LaunchServices  LSQuarantine                                   -bool FALSE
-        defaults write com.apple.desktopservices DSDontWriteNetworkStores                       -bool TRUE
-        defaults write com.apple.dashboard       mcx-disabled                                   -bool TRUE
-        defaults -currentHost write com.apple.screensaver     moduleDict                        -dict moduleName 'Flurry'
-        defaults -currentHost write com.apple.screensaver     moduleDict                        -dict path '/System/Library/Screen Savers/Flurry.saver'
-        defaults -currentHost write com.apple.screensaver     showClock                         -bool TRUE
+        defaults write NSGlobalDomain            ApplePressAndHoldEnabled            -bool FALSE
+        defaults write NSGlobalDomain            AppleKeyboardUIMode                 -int  3
+        defaults write NSGlobalDomain            PMPrintingExpandedStateForPrint     -bool TRUE
+        defaults write NSGlobalDomain            NSNavPanelExpandedStateForSaveMode  -bool TRUE
+        defaults write NSGlobalDomain            InitialKeyRepeat                    -int  35
+        defaults write NSGlobalDomain            KeyRepeat                           -int  0
+        defaults write NSGlobalDomain            com.apple.swipescrolldirection      -bool FALSE
+        defaults write NSGlobalDomain            com.apple.keyboard.fnState          -bool TRUE
+        defaults write com.apple.dock            no-glass                            -bool TRUE
+        defaults write com.apple.dock            autohide                            -bool TRUE
+        defaults write com.apple.dock            checked-for-launchpad               -bool TRUE
+        defaults write com.apple.dock            persistent-apps                     '()'
+        defaults write com.apple.dock            show-process-indicators             -bool FALSE
+        defaults write com.apple.dock            tilesize                            -int  36
+        defaults write com.apple.finder          ShowExternalHardDrivesOnDesktop     -bool TRUE
+        defaults write com.apple.finder          ShowHardDrivesOnDesktop             -bool TRUE
+        defaults write com.apple.finder          ShowMountedServersOnDesktop         -bool TRUE
+        defaults write com.apple.finder          ShowRemovableMediaOnDesktop         -bool TRUE
+        defaults write com.apple.finder          EmptyTrashSecurely                  -bool TRUE
+        defaults write com.apple.universalaccess HIDScrollZoomModifierMask           -int  262144
+        defaults write com.apple.LaunchServices  LSQuarantine                        -bool FALSE
+        defaults write com.apple.desktopservices DSDontWriteNetworkStores            -bool TRUE
+        defaults write com.apple.dashboard       mcx-disabled                        -bool TRUE
+        defaults -currentHost write com.apple.screensaver     moduleDict             -dict moduleName 'Flurry'
+        defaults -currentHost write com.apple.screensaver     moduleDict             -dict path '/System/Library/Screen Savers/Flurry.saver'
+        defaults -currentHost write com.apple.screensaver     showClock              -bool TRUE
 
 
 
@@ -145,7 +145,7 @@ if [[ -z "$1" ]]; then
         rm "$PREFDIR"/com.runningwithcrayons.Alfred-* 2>/dev/null
         ln -s $DIR/alfred/*.plist "$PREFDIR"/
         ALFDIR="$HOME/Library/Application Support/Alfred 2/Alfred.alfredpreferences"
-        rm -rf "$ALFDIR"/preferences #2>/dev/null
+        rm -rf "$ALFDIR"/preferences 2>/dev/null
         ln -s $DIR/alfred/preferences "$ALFDIR"
     fi
 
