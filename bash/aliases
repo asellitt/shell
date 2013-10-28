@@ -20,6 +20,10 @@ alias l='ll'
 alias f='findhistory'
 alias c='j'
 
+# ssh
+alias compile-ssh-config='echo -n > ~/.ssh/config && cat ~/.ssh/*.config > ~/.ssh/config'
+alias ssh='compile-ssh-config && ssh'
+
 # diagnostic
 alias duh="sudo du --max-depth=2 | grep '^[0-9]*\.*[0-9]*G'"
 
@@ -36,6 +40,7 @@ alias zc='z console'
 alias zt='z test --format documentation'
 alias powrestart='touch ~/.pow/restart.txt'
 alias irb='pry'
+alias bn='boxen'
 
 # fun 
 alias minecraft='pushd .;cd /media/one/games/minecraft;./start.sh;popd'

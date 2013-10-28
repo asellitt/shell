@@ -22,6 +22,13 @@ if [[ -z "$1" ]]; then
 
 
 
+    # ssh
+    echo 'Installing SSH config'
+    rm ~/.ssh/cybertron.config 2>/dev/null
+    ln -s $DIR/ssh/cybertron.config ~/.ssh/cybertron.config
+
+
+
     # vim
     echo 'Installing Vim config'
     rm ~/.vim* 2>/dev/null
@@ -154,15 +161,16 @@ if [[ -z "$1" ]]; then
 # header: install a bash header
 #
 elif [[ "$1" == "header" ]]; then
+    HEADIR="$DIR/bash/header"
     if [[ -z "$2" ]]; then
         echo 'Install which header?'
     else
-        if [[ -f $2 ]]; then
-            echo "Installing header: ${DIR}/${2}"
+        if [[ -f "${HEADIR}/${2}" ]]; then
+            echo "Installing header: ${HEADIR}/${2}"
             rm ~/.bash_header 2>/dev/null
-            ln -s $DIR/$2 ~/.bash_header
+            ln -s $HEADIR/$2 ~/.bash_header
         else
-            echo "${DIR}/${2} doesnt exist..."
+            echo "${HEADIR}/${2} doesnt exist..."
         fi
     fi
 else
