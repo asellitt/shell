@@ -113,6 +113,23 @@ if [[ -z "$1" ]]; then
 
 
 
+        echo '  Fixing HOME/END key behaviour'
+        KEYDIR="$HOME/Library/KeyBindings"
+        mkdir $KEYDIR 2>/dev/null
+        echo "
+            {
+                /* Remap Home / End keys to be correct */
+                \"\UF729\" = \"moveToBeginningOfLine:\"; /* Home */
+                \"\UF72B\" = \"moveToEndOfLine:\"; /* End */
+                \"$\UF729\" = \"moveToBeginningOfLineAndModifySelection:\"; /* Shift + Home */
+                \"$\UF72B\" = \"moveToEndOfLineAndModifySelection:\"; /* Shift + End */
+                \"^\UF729\" = \"moveToBeginningOfDocument:\"; /* Ctrl + Home */
+                \"^\UF72B\" = \"moveToEndOfDocument:\"; /* Ctrl + End */
+                \"$^\UF729\" = \"moveToBeginningOfDocumentAndModifySelection:\"; /* Shift + Ctrl + Home */
+                \"$^\UF72B\" = \"moveToEndOfDocumentAndModifySelection:\"; /* Shift + Ctrl + End */
+            }
+        " > $KEYDIR/DefaultKeyBinding.dict
+
         echo '  Restarting Apps'
         killall Dock
         killall Finder
