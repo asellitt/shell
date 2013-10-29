@@ -1,6 +1,8 @@
 [user]
   name  = Anthony Sellitti
   email = anthony.sellitti@envato.com
+[color]
+  ui = auto
 [alias]
   build-features = !git push -f origin HEAD:build-features/asellitt/$(openssl rand -hex 3)
   build-features-without-master = !git push -f origin HEAD:build-features/asellitt/$(openssl rand -hex 3)-without-master

@@ -48,10 +48,30 @@ if [[ -z "$1" ]]; then
 
 
 
+    # rbenv
+    echo 'Installing rbenv config'
+    rm ~/.rbenv* 2>/dev/null
+    ln -s $DIR/rbenv/version ~/.rbenv-version
+
+
+
     # gem
     echo 'Installing Gem config'
     rm ~/.gem* 2>/dev/null
     ln -s $DIR/gem/rc ~/.gemrc
+
+
+
+    # default gems
+    echo 'Installing handy gems'
+    if ! gem spec bundler > /dev/null 2>&1; then
+        echo '  Installing bundler'
+        gem install bundler
+    fi
+    if ! gem spec jazz_hands > /dev/null 2>&1; then
+        echo '  Installing jazz_hands'
+        gem install jazz_hands
+    fi
 
 
 
@@ -129,6 +149,8 @@ if [[ -z "$1" ]]; then
                 \"$^\UF72B\" = \"moveToEndOfDocumentAndModifySelection:\"; /* Shift + Ctrl + End */
             }
         " > $KEYDIR/DefaultKeyBinding.dict
+
+
 
         echo '  Restarting Apps'
         killall Dock
