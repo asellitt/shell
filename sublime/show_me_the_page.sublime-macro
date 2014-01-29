@@ -1,0 +1,59 @@
+[
+	{
+		"args":
+		{
+			"to": "bol"
+		},
+		"command": "move_to"
+	},
+	{
+		"args":
+		{
+			"characters": "\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"by": "lines",
+			"forward": false
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"characters": "And"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": " show"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": " me"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": " the"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": " page"
+		},
+		"command": "insert"
+	}
+]

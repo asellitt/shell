@@ -55,7 +55,7 @@ if [ -f ~/.bash_include ]; then
     . ~/.bash_include
 fi
 
-# Prompt 
+# Prompt
 
 # Prompt colors
 BLACK='\[\e[00;30m\]'
@@ -135,6 +135,10 @@ export PATH=$HOME/.rbenv/bin:/user/local/sbin/:$PATH:$HOME/.git-commands
 export CC=/usr/local/bin/gcc-4.2
 export CLICOLOR=1
 eval "$(rbenv init -)"
+
+# FU VIM! GET STUFFED
+#export EDITOR="subl -n -w"
+#export GIT_EDITOR=${EDITOR}
 
 export LESS="-R"
 #eval "$(lesspipe)"

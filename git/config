@@ -4,13 +4,26 @@
 [color]
   ui = auto
 [alias]
-  build-features = !git push -f origin HEAD:build-features/asellitt/$(openssl rand -hex 3)
-  build-features-without-master = !git push -f origin HEAD:build-features/asellitt/$(openssl rand -hex 3)-without-master
-  build-js = !git push -f origin HEAD:build-js/asellitt/$(openssl rand -hex 3)
-  build-js-without-master = !git push -f origin HEAD:build-js/asellitt/$(openssl rand -hex 3)-without-master
-  build-specs = !git push -f origin HEAD:build-specs/asellitt/$(openssl rand -hex 3)
-  build-specs-without-master = !git push -f origin HEAD:build-specs/asellitt/$(openssl rand -hex 3)-without-master
-  build-without-master = !git push -f origin HEAD:build/asellitt/$(openssl rand -hex 3)-without-master
+  a  = add
+  b  = personal-build
+  c  = commit
+  d  = diff
+  f  = fetch
+  l  = smart-log
+  p  = push-curent
+  s  = status
+  bd = personal-build
+  br = new-branch
+  cl = clone
+  co = checkout
+  cm = commit
+  cp = cherry-pick
+  pl = pull
+  ps = push-current
+  rb = reabse
+  sa = stash
+  sm = submodule
+  st = status
 [alias]
   a  = add
   b  = personal-build
@@ -21,7 +34,7 @@
   p  = push-curent
   s  = status
   bd = personal-build
-  br = branch
+  br = new-branch
   cl = clone
   co = checkout
   cm = commit
@@ -51,3 +64,6 @@
   default = current
 [hub]
   protocol = https
+
+[gh]
+protocol = https

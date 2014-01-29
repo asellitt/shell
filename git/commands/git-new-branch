@@ -1,0 +1,15 @@
+#!/bin/bash
+
+CLEAR="\033[1;0m"
+GREEN="\033[0;32m"
+
+echo -e "$GREEN- Starting: new-branch for '$1' -$CLEAR"
+
+echo $'\nExecuting: git checkout master'
+git checkout master
+
+echo $'\nExecuting: git pull'
+git pull
+
+echo $"Executing: git checkout -b $1"
+git checkout -b $1

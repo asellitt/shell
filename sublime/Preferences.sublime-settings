@@ -1,8 +1,11 @@
 {
 	"color_scheme": "Packages/Color Scheme - Default/Blackbolt.tmTheme",
+	"default_line_ending": "unix",
 	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Menlo",
 	"font_size": 13.0,
+	"hide_minimap": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":
@@ -16,7 +19,7 @@
 	],
 	"show_full_path": true,
 	"show_minimap": false,
-	"hide_minimap": true,
 	"tab_size": 2,
-	"translate_tabs_to_spaces": true
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
 }

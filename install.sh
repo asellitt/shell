@@ -121,10 +121,11 @@ if [[ -z "$1" ]]; then
         defaults write com.apple.LaunchServices  LSQuarantine                        -bool FALSE
         defaults write com.apple.desktopservices DSDontWriteNetworkStores            -bool TRUE
         defaults write com.apple.dashboard       mcx-disabled                        -bool TRUE
+        # disable that weird arse dictionary crap
+        defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys                -dict-add 70 '<dict><key>enabled</key><false/></dict>'
         defaults -currentHost write com.apple.screensaver     moduleDict             -dict moduleName 'Flurry'
         defaults -currentHost write com.apple.screensaver     moduleDict             -dict path '/System/Library/Screen Savers/Flurry.saver'
         defaults -currentHost write com.apple.screensaver     showClock              -bool TRUE
-
 
 
         PREFDIR="$HOME/Library/Preferences"
