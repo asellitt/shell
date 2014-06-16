@@ -1,0 +1,26 @@
+#!/bin/bash
+
+CLEAR="\033[1;0m"
+GREEN="\033[0;32m"
+BRANCH="$(git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1 /' | sed -e 's/^ *//g' -e 's/ *$//g')"
+
+
+echo -e "$GREEN- Starting: merge-master on branch '$BRANCH' -$CLEAR"
+
+echo $'\nExecuting: git checkout master'
+git checkout master
+
+echo $'\nExecuting: git pull (on master)'
+git pull
+
+echo $'\nExecuting: git fetch (on master)'
+git fetch
+
+echo $'\nExecuting: git checkout branch'
+git checkout $BRANCH
+
+echo $'\nExecuting: git pull (on branch)'
+git pull
+
+echo $'\nExecuting: git merge master'
+git merge master
