@@ -19,6 +19,7 @@ if [[ -z "$1" ]]; then
     ln -s $DIR/bash/aliases ~/.bash_aliases
     ln -s $DIR/bash/functions ~/.bash_functions
     ln -s $DIR/bash/logout ~/.bash_logout
+    ln -s $DIR/bash/path ~/path
 
 
 

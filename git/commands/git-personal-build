@@ -5,9 +5,7 @@ GREEN="\033[0;32m"
 CYAN="\033[0;36m"
 BRANCH="$(git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1 /')"
 
-USERNAME="$(whoami)"
-RANDOM="$(openssl rand -hex 3)"
-BUILDBRANCH="build/${USERNAME}/${RANDOM}"
+BUILDBRANCH="build/$(whoami)/$(openssl rand -hex 3)"
 
 echo -e "${GREEN}- Starting: personal-build on branch '${BRANCH}'-${CLEAR}"
 echo $'\nExecuting: git push'

@@ -46,6 +46,8 @@ map =m :%s/\r//g
 " ANTHONISMS
 set number
 set mouse=a
+command! W  write
+command! Q  quit
 
 " windowisms
 map <C-C> "+y

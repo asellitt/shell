@@ -25,8 +25,7 @@ alias compile-ssh-config='echo -n > ~/.ssh/config && cat ~/.ssh/*.config > ~/.ss
 alias ssh='compile-ssh-config && ssh'
 
 # diagnostic
-alias duh="sudo du --max-depth=2 | grep '^[0-9]*\.*[0-9]*G'"
-
+alias duh="sudo du -hxP --max-depth=2 | grep '^[0-9]*\.*[0-9]*G'"
 # development
 alias v='vim'
 alias b='bundle'
@@ -34,6 +33,7 @@ alias be='b exec'
 alias ber='be rake'
 alias bes='be rspec --color --format documentation -b'
 alias bec='GHERKIN_RUBY=true be cucumber'
+alias bew='be unicorn_rails -c config/unicorn.rb'
 alias berc='be rails c'
 alias s='bes'
 alias z='zeus'
@@ -42,6 +42,9 @@ alias zt='z test --format documentation'
 alias powrestart='touch ~/.pow/restart.txt'
 alias irb='pry'
 alias bn='boxen'
+alias replica-tunnel='ssh -fNg -L 3307:127.0.0.1:3306 reporting-db00'
+alias prepare-deploy='git fetch origin && git checkout production && git reset --hard origin/production && git merge --no-ff origin/master'
+alias pd='prepare-deploy'
 
 # fun
 alias minecraft='pushd .;cd /media/one/games/minecraft;./start.sh;popd'

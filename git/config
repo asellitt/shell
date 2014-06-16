@@ -24,27 +24,8 @@
   sa = stash
   sm = submodule
   st = status
-[alias]
-  a  = add
-  b  = personal-build
-  c  = commit
-  d  = diff
-  f  = fetch
-  l  = smart-log
-  p  = push-curent
-  s  = status
-  bd = personal-build
-  br = new-branch
-  cl = clone
-  co = checkout
-  cm = commit
-  cp = cherry-pick
-  pl = pull
-  ps = push-current
-  rb = reabse
-  sa = stash
-  sm = submodule
-  st = status
+  mm = merge-master
+  to-deploy = log --merges --grep='pull request' --format='%s (%cN)' origin/production..origin/master
 [credential]
   helper = /opt/boxen/bin/boxen-git-credential
 [color]
