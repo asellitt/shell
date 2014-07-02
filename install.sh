@@ -8,8 +8,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 if [[ -z "$1" ]]; then
     echo "Working directory: ${DIR}"
 
-
-
     # bash
     echo 'Installing Bash config'
     rm ~/.bash* 2>/dev/null
@@ -21,22 +19,16 @@ if [[ -z "$1" ]]; then
     ln -s $DIR/bash/logout ~/.bash_logout
     ln -s $DIR/bash/path ~/path
 
-
-
     # ssh
     echo 'Installing SSH config'
     rm ~/.ssh/cybertron.config 2>/dev/null
     ln -s $DIR/ssh/cybertron.config ~/.ssh/cybertron.config
-
-
 
     # vim
     echo 'Installing Vim config'
     rm ~/.vim* 2>/dev/null
     ln -s $DIR/vim/rc ~/.vimrc
     #ln -s $DIR/vim/vim/ ~/test/.vim
-
-
 
     # git
     echo 'Installing Git config'
@@ -47,21 +39,15 @@ if [[ -z "$1" ]]; then
     ln -s $DIR/git/commands ~/.git-commands
     chmod -RH u+x ~/.git-commands
 
-
-
     # rbenv
     echo 'Installing rbenv config'
     rm ~/.rbenv* 2>/dev/null
     ln -s $DIR/rbenv/version ~/.rbenv-version
 
-
-
     # gem
     echo 'Installing Gem config'
     rm ~/.gem* 2>/dev/null
     ln -s $DIR/gem/rc ~/.gemrc
-
-
 
     # default gems
     echo 'Installing handy gems'
@@ -74,27 +60,19 @@ if [[ -z "$1" ]]; then
         gem install jazz_hands
     fi
 
-
-
     # pow
     echo 'Installing Pow config'
     rm ~/.pow* 2>/dev/null
     ln -s $DIR/pow/config ~/.powconfig
-
-
 
     # pry
     echo 'Installing Pry config'
     rm ~/.pry* 2>/dev/null
     ln -s $DIR/pry/rc ~/.pryrc
 
-
-
     # OSX specific stuffs
     if [ `uname` == 'Darwin' ]; then
         echo 'Installing OSX Specific config'
-
-
 
         # preferences
         echo '  Setting OSX preferences'
@@ -128,12 +106,9 @@ if [[ -z "$1" ]]; then
         defaults -currentHost write com.apple.screensaver     moduleDict             -dict path '/System/Library/Screen Savers/Flurry.saver'
         defaults -currentHost write com.apple.screensaver     showClock              -bool TRUE
 
-
         PREFDIR="$HOME/Library/Preferences"
         rm "$PREFDIR"/com.apple.symbolichotkeys.plist 2>/dev/null
         ln -s $DIR/osx/com.apple.symbolichotkeys.plist "$PREFDIR"/
-
-
 
         echo '  Fixing HOME/END key behaviour'
         KEYDIR="$HOME/Library/KeyBindings"
@@ -152,20 +127,14 @@ if [[ -z "$1" ]]; then
             }
         " > $KEYDIR/DefaultKeyBinding.dict
 
-
-
         echo '  Restarting Apps'
         killall Dock
         killall Finder
-
-
 
         # slate
         echo '  Installing Slate config'
         rm ~/.slate 2>/dev/null
         ln -s $DIR/slate/slate ~/.slate
-
-
 
         # sublime
         echo '  Installing Sublime config'
@@ -185,8 +154,6 @@ if [[ -z "$1" ]]; then
         SUBLDIR="$HOME/Library/Application Support/Sublime Text 2/Installed Packages"
         rm "$SUBLDIR"/*-package   2>/dev/null
         ln -s $DIR/sublime/*-package   "$SUBLDIR"/
-
-
 
         # alfred
         echo '  Installing Alfred config'
@@ -214,6 +181,25 @@ elif [[ "$1" == "header" ]]; then
             echo "${HEADIR}/${2} doesnt exist..."
         fi
     fi
+
+
+#
+# non-boxen: install binaries on a non-boxenated system
+#
+elif [[ "$1" == "nonboxen" ]]; then
+    if hash brew 2>/dev/null; then
+        echo 'Brew installed'
+        echo '  Installing gh...'
+        brew install gh
+        echo '  Installing autojump...'
+        brew install autojump
+        echo '  Installing the_silver_searcher...'
+        brew install the_silver_searcher
+    else
+        echo 'Install brew first: http://brew.sh'
+    fi
+
+
 else
     echo "Dont know what ${1} means"
 fi
