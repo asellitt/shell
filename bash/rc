@@ -132,7 +132,6 @@ bind '"\e[B"':history-search-forward
 bind Space:magic-space
 
 export PATH=$HOME/.rbenv/bin:/user/local/sbin/:$PATH:$HOME/.git-commands:$HOME/path
-export CC=/usr/local/bin/gcc-4.2
 export CLICOLOR=1
 eval "$(rbenv init -)"
 
