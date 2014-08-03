@@ -47,4 +47,5 @@
   protocol = https
 
 [gh]
-protocol = https
+  protocol = https
+  autoUpdate = always
