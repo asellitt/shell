@@ -1,0 +1,10 @@
+#!/bin/bash
+
+CLEAR="\033[1;0m"
+GREEN="\033[0;32m"
+
+echo -e "$GREEN- Starting: spring-clean -$CLEAR"
+git branch |
+  grep -v "^[* ] master$" |
+  grep -v "^[* ] production$" |
+  xargs git branch -D
