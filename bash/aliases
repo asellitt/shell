@@ -27,6 +27,7 @@ alias ssh='compile-ssh-config && ssh'
 
 # diagnostic
 alias duh="sudo du -hxP --max-depth=2 | grep '^[0-9]*\.*[0-9]*G'"
+
 # development
 alias v='vim'
 alias b='bundle'
@@ -45,7 +46,7 @@ alias irb='pry'
 alias bn='boxen'
 alias replica-tunnel='ssh -fNg -L 3307:127.0.0.1:3306 reporting-db00'
 alias deploy='git fetch origin && git fetch --tags && git checkout production && git reset --hard origin/production && git merge --no-ff green && ./script/deploy_production'
-
+alias fuck-you-structure-sql='git checkout -- db/structure.sql'
 
 # fun
 alias minecraft='pushd .;cd /media/one/games/minecraft;./start.sh;popd'

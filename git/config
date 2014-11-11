@@ -26,6 +26,7 @@
   mm = merge-master
   to-deploy = log --merges --grep='pull request' --format='%s (%cN)' origin/production..origin/master
   sc = spring-clean
+  pr = pull-request
 [credential]
   helper = /opt/boxen/bin/boxen-git-credential
 [color]
