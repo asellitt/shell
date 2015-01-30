@@ -1,0 +1,12 @@
+#!/bin/bash
+
+CLEAR="\033[1;0m"
+GREEN="\033[0;32m"
+BRANCH="$(git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1 /')"
+
+echo -e "${GREEN}- Starting: set-upstream on branch '${BRANCH}'-${CLEAR}"
+echo ''
+echo "Executing: git branch --set-upstream-to=origin/${BRANCH} ${BRANCH}"
+echo ''
+
+git branch --set-upstream-to=origin/${BRANCH} ${BRANCH}
