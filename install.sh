@@ -138,38 +138,45 @@ if [[ -z "$1" ]]; then
 
         # sublime
         echo '  Installing Sublime config'
-        if [ -d "$HOME/Library/Application Support/Sublime Text 2" ]; then
-            SUBLDIR="$HOME/Library/Application Support/Sublime Text 2"
-        elif [ -d "$HOME/Library/Application Support/Sublime Text 3" ]; then
-            SUBLDIR="$HOME/Library/Application Support/Sublime Text 3"
-        else
-            echo '  Sublime Text is not installed...'
+        SUBLDIR="$HOME/Library/Application Support"
+        if [ -d "$SUBLDIR/Sublime Text 3" ]; then
+            echo '    Found Sublime Text 3'
+            SUBLDIR="$SUBLDIR/Sublime Text 3"
+        elif [ -d "$SUBLDIR/Sublime Text 2" ]; then
+            echo '    Found Sublime Text 2'
+            SUBLDIR="$SUBLDIR/Sublime Text 2"
         fi
 
-        if [ -n "$SUBLDIR" ]; then
-            rm "$SUBLDIR"/Packages/User/*-keymap   2>/dev/null
-            ln -s $DIR/sublime/*-keymap   "$SUBLDIR"/Packages/User/
-            rm "$SUBLDIR"/Packages/User/*-settings 2>/dev/null
-            ln -s $DIR/sublime/*-settings "$SUBLDIR"/Packages/User/
-            rm "$SUBLDIR"/Packages/User/*-macro    2>/dev/null
-            ln -s $DIR/sublime/*-macro    "$SUBLDIR"/Packages/User/
-            rm "$SUBLDIR"/Packages/User/*-snippet  2>/dev/null
-            ln -s $DIR/sublime/*-snippet  "$SUBLDIR"/Packages/User/
-            rm "$SUBLDIR"/Packages/Color\ Scheme\ -\ Default/Blackbolt.tmTheme* 2>/dev/null
-            ln -s $DIR/sublime/theme "$SUBLDIR"/Packages/Color\ Scheme\ -\ Default/Blackbolt.tmTheme
-            rm "$SUBLDIR"/Packages/User/syntax_highlighting.py* 2>/dev/null
-            ln -s $DIR/sublime/syntax_highlighting.py "$SUBLDIR"/Packages/User/syntax_highlighting.py
-            rm "$SUBLDIR"/Installed\ Packages/*-package   2>/dev/null
-            ln -s $DIR/sublime/*-package   "$SUBLDIR"/Installed\ Packages/
+        if [ -d "$SUBLDIR" ]; then
+            SUBL_PACKAGE_DIR="$SUBLDIR/Packages"
+            rm "$SUBL_PACKAGE_DIR"/User/*-keymap   2>/dev/null
+            ln -s $DIR/sublime/*-keymap   "$SUBL_PACKAGE_DIR"/User/
+            rm "$SUBL_PACKAGE_DIR"/User/*-settings 2>/dev/null
+            ln -s $DIR/sublime/*-settings "$SUBL_PACKAGE_DIR"/User/
+            rm "$SUBL_PACKAGE_DIR"/User/*-macro    2>/dev/null
+            ln -s $DIR/sublime/*-macro    "$SUBL_PACKAGE_DIR"/User/
+            rm "$SUBL_PACKAGE_DIR"/User/*-snippet  2>/dev/null
+            ln -s $DIR/sublime/*-snippet  "$SUBL_PACKAGE_DIR"/User/
+            mkdir "$SUBL_PACKAGE_DIR"/Color\ Scheme\ -\ Default 2>/dev/null
+            rm "$SUBL_PACKAGE_DIR"/Color\ Scheme\ -\ Default/Blackbolt.tmTheme* 2>/dev/null
+            ln -s $DIR/sublime/theme "$SUBL_PACKAGE_DIR"/Color\ Scheme\ -\ Default/Blackbolt.tmTheme
+            rm "$SUBL_PACKAGE_DIR"/User/syntax_highlighting.py* 2>/dev/null
+            ln -s $DIR/sublime/syntax_highlighting.py "$SUBL_PACKAGE_DIR"/User/syntax_highlighting.py
+
+            SUBL_INST_PACKAGE_DIR="$SUBLDIR/Installed Packages"
+            rm "$SUBL_INST_PACKAGE_DIR"/*-package   2>/dev/null
+            ln -s $DIR/sublime/*-package   "$SUBL_INST_PACKAGE_DIR"/
+        else
+            echo '    Looks like Sublime is not installed. Skipped config'
         fi
 
         # alfred
-        echo '  Installing Alfred config'
-        rm "$PREFDIR"/com.runningwithcrayons.Alfred-* 2>/dev/null
-        ln -s $DIR/alfred/*.plist "$PREFDIR"/
-        ALFDIR="$HOME/Library/Application Support/Alfred 2/Alfred.alfredpreferences"
-        rm -rf "$ALFDIR"/preferences 2>/dev/null
-        ln -s $DIR/alfred/preferences "$ALFDIR"
+        # echo '  Installing Alfred config'
+        # rm "$PREFDIR"/com.runningwithcrayons.Alfred-* 2>/dev/null
+        # ln -s $DIR/alfred/*.plist "$PREFDIR"/
+        # ALFDIR="$HOME/Library/Application Support/Alfred 2/Alfred.alfredpreferences"
+        # rm -rf "$ALFDIR"/preferences 2>/dev/null
+        # ln -s $DIR/alfred/preferences "$ALFDIR"
     fi
 
 
@@ -177,16 +184,16 @@ if [[ -z "$1" ]]; then
 # header: install a bash header
 #
 elif [[ "$1" == "header" ]]; then
-    HEADIR="$DIR/bash/header"
+    HEADDIR="$DIR/bash/header"
     if [[ -z "$2" ]]; then
         echo 'Install which header?'
     else
-        if [[ -f "${HEADIR}/${2}" ]]; then
-            echo "Installing header: ${HEADIR}/${2}"
+        if [[ -f "${HEADDIR}/${2}" ]]; then
+            echo "Installing header: ${HEADDIR}/${2}"
             rm ~/.bash_header 2>/dev/null
-            ln -s $HEADIR/$2 ~/.bash_header
+            ln -s $HEADDIR/$2 ~/.bash_header
         else
-            echo "${HEADIR}/${2} doesnt exist..."
+            echo "${HEADDIR}/${2} doesnt exist..."
         fi
     fi
 

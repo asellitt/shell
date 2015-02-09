@@ -5,13 +5,15 @@ GREEN="\033[0;32m"
 CYAN="\033[0;36m"
 BRANCH="$(git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1 /')"
 
-BUILDBRANCH="build/$(whoami)/$(openssl rand -hex 3)"
-
 echo -e "${GREEN}- Starting: personal-build on branch '${BRANCH}'-${CLEAR}"
 echo $'\nExecuting: git push'
 
-git push -f origin HEAD:$BUILDBRANCH
+git push
+
+echo $'\nExecuting: git buildbox'
+
+git buildbox
 
 echo -e "${GREEN}  ---------------------------------------------${CLEAR}"
-printf  "${GREEN} | Build branch: ${CYAN}%-30s${GREEN} |${CLEAR}\n" "${BUILDBRANCH}"
+printf  "${GREEN} | Build branch: ${CYAN}%-30s${GREEN} |${CLEAR}\n" "${BRANCH}"
 echo -e "${GREEN}  ---------------------------------------------${CLEAR}"

@@ -12,7 +12,6 @@
   l  = smart-log
   p  = push-curent
   s  = status
-  bd = personal-build
   br = new-branch
   cl = clone
   co = checkout
@@ -26,6 +25,9 @@
   st = status
   mm = merge-master
   to-deploy = log --merges --grep='pull request' --format='%s (%cN)' origin/production..origin/master
+  sc = spring-clean
+  pr = pull-request
+  su = set-upstream
 [credential]
   helper = /opt/boxen/bin/boxen-git-credential
 [color]
@@ -47,4 +49,5 @@
   protocol = https
 
 [gh]
-protocol = https
+  protocol = https
+  autoUpdate = always

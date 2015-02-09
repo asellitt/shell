@@ -48,6 +48,9 @@ set number
 set mouse=a
 command! W  write
 command! Q  quit
+command! W w
+command! Q q
+command! Wq wq
 
 " windowisms
 map <C-C> "+y
