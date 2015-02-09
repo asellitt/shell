@@ -138,22 +138,30 @@ if [[ -z "$1" ]]; then
 
         # sublime
         echo '  Installing Sublime config'
-        SUBLDIR="$HOME/Library/Application Support/Sublime Text 2/Packages"
-        rm "$SUBLDIR"/User/*-keymap   2>/dev/null
-        ln -s $DIR/sublime/*-keymap   "$SUBLDIR"/User/
-        rm "$SUBLDIR"/User/*-settings 2>/dev/null
-        ln -s $DIR/sublime/*-settings "$SUBLDIR"/User/
-        rm "$SUBLDIR"/User/*-macro    2>/dev/null
-        ln -s $DIR/sublime/*-macro    "$SUBLDIR"/User/
-        rm "$SUBLDIR"/User/*-snippet  2>/dev/null
-        ln -s $DIR/sublime/*-snippet  "$SUBLDIR"/User/
-        rm "$SUBLDIR"/Color\ Scheme\ -\ Default/Blackbolt.tmTheme* 2>/dev/null
-        ln -s $DIR/sublime/theme "$SUBLDIR"/Color\ Scheme\ -\ Default/Blackbolt.tmTheme
-        rm "$SUBLDIR"/User/syntax_highlighting.py* 2>/dev/null
-        ln -s $DIR/sublime/syntax_highlighting.py "$SUBLDIR"/User/syntax_highlighting.py
-        SUBLDIR="$HOME/Library/Application Support/Sublime Text 2/Installed Packages"
-        rm "$SUBLDIR"/*-package   2>/dev/null
-        ln -s $DIR/sublime/*-package   "$SUBLDIR"/
+        if [ -d "$HOME/Library/Application Support/Sublime Text 2" ]; then
+            SUBLDIR="$HOME/Library/Application Support/Sublime Text 2"
+        elif [ -d "$HOME/Library/Application Support/Sublime Text 3" ]; then
+            SUBLDIR="$HOME/Library/Application Support/Sublime Text 3"
+        else
+            echo '  Sublime Text is not installed...'
+        fi
+
+        if [ -n "$SUBLDIR" ]; then
+            rm "$SUBLDIR"/Packages/User/*-keymap   2>/dev/null
+            ln -s $DIR/sublime/*-keymap   "$SUBLDIR"/Packages/User/
+            rm "$SUBLDIR"/Packages/User/*-settings 2>/dev/null
+            ln -s $DIR/sublime/*-settings "$SUBLDIR"/Packages/User/
+            rm "$SUBLDIR"/Packages/User/*-macro    2>/dev/null
+            ln -s $DIR/sublime/*-macro    "$SUBLDIR"/Packages/User/
+            rm "$SUBLDIR"/Packages/User/*-snippet  2>/dev/null
+            ln -s $DIR/sublime/*-snippet  "$SUBLDIR"/Packages/User/
+            rm "$SUBLDIR"/Packages/Color\ Scheme\ -\ Default/Blackbolt.tmTheme* 2>/dev/null
+            ln -s $DIR/sublime/theme "$SUBLDIR"/Packages/Color\ Scheme\ -\ Default/Blackbolt.tmTheme
+            rm "$SUBLDIR"/Packages/User/syntax_highlighting.py* 2>/dev/null
+            ln -s $DIR/sublime/syntax_highlighting.py "$SUBLDIR"/Packages/User/syntax_highlighting.py
+            rm "$SUBLDIR"/Installed\ Packages/*-package   2>/dev/null
+            ln -s $DIR/sublime/*-package   "$SUBLDIR"/Installed\ Packages/
+        fi
 
         # alfred
         echo '  Installing Alfred config'
