@@ -9,7 +9,10 @@ alias trex shift;${trip}
 
 # Monitor Aliases
 alias mac 0
-alias ext 1
+alias sec 1
+alias tri 2
+
+
 
 #
 # Window Manipulation
@@ -33,11 +36,12 @@ bind right:${trip} push right bar-resize:screenSizeX/2
 bind up:${trip}    move screenOriginX;screenOriginY screenSizeX;screenSizeY
 bind pad5:cmd      move screenOriginX;screenOriginY screenSizeX;screenSizeY
 bind down:${trip}  grid padding:5 0:6,6 1:6,6
-bind /:${trip}     hint ZXCVBNM
+bind /:${trip}     hint ZXCVB
 
 # Move Monitor Bindings
-bind ,:${trip} throw ${mac} resize
-bind .:${trip} throw ${ext} resize
+bind z:${trip} throw ${mac} resize
+bind x:${trip} throw ${sec} resize
+bind c:${trip} throw ${tri} resize
 
 # Nudge Window Bindings
 bind pad4:${trip} nudge -5% +0
@@ -54,12 +58,13 @@ bind pad2:${trip} nudge +0 +5%
 # Layout Defaults
 default single  count:1
 default dual    count:2
+default triple  count:3
 
 # Single Monitor
 layout single 'Google Chrome':REPEAT    throw ${mac} resize:screenSizeX;screenSizeY
-layout single 'LimeChat':REPEAT         throw ${mac} resize:screenSizeX;screenSizeY
+layout single 'Slack':REPEAT            throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'Skype':REPEAT            throw ${mac} resize:screenSizeX;screenSizeY
-layout single 'Sublime Text 2':REPEAT   throw ${mac} resize:screenSizeX;screenSizeY
+layout single 'Sublime Text':REPEAT     throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'iTerm':REPEAT            throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'Airmail':REPEAT          throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'GoogleCalendar':REPEAT   throw ${mac} resize:screenSizeX;screenSizeY
@@ -67,15 +72,15 @@ layout single 'Pandora':REPEAT          throw ${mac} resize:screenSizeX;screenSi
 layout single 'Twitter':REPEAT          throw ${mac} resize:screenSizeX/6;screenSizeY
 
 # Dual Monitor
-layout dual 'Google Chrome':REPEAT  throw ${ext} resize:screenSizeX;screenSizeY
-layout dual 'LimeChat':REPEAT       throw ${mac}
-layout dual 'LimeChat':REPEAT       push right bar-resize:screenSizeX*2/3
+layout dual 'Google Chrome':REPEAT  throw ${sec} resize:screenSizeX;screenSizeY
+layout dual 'Slack':REPEAT          throw ${mac}
+layout dual 'Slack':REPEAT          push right bar-resize:screenSizeX*2/3
 layout dual 'Skype':REPEAT          throw ${mac} resize:screenSizeX*2/3;screenSizeY
 layout dual 'Skype':REPEAT          nudge +15% +0
-layout dual 'Sublime Text 2':REPEAT throw ${ext} resize:screenSizeX;screenSizeY
+layout dual 'Sublime Text':REPEAT   throw ${sec} resize:screenSizeX;screenSizeY
 layout dual 'iTerm':REPEAT          throw ${mac}
 layout dual 'iTerm':REPEAT          push right bar-resize:screenSizeX*5/6
-layout dual 'Airmail':REPEAT        throw ${ext} resize:screenSizeX;screenSizeY
+layout dual 'Airmail':REPEAT        throw ${sec} resize:screenSizeX;screenSizeY
 layout dual 'GoogleCalendar':REPEAT throw ${mac}
 layout dual 'GoogleCalendar':REPEAT push right bar-resize:screenSizeX*5/6
 layout dual 'Pandora':REPEAT        throw ${mac}
@@ -83,6 +88,18 @@ layout dual 'Pandora':REPEAT        push left bar-resize:screenSizeX*5/6
 layout dual 'Twitter':REPEAT        throw ${mac} resize:screenSizeX/6;screenSizeY
 layout dual 'Twitter':REPEAT        nudge -5% +0
 
+# Triple Monitor
+layout triple 'Google Chrome':REPEAT  throw ${mac} resize:screenSizeX;screenSizeY
+layout triple 'Google Chrome':REPEAT  push right bar-resize:screenSizeX*5/6
+layout triple 'Airmail':REPEAT        throw ${mac} resize:screenSizeX;screenSizeY
+layout triple 'Airmail':REPEAT        push left bar-resize:screenSizeX*5/6
+layout triple 'Sublime Text':REPEAT   throw ${sec} resize:screenSizeX;screenSizeY
+layout triple 'Slack':REPEAT          throw ${tri}
+layout triple 'Slack':REPEAT          push down bar-resize:screenSizeY/2
+layout triple 'iTerm':REPEAT          throw ${tri}
+layout triple 'iTerm':REPEAT          push up bar-resize:screenSizeY/2
+
 # Switch Layout Bindings
 bind 1:${trip} layout single
 bind 2:${trip} layout dual
+bind 3:${trip} layout triple
