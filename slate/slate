@@ -94,3 +94,15 @@ layout triple 'iTerm':REPEAT            push up bar-resize:screenSizeY/2
 bind 1:${trip} layout single
 bind 2:${trip} layout dual
 bind 3:${trip} layout triple
+
+
+
+#
+# Snapshots
+#
+
+# Take Snapshot
+bind `:${trex} snapshot triMonitor save-to-disk
+
+# Activate Snapshot
+bind `:${trip} activate-snapshot triMonitor
