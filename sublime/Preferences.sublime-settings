@@ -1,26 +1,41 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Blackbolt.tmTheme",
+	"bold_folder_labels": true,
+	"caret_style": "phase",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"default_line_ending": "unix",
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
+	"fade_fold_buttons": false,
 	"font_face": "Menlo",
 	"font_size": 14.0,
 	"hide_minimap": true,
 	"highlight_modified_tabs": true,
-	"hot_exit": false,
+	"hilight_line": true,
+	"hot_exit": true,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
+	"material_theme_accent_lime": true,
+	"material_theme_panel_separator": true,
+	"material_theme_small_statusbar": true,
+	"material_theme_small_tab": true,
+	"material_theme_tabs_separator": true,
+	"overlay_scroll_bars": "enabled",
+	"remember_open_files": true,
 	"rulers":
 	[
 		80,
 		105
 	],
+	"save_on_focus_lost": true,
 	"show_full_path": true,
 	"show_minimap": false,
 	"tab_completion": false,
 	"tab_size": 2,
+	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": false

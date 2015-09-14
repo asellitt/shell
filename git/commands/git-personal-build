@@ -12,7 +12,7 @@ git push
 
 echo $'\nExecuting: git buildbox'
 
-git buildbox
+git buildkite
 
 echo -e "${GREEN}  ---------------------------------------------${CLEAR}"
 printf  "${GREEN} | Build branch: ${CYAN}%-30s${GREEN} |${CLEAR}\n" "${BRANCH}"

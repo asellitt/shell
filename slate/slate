@@ -65,13 +65,13 @@ layout single 'Google Chrome':REPEAT    throw ${mac} resize:screenSizeX;screenSi
 layout single 'Slack':REPEAT            throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'Sublime Text':REPEAT     throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'iTerm':REPEAT            throw ${mac} resize:screenSizeX;screenSizeY
-layout single 'Airmail':REPEAT          throw ${mac} resize:screenSizeX;screenSizeY
+layout single 'Mailbox':REPEAT          throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'Twitter':REPEAT          throw ${mac} resize:screenSizeX/6;screenSizeY
 
 # Dual Monitor
 layout dual 'Google Chrome':REPEAT      throw ${sec} resize:screenSizeX;screenSizeY
 layout dual 'Sublime Text':REPEAT       throw ${sec} resize:screenSizeX;screenSizeY
-layout dual 'Airmail':REPEAT            throw ${mac}
+layout dual 'Mailbox':REPEAT            throw ${mac}
 layout dual 'Slack':REPEAT              throw ${mac}
 layout dual 'Slack':REPEAT              push right bar-resize:screenSizeX*5/6
 layout dual 'iTerm':REPEAT              throw ${mac} resize:screenSizeX;screenSizeY
@@ -82,8 +82,8 @@ layout dual 'Twitter':REPEAT            nudge -5% +0
 # Triple Monitor
 layout triple 'Google Chrome':REPEAT    throw ${mac} resize:screenSizeX;screenSizeY
 layout triple 'Google Chrome':REPEAT    push right bar-resize:screenSizeX*5/6
-layout triple 'Airmail':REPEAT          throw ${mac} resize:screenSizeX;screenSizeY
-layout triple 'Airmail':REPEAT          push left bar-resize:screenSizeX*5/6
+layout triple 'Mailbox':REPEAT          throw ${mac} resize:screenSizeX;screenSizeY
+layout triple 'Mailbox':REPEAT          push left bar-resize:screenSizeX*5/6
 layout triple 'Sublime Text':REPEAT     throw ${sec} resize:screenSizeX;screenSizeY
 layout triple 'Slack':REPEAT            throw ${tri}
 layout triple 'Slack':REPEAT            push down bar-resize:screenSizeY/2
