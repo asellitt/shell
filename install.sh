@@ -6,7 +6,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # default action: install environment
 #
 if [[ -z "$1" ]]; then
-    . $DIR/install/__environment.sh
+    . $DIR/install/modules.sh
 
     echo "Working directory: ${DIR}"
 
