@@ -42,9 +42,10 @@ else
       rm "${SUBLIME_USER_PACKAGE_DIR}"/syntax_highlighting.py* 2>/dev/null
       ln -s "${SUBLIME_MODULE_DIR}/syntax_highlighting.py" "${SUBLIME_USER_PACKAGE_DIR}"/
 
-      # mkdir "$SUBL_PACKAGE_DIR"/Color\ Scheme\ -\ Default 2>/dev/null
-      # rm "$SUBL_PACKAGE_DIR"/Color\ Scheme\ -\ Default/Blackbolt.tmTheme* 2>/dev/null
-      # ln -s $DIR/sublime/theme "$SUBL_PACKAGE_DIR"/Color\ Scheme\ -\ Default/Blackbolt.tmTheme
-
+      echo "${PREFIX} Installing Color Scheme"
+      SUBLIME_COLOR_SCHEME_DIR="${SUBLIME_INSTALL_DIR}/Packages/Color Scheme - Default"
+      mkdir "${SUBLIME_COLOR_SCHEME_DIR}" 2>/dev/null
+      rm "${SUBLIME_COLOR_SCHEME_DIR}"/Blackbolt.tmTheme* 2>/dev/null
+      ln -s "${SUBLIME_MODULE_DIR}"/theme "${SUBLIME_COLOR_SCHEME_DIR}"/Blackbolt.tmTheme
   fi
 fi
