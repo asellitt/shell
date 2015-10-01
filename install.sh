@@ -81,40 +81,6 @@ if [[ -z "$1" ]]; then
         rm ~/.slate 2>/dev/null
         ln -s $DIR/slate/slate ~/.slate
 
-        # sublime
-        # echo '  Installing Sublime config'
-        # SUBLDIR="$HOME/Library/Application Support"
-        # if [ -d "$SUBLDIR/Sublime Text 3" ]; then
-        #     echo '    Found Sublime Text 3'
-        #     SUBLDIR="$SUBLDIR/Sublime Text 3"
-        # elif [ -d "$SUBLDIR/Sublime Text 2" ]; then
-        #     echo '    Found Sublime Text 2'
-        #     SUBLDIR="$SUBLDIR/Sublime Text 2"
-        # fi
-
-        # if [ -d "$SUBLDIR" ]; then
-        #     SUBL_PACKAGE_DIR="$SUBLDIR/Packages"
-        #     rm "$SUBL_PACKAGE_DIR"/User/*-keymap   2>/dev/null
-        #     ln -s $DIR/sublime/*-keymap   "$SUBL_PACKAGE_DIR"/User/
-        #     rm "$SUBL_PACKAGE_DIR"/User/*-settings 2>/dev/null
-        #     ln -s $DIR/sublime/*-settings "$SUBL_PACKAGE_DIR"/User/
-        #     rm "$SUBL_PACKAGE_DIR"/User/*-macro    2>/dev/null
-        #     ln -s $DIR/sublime/*-macro    "$SUBL_PACKAGE_DIR"/User/
-        #     rm "$SUBL_PACKAGE_DIR"/User/*-snippet  2>/dev/null
-        #     ln -s $DIR/sublime/*-snippet  "$SUBL_PACKAGE_DIR"/User/
-        #     mkdir "$SUBL_PACKAGE_DIR"/Color\ Scheme\ -\ Default 2>/dev/null
-        #     rm "$SUBL_PACKAGE_DIR"/Color\ Scheme\ -\ Default/Blackbolt.tmTheme* 2>/dev/null
-        #     ln -s $DIR/sublime/theme "$SUBL_PACKAGE_DIR"/Color\ Scheme\ -\ Default/Blackbolt.tmTheme
-        #     rm "$SUBL_PACKAGE_DIR"/User/syntax_highlighting.py* 2>/dev/null
-        #     ln -s $DIR/sublime/syntax_highlighting.py "$SUBL_PACKAGE_DIR"/User/syntax_highlighting.py
-
-        #     SUBL_INST_PACKAGE_DIR="$SUBLDIR/Installed Packages"
-        #     rm "$SUBL_INST_PACKAGE_DIR"/*-package   2>/dev/null
-        #     ln -s $DIR/sublime/*-package   "$SUBL_INST_PACKAGE_DIR"/
-        # else
-        #     echo '    Looks like Sublime is not installed. Skipped config'
-        # fi
-
         # alfred
         # echo '  Installing Alfred config'
         # rm "$PREFDIR"/com.runningwithcrayons.Alfred-* 2>/dev/null
