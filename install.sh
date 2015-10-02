@@ -10,12 +10,6 @@ if [[ -z "$1" ]]; then
 
     echo "Working directory: ${DIR}"
 
-    # vim
-    echo 'Installing Vim config'
-    rm ~/.vim* 2>/dev/null
-    ln -s $DIR/vim/rc ~/.vimrc
-    #ln -s $DIR/vim/vim/ ~/test/.vim
-
     # rbenv
     echo 'Installing rbenv config'
     rm ~/.rbenv* 2>/dev/null
