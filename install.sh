@@ -72,24 +72,6 @@ if [[ -z "$1" ]]; then
     rm ~/.pry* 2>/dev/null
     ln -s $DIR/pry/rc ~/.pryrc
 
-    # OSX specific stuffs
-    if [ `uname` == 'Darwin' ]; then
-        echo 'Installing OSX Specific config'
-
-        # slate
-        echo '  Installing Slate config'
-        rm ~/.slate 2>/dev/null
-        ln -s $DIR/slate/slate ~/.slate
-
-        # alfred
-        # echo '  Installing Alfred config'
-        # rm "$PREFDIR"/com.runningwithcrayons.Alfred-* 2>/dev/null
-        # ln -s $DIR/alfred/*.plist "$PREFDIR"/
-        # ALFDIR="$HOME/Library/Application Support/Alfred 2/Alfred.alfredpreferences"
-        # rm -rf "$ALFDIR"/preferences 2>/dev/null
-        # ln -s $DIR/alfred/preferences "$ALFDIR"
-    fi
-
 
 #
 # header: install a bash header
