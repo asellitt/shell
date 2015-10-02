@@ -27,15 +27,6 @@ if [[ -z "$1" ]]; then
     ln -s $DIR/vim/rc ~/.vimrc
     #ln -s $DIR/vim/vim/ ~/test/.vim
 
-    # git
-    echo 'Installing Git config'
-    rm ~/.git* 2>/dev/null
-    ln -s $DIR/git/config ~/.gitconfig
-    ln -s $DIR/git/ignore ~/.gitignore
-    ln -s $DIR/git/completion.bash ~/.git-completion.bash
-    ln -s $DIR/git/commands ~/.git-commands
-    chmod -RH u+x ~/.git-commands
-
     # rbenv
     echo 'Installing rbenv config'
     rm ~/.rbenv* 2>/dev/null
