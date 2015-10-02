@@ -21,11 +21,6 @@ if [[ -z "$1" ]]; then
     ln -s $DIR/bash/logout ~/.bash_logout
     ln -s $DIR/bash/path ~/path
 
-    # ssh
-    echo 'Installing SSH config'
-    rm ~/.ssh/cybertron.config 2>/dev/null
-    ln -s $DIR/ssh/cybertron.config ~/.ssh/cybertron.config
-
     # vim
     echo 'Installing Vim config'
     rm ~/.vim* 2>/dev/null
