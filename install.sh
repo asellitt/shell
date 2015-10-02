@@ -10,17 +10,6 @@ if [[ -z "$1" ]]; then
 
     echo "Working directory: ${DIR}"
 
-    # bash
-    echo 'Installing Bash config'
-    rm ~/.bash* 2>/dev/null
-    ln -s $DIR/bash/rc ~/.bashrc
-    ln -s $DIR/bash/profile ~/.bash_profile
-    ln -s $DIR/bash/include ~/.bash_include
-    ln -s $DIR/bash/aliases ~/.bash_aliases
-    ln -s $DIR/bash/functions ~/.bash_functions
-    ln -s $DIR/bash/logout ~/.bash_logout
-    ln -s $DIR/bash/path ~/path
-
     # vim
     echo 'Installing Vim config'
     rm ~/.vim* 2>/dev/null
