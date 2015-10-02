@@ -7,10 +7,10 @@ if [ `uname` != 'Darwin' ]; then
   echo "${PREFIX} This isn't OSX! Skipping config"
 else
   SUBLIME_MODULE_DIR="${DIR}/sublime"
-  SUBLIME_INSTALL_DIR="$HOME/Library/Application Support"
+  SUBLIME_INSTALL_DIR="${HOME}/Library/Application Support"
   echo "${PREFIX} OSX detected"
 
-  SUBLIME_INSTALL_DIR="$HOME/Library/Application Support"
+  SUBLIME_INSTALL_DIR="${HOME}/Library/Application Support"
   if [ -d "${SUBLIME_INSTALL_DIR}/Sublime Text 3" ]; then
       echo "${PREFIX}    Found Sublime Text 3"
       SUBLIME_INSTALL_DIR="${SUBLIME_INSTALL_DIR}/Sublime Text 3"
@@ -20,7 +20,7 @@ else
   fi
 
   if [ ! -d "${SUBLIME_INSTALL_DIR}" ]; then
-      echo "${PREFIX} Looks like Sublime is not installed. Skipped config"
+      echo "${PREFIX} Looks like Sublime is not installed. Skipping config"
   else
       echo "${PREFIX} Installing Sublime config"
 

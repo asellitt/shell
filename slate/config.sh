@@ -14,7 +14,9 @@ else
       echo "${PREFIX}    Found Slate"
 
       echo "${PREFIX} Installing Slate config"
-      rm ~/.slate 2>/dev/null
-      ln -s "${DIR}"/slate/slate ~/.slate
+      SLATE_DIR="${HOME}/.slate"
+      SLATE_MODULE_DIR="${DIR}/slate"
+      rm "${SLATE_DIR}"/slate 2>/dev/null
+      ln -s "${SLATE_MODULE_DIR}"/slate "${SLATE_DIR}"/slate
   fi
 fi
