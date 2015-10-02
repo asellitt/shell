@@ -2,10 +2,13 @@
 
 echo "[INSTALL] Finding compatible modules in: ${DIR}"
 
-for MODULE_DIR in */ ; do
-    MODULE_CONFIG="${DIR}/${MODULE_DIR}config.sh"
+for MODULES in */ ; do
+    MODULE="${MODULES%/}"
+    MODULE_DIR="${DIR}/${MODULE}"
+    MODULE_CONFIG="${MODULE_DIR}/config.sh"
+
     if [ -f "$MODULE_CONFIG" ]; then
-      echo "[INSTALL] Installing '$MODULE_DIR' config"
+      echo "[INSTALL] Installing '${MODULE}' config"
       . $MODULE_CONFIG
     fi
 done
