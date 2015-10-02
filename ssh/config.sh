@@ -1,10 +1,9 @@
 #! /bin/bash
 
-PREFIX="[SSH]"
-echo "${PREFIX} Begin SSH config"
+PREFIX="SSH"
+log "Begin SSH config"
 
-echo "${PREFIX} Installing SSH config"
-
+log "Installing SSH config"
 SSH_DIR="${HOME}/.ssh"
 SSH_MODULE_DIR="${DIR}/ssh"
 rm "${SSH_DIR}"/cybertron.config 2>/dev/null

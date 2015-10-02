@@ -1,6 +1,9 @@
 #! /bin/bash
 
-echo "[INSTALL] Finding compatible modules in: ${DIR}"
+. "${DIR}/install/functions.sh"
+
+PREFIX="INSTALL"
+log "Finding compatible modules in: ${DIR}"
 
 for MODULES in */ ; do
     MODULE="${MODULES%/}"
@@ -8,7 +11,8 @@ for MODULES in */ ; do
     MODULE_CONFIG="${MODULE_DIR}/config.sh"
 
     if [ -f "$MODULE_CONFIG" ]; then
-      echo "[INSTALL] Installing '${MODULE}' config"
+      PREFIX="INSTALL"
+      log "Installing '${MODULE}' config"
       . $MODULE_CONFIG
     fi
 done
