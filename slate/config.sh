@@ -16,7 +16,6 @@ else
       log "Installing Slate config"
       SLATE_DIR="${HOME}/.slate"
       SLATE_MODULE_DIR="${DIR}/slate"
-      rm "${SLATE_DIR}"/slate 2>/dev/null
-      ln -s "${SLATE_MODULE_DIR}"/slate "${SLATE_DIR}"/slate
+      link "${SLATE_DIR}/slate" "${SLATE_MODULE_DIR}/slate"
   fi
 fi
