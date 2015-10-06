@@ -10,11 +10,6 @@ if [[ -z "$1" ]]; then
 
     echo "Working directory: ${DIR}"
 
-    # rbenv
-    echo 'Installing rbenv config'
-    rm ~/.rbenv* 2>/dev/null
-    ln -s $DIR/rbenv/version ~/.rbenv-version
-
     # gem
     echo 'Installing Gem config'
     rm ~/.gem* 2>/dev/null
