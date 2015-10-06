@@ -8,13 +8,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 if [[ -z "$1" ]]; then
     . $DIR/install/modules.sh
 
-    echo "Working directory: ${DIR}"
-
-    # pry
-    echo 'Installing Pry config'
-    rm ~/.pry* 2>/dev/null
-    ln -s $DIR/pry/rc ~/.pryrc
-
 
 #
 # header: install a bash header

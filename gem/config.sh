@@ -9,12 +9,18 @@ GEM_MODULE_DIR="${DIR}/gem"
 link "${GEM_DIR}/.gemrc" "${GEM_MODULE_DIR}/rc"
 
 # default gems
-log 'Installing handy gems'
+log "Installing handy gems"
 if ! gem spec bundler > /dev/null 2>&1; then
-    log '  Installing bundler'
+    log "   Installing bundler"
     gem install bundler
 fi
 if ! gem spec pry > /dev/null 2>&1; then
-    log '  Installing pry'
+    log "   Installing pry"
     gem install pry
+fi
+if gem spec pry > /dev/null 2>&1; then
+    log "   Installing Pry config"
+    PRY_DIR="${HOME}"
+    PRY_MODULE_DIR="${DIR}/pry"
+    link "${PRY_DIR}/.pryrc" "${PRY_MODULE_DIR}/rc"
 fi
