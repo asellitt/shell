@@ -1,0 +1,101 @@
+ERS="\033[1;0m"          # echo-friendly reset
+EYLW="\033[0;33m"        # echo-friendly foreground GREEN
+ERED="\033[0;31m"     # echo-friendly foreground LIGHT GREEN
+
+clear
+
+echo -en "$ERS"
+
+echo -en "$ERED"
+echo -n '.+/-.`                                                                    .-/+/ '
+echo ''
+
+echo -en "$ERED"
+echo -n '-MMMMMNmhyo+:-.                `      '
+echo -en "$EYLW"
+echo -n '`h/'
+echo -en "$ERED"
+echo -n '       `               `-:/oshdNMMMMMy '
+echo ''
+
+echo -en "$ERED"
+echo -n '.MMMMMMMMMMMMMMMNdhso/:-`    :.      '
+echo -en "$EYLW"
+echo -n '.mMMo'
+echo -en "$ERED"
+echo -n '      `:.   `.:/+sydmMMMMMMMMMMMMMMMs '
+echo ''
+
+echo -en "$ERED"
+echo -n '.MMMMMMMMMMMMMMMMMMMMMMMMMmdo       '
+echo -en "$EYLW"
+echo -n '-NMMMMy'
+echo -en "$ERED"
+echo -n '       :hmNMMMMMMMMMMMMMMMMMMMMMMMMs '
+echo ''
+
+echo -en "$ERED"
+echo -n '   ``.--:://++oosyyhhddmmNMh       '
+echo -en "$EYLW"
+echo -n '/NMMMMMMd`'
+echo -en "$ERED"
+echo -n '      /MMNmmddhyyssoo++//::-..``   '
+echo ''
+
+echo -en "$ERED"
+echo -n '                         hM:      '
+echo -en "$EYLW"
+echo -n '+o-------:h.'
+echo -en "$ERED"
+echo -n '      mM.                         '
+echo ''
+
+echo -en "$ERED"
+echo -n '  .yhhyyyyyyyyyyyyyyssssyMM`     '
+echo -en "$EYLW"
+echo -n 'yMM+     .mMN-'
+echo -en "$ERED"
+echo -n '     yMdsyyyyyyyyyyyyyyyhhhhh+   '
+echo ''
+
+echo -en "$ERED"
+echo -n '   -NMMMMMMMMMMMMMMMMMMMNMM-   '
+echo -en "$EYLW"
+echo -n '`hMMMMs   -NMMMM/'
+echo -en "$ERED"
+echo -n '    dMMMMMMMMMMMMMMMMMMMMMMs    '
+echo ''
+
+echo -en "$ERED"
+echo -n '    `dMMMMMMMMMMMmhs+:.`.MMy  '
+echo -en "$EYLW"
+echo -n '.mMMMMMMy :NMMMMMMo'
+echo -en "$ERED"
+echo -n '  -MMy .:+shmNMMMMMMMMMMN/     '
+echo ''
+
+echo -en "$ERED"
+echo -n '      sMMMmhs+:.        `hMM: '
+echo -en "$EYLW"
+echo -n '/++++++++:+++++++++.'
+echo -en "$ERED"
+echo -n '`mMM:        .-/oydNMMm.      '
+echo ''
+
+echo -en "$ERED"
+echo '       -.         .:+sdNMMMMN+         .         -dMMMMMmyo/-`        `-`       '
+echo '           `-/oymMMMMMMMMd+/NMmo.     -Ny      /hMMy/yNMMMMMMMNds+:.            '
+echo '           -sNMMMMMMMMdo.    oMMMd/  /MMMh` .hNMMd.   `/hMMMMMMMMMh/`           '
+echo '              -sNMMdo.     -yMMm/o` oMMMMMm. /+yMMm+`    `/hMMMh+`              '
+echo '                 -.     `/dMMMm.   sMMMMMMMN.   sMMMNs.     `:`                 '
+echo '                       .hNMMMd` -/` :hMMMNo. -:. +MMMMm+                        '
+echo '                          .:+` +MM+   +Mm`  `mMN` :/-                           '
+echo '                               dMs   .yMN/   .NM/                               '
+echo '                       :+++ooosMh    hMMMN.   -Mdoooo+++.                       '
+echo '                      mMMMNmdhyMN`   .MMMs    oMmyhmNMMMM+                      '
+echo '                      hMM.    /y-     yMN`    `+h`    sMN/                      '
+echo '                       +My            .No            .Mm.                       '
+echo '                        -m-            o             yy`                        '
+echo '                         `+                         ./                          '
+echo '                                                                                '
+echo -en "$ERS"

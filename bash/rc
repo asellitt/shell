@@ -5,7 +5,9 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-source /opt/boxen/env.sh
+if [ -f /opt/boxen/env.sh ]; then
+    source /opt/boxen/env.sh
+fi
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
@@ -131,9 +133,17 @@ bind '"\e[A"':history-search-backward
 bind '"\e[B"':history-search-forward
 bind Space:magic-space
 
-export PATH=$HOME/.rbenv/bin:/user/local/sbin/:$PATH:$HOME/.git-commands:$HOME/path
+export PATH=$PATH:$HOME/path:/user/local/sbin/:$HOME/.git-commands:$HOME/.rbenv/bin:$HOME/pebble-dev/PebbleSDK-2.3/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin
+#export CC=/usr/local/bin/gcc-4.2
 export CLICOLOR=1
-eval "$(rbenv init -)"
+
+if hash rbenv 2>/dev/null;then
+    export PATH=$PATH:$HOME/.rbenv/bin
+    eval "$(rbenv init -)"
+elif [ -f /usr/local/share/chruby/chruby.sh ]; then
+    source /usr/local/share/chruby/chruby.sh
+    source /usr/local/share/chruby/auto.sh
+fi
 
 # FU VIM! GET STUFFED
 #export EDITOR="subl -n -w"
@@ -141,3 +151,6 @@ eval "$(rbenv init -)"
 
 export LESS="-R"
 #eval "$(lesspipe)"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
