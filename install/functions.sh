@@ -84,3 +84,18 @@ function install_lastpass() {
     fi
   fi
 }
+
+function update_packages() {
+  UPDATE=$1
+
+  if [[ $UPDATE == true ]]; then
+    if hash boxen 2>/dev/null; then
+      log "Boxen detected, updating boxen"
+      boxen
+    elif hash brew 2>/dev/null; then
+      log "Brew installed, updating brew"
+      brew update
+      brew upgrade
+    fi
+  fi
+}

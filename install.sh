@@ -1,7 +1,7 @@
 #! /bin/bash
 PREFIX="INSTALL"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-. "${DIR}/install/functions.sh"
+source "${DIR}/install/functions.sh"
 
 while [ "$1" != "" ]; do
   case $1 in
@@ -31,11 +31,12 @@ done
 if [[ -z "$1" ]]; then
   log "Linking dotfiles"
 
+  update_packages $UPDATE
   ensure_secret_dir_exists
   agree_to_xcode_license
   ensure_lastpass_installed
 
-  . $DIR/install/modules.sh
+  source $DIR/install/modules.sh
 
 
 #
