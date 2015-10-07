@@ -3,9 +3,10 @@
 function usage() {
   echo "asellitt's dotfiles install script"
   echo ""
-  echo "usage: install [-u|--update]"
-  echo "               [-l|--license]"
+  echo "usage: install [-b|--banner bannerFile]"
   echo "               [-h|--help]"
+  echo "               [-u|--update]"
+  echo "               [-l|--license]"
   echo ""
 }
 
@@ -67,6 +68,22 @@ function install_required_packages() {
   fi
 }
 
+function install_banner() {
+  BANNER=$1
+  BANNER_FILE=$2
+
+  if [[ $BANNER == true ]]; then
+    BANNER_DIR="$DIR/bash/header"
+    if [[ ! -f "${BANNER_DIR}/${BANNER_FILE}" ]]; then
+      log "Banner: ${BANNER_FILE} doesnt exist, available banners:"
+      ls ${BANNER_DIR}
+    else
+      log "Installing banner: ${BANNER_FILE}"
+      link "${HOME}/.bash_header" "${BANNER_DIR}/${BANNER_FILE}"
+    fi
+  fi
+}
+
 function log() {
   MESSAGE=$1
 
@@ -87,9 +104,9 @@ function package() {
   PACKAGE=$1
 
   if brew list $PACKAGE &>/dev/null; then
-    log "${PACKAGE} installed, skipping"
+    log "   ${PACKAGE} installed, skipping"
   else
-    log "${PACKAGE} not installed, installing"
+    log "   ${PACKAGE} not installed, installing"
     brew install $PACKAGE
   fi
 }
