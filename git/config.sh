@@ -8,6 +8,7 @@ GIT_DIR="${HOME}"
 GIT_MODULE_DIR="${DIR}/git"
 
 link "${GIT_DIR}/.gitconfig" "${GIT_MODULE_DIR}/config"
+log "Fetching git.config.secret"
 lpass show --notes git.config.secret > "${DIR}/secret/git.config.secret"
 git config --global include.path "${DIR}/secret/git.config.secret"
 
