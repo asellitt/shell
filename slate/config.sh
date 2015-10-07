@@ -14,8 +14,8 @@ else
       log "   Found Slate"
 
       log "Installing Slate config"
-      SLATE_DIR="${HOME}/.slate"
+      SLATE_DIR="${HOME}"
       SLATE_MODULE_DIR="${DIR}/slate"
-      link "${SLATE_DIR}/slate" "${SLATE_MODULE_DIR}/slate"
+      link "${SLATE_DIR}/.slate" "${SLATE_MODULE_DIR}/slate"
   fi
 fi
