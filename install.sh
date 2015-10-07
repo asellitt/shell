@@ -31,10 +31,11 @@ done
 if [[ -z "$1" ]]; then
   log "Linking dotfiles"
 
-  update_packages $UPDATE
   ensure_secret_dir_exists
-  agree_to_xcode_license
-  ensure_lastpass_installed
+  agree_to_xcode_license $LICENSE
+  update_packages $UPDATE
+  install_required_packages
+  log_into_lastpass
 
   source $DIR/install/modules.sh
 
