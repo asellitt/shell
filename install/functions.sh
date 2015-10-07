@@ -115,7 +115,17 @@ function install_banner() {
 function log() {
   local message=$1
 
-  echo "[${PREFIX}] ${message}"
+  determine_color_code
+  local erst="\033[1;0m"
+  local ecol=$COLOR
+
+  echo -en "${erst}"
+  echo -n "[${col}"
+  echo -en "${ecol}"
+  echo -n "${PREFIX}"
+  echo -en "${erst}"
+  echo -n "] ${message}"
+  echo -e "${erst}"
 }
 
 function link() {
@@ -138,3 +148,13 @@ function package() {
     brew install $package
   fi
 }
+
+function determine_color_code() {
+  color_offset=0
+  for (( i=0; i<${#PREFIX}; i++ )); do
+    color_offset=$((color_offset + i * $(printf "%d" "'$i")))
+  done
+  color_offset=$((31 + color_offset % 6))
+  COLOR="\033[0;${color_offset}m"
+}
+
