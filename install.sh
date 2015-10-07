@@ -58,23 +58,6 @@ elif [[ "$1" == "header" ]]; then
   fi
 
 
-#
-# non-boxen: install binaries on a non-boxenated system
-#
-elif [[ "$1" == "nonboxen" ]]; then
-  if hash brew 2>/dev/null; then
-    echo 'Brew installed'
-    echo '  Installing gh...'
-    brew install gh
-    echo '  Installing autojump...'
-    brew install autojump
-    echo '  Installing the_silver_searcher...'
-    brew install the_silver_searcher
-  else
-    echo 'Install brew first: http://brew.sh'
-  fi
-
-
 else
   echo "Dont know what ${1} means"
 fi

@@ -55,11 +55,15 @@ function install_required_packages() {
   if hash boxen 2>/dev/null; then
     log 'Boxen detected, skipping package installation'
   else
-    log 'Brew detected, installing required packages'
-    package 'autojump'
-    package 'gh'
-    package 'lastpass-cli'
-    package 'the_silver_searcher'
+    if ! hash brew 2>/dev/null; then
+      log 'Install brew first: http://brew.sh'
+    else
+      log 'Brew detected, installing required packages'
+      package 'autojump'
+      package 'gh'
+      package 'lastpass-cli'
+      package 'the_silver_searcher'
+    fi
   fi
 }
 
