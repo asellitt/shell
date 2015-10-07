@@ -21,6 +21,4 @@
   { "keys": ["ctrl+super+alt+p"], "command": "run_macro_file", "args": {"file": "Packages/User/pry_binding.sublime-macro"} },
   { "keys": ["ctrl+super+alt+s"], "command": "run_macro_file", "args": {"file": "Packages/User/show_me_the_page.sublime-macro"} },
   { "keys": ["ctrl+super+alt+\\"], "command": "align_tab", "args": {"user_input": "\\|", "mode": "table"} }
-
 ]
-w
