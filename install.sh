@@ -1,13 +1,16 @@
 #! /bin/bash
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+. "${DIR}/install/functions.sh"
 
 #
 # default action: install environment
 #
 if [[ -z "$1" ]]; then
-    . $DIR/install/modules.sh
+    PREFIX="INSTALL"
 
+    ensure_lastpass_installed
+    . $DIR/install/modules.sh
 
 #
 # header: install a bash header

@@ -1,7 +1,5 @@
 #! /bin/bash
 
-. "${DIR}/install/functions.sh"
-
 PREFIX="INSTALL"
 log "Finding compatible modules in: ${DIR}"
 
