@@ -10,15 +10,43 @@ function usage() {
   echo ""
 }
 
+function parse_commandline_arguments() {
+  while [ "$1" != "" ]; do
+    case $1 in
+      -b|--banner)
+        BANNER=true
+        BANNER_FILE=$2
+        shift
+        ;;
+      -u|--update)
+        UPDATE=true
+        ;;
+      -l|--license)
+        LICENSE=true
+        ;;
+      -h|--help)
+        usage
+        exit
+        ;;
+      *)
+        echo "ERROR: unknown parameter: ${1}"
+        usage
+        exit 1
+        ;;
+    esac
+    shift
+  done
+}
+
 function ensure_secret_dir_exists() {
   log "Ensuring secrets directory exist"
   mkdir -p "${DIR}/secret"
 }
 
 function agree_to_xcode_license() {
-  LICENSE=$1
+  local license=$1
 
-  if [[ $LICENSE == true ]]; then
+  if [[ $license == true ]]; then
     if [ `uname` == 'Darwin' ]; then
       log "OSX detected"
       log "Agreeing to xcode license, because fuck you OSX"
@@ -38,9 +66,9 @@ function log_into_lastpass() {
 }
 
 function update_packages() {
-  UPDATE=$1
+  local update=$1
 
-  if [[ $UPDATE == true ]]; then
+  if [[ $update == true ]]; then
     if hash boxen 2>/dev/null; then
       log "Boxen detected, updating boxen"
       boxen
@@ -69,44 +97,44 @@ function install_required_packages() {
 }
 
 function install_banner() {
-  BANNER=$1
-  BANNER_FILE=$2
+  local banner=$1
+  local banner_file=$2
 
-  if [[ $BANNER == true ]]; then
-    BANNER_DIR="$DIR/bash/header"
-    if [[ ! -f "${BANNER_DIR}/${BANNER_FILE}" ]]; then
-      log "Banner: ${BANNER_FILE} doesnt exist, available banners:"
-      ls ${BANNER_DIR}
+  if [[ $banner == true ]]; then
+    local banner_dir="$DIR/bash/header"
+    if [[ ! -f "${banner_dir}/${banner_file}" ]]; then
+      log "Banner ${banner_file} doesnt exist, available banners:"
+      ls ${banner_dir}
     else
-      log "Installing banner: ${BANNER_FILE}"
-      link "${HOME}/.bash_header" "${BANNER_DIR}/${BANNER_FILE}"
+      log "Installing banner: ${banner_file}"
+      link "${HOME}/.bash_header" "${banner_dir}/${banner_file}"
     fi
   fi
 }
 
 function log() {
-  MESSAGE=$1
+  local message=$1
 
-  echo "[${PREFIX}] ${MESSAGE}"
+  echo "[${PREFIX}] ${message}"
 }
 
 function link() {
-  TO=$1
-  FROM=$2
+  local to=$1
+  local from=$2
 
-  log "   Removing ${TO}"
-  rm "${TO}" 2>/dev/null
-  log "   Linking ${FROM}"
-  ln -s "${FROM}" "${TO}"
+  log "   Removing ${to}"
+  rm "${to}" 2>/dev/null
+  log "   Linking ${from}"
+  ln -s "${from}" "${to}"
 }
 
 function package() {
-  PACKAGE=$1
+  local package=$1
 
-  if brew list $PACKAGE &>/dev/null; then
-    log "   ${PACKAGE} installed, skipping"
+  if brew list $package &>/dev/null; then
+    log "   ${package} installed, skipping"
   else
-    log "   ${PACKAGE} not installed, installing"
-    brew install $PACKAGE
+    log "   ${package} not installed, installing"
+    brew install $package
   fi
 }

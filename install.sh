@@ -1,37 +1,11 @@
 #! /bin/bash
 PREFIX="INSTALL"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SWITCHES=$@
 source "${DIR}/install/functions.sh"
 
-while [ "$1" != "" ]; do
-  case $1 in
-    -b|--banner)
-      BANNER=true
-      BANNER_FILE=$2
-      shift
-      ;;
-    -u|--update)
-      UPDATE=true
-      ;;
-    -l|--license)
-      LICENSE=true
-      ;;
-    -h|--help)
-      usage
-      exit
-      ;;
-    *)
-      echo "ERROR: unknown parameter: ${1}"
-      usage
-      exit 1
-      ;;
-  esac
-  shift
-done
-
-
 log "Linking dotfiles"
-
+parse_commandline_arguments $SWITCHES
 ensure_secret_dir_exists
 agree_to_xcode_license $LICENSE
 update_packages $UPDATE
