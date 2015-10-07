@@ -20,7 +20,7 @@ alias g='git'
 alias l='ll'
 alias f='findhistory'
 alias c='j'
-
+alias dotfiles="${HOME}/src/shell/install.sh"
 # ssh
 alias compile-ssh-config='echo -n > ~/.ssh/config && cat ~/.ssh/*.config > ~/.ssh/config'
 alias ssh='compile-ssh-config && ssh'
