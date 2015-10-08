@@ -4,8 +4,9 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 SWITCHES=$@
 source "${DIR}/install/functions.sh"
 
-log "Linking dotfiles"
 parse_commandline_arguments $SWITCHES
+
+log "Linking dotfiles"
 ensure_secret_dir_exists
 agree_to_xcode_license $LICENSE
 update_packages $UPDATE

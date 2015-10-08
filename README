@@ -1,7 +1,26 @@
+# Dotfiles
+
 What happens when you're tired of copying/pasting the same stuff into every bashrc file?
 
 You make a repo!
 
 What happens when a friend of yours talks up GitHub?
 
-You make git repo!
+You make github repo!
+
+## Usage
+
+```bash
+$> ./install.sh -h
+
+asellitt's dotfiles install script
+
+usage: install [-b|--banner bannerFile]
+               [-h|--help]
+               [-u|--update]
+               [-l|--license]
+```
+
+## Requirements
+
+- [lastpass-cli](https://github.com/lastpass/lastpass-cli) For secret config
