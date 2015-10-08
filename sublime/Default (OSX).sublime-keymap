@@ -17,7 +17,7 @@
   { "keys": ["ctrl+alt+h"], "command": "htmlprettify" },
   { "keys": ["ctrl+alt+r"], "command": "beautify_ruby" },
   { "keys": ["ctrl+keypad0"], "command": "focus_side_bar" },
-  { "keys": ["super+shift+r"], "command": "filter_through_command", "args": { "cmdline": "/Users/asellitt/.rbenv/shims/ruby -e 'print eval($stdin.gets)'" } },
+  { "keys": ["ctrl+super+alt+r"], "command": "filter_through_command", "args": { "cmdline": "pry -e 'print eval($stdin.gets)'" } },
   { "keys": ["ctrl+super+alt+p"], "command": "run_macro_file", "args": {"file": "Packages/User/pry_binding.sublime-macro"} },
   { "keys": ["ctrl+super+alt+s"], "command": "run_macro_file", "args": {"file": "Packages/User/show_me_the_page.sublime-macro"} },
   { "keys": ["ctrl+super+alt+\\"], "command": "align_tab", "args": {"user_input": "\\|", "mode": "table"} },
