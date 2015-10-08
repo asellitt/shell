@@ -148,8 +148,17 @@ else
       }
   " > $KEYDIR/DefaultKeyBinding.dict
 
-  log "Restarting Apps"
+  log "Restarting apps"
   killall Finder /dev/null 2>&1
   killall SystemUIServer /dev/null 2>&1
   killall Dock /dev/null 2>&1
+
+  log "Linking applications"
+  APP_DIR="${HOME}/Applications"
+  APP_MODULE_DIR="${DIR}/osx/apps"
+  link "${APP_DIR}/Lock.app" "${APP_MODULE_DIR}/Lock.app"
+  link "${APP_DIR}/Logout.app" "${APP_MODULE_DIR}/Logout.app"
+  link "${APP_DIR}/Restart.app" "${APP_MODULE_DIR}/Restart.app"
+  link "${APP_DIR}/Shutdown.app" "${APP_MODULE_DIR}/Shutdown.app"
+  link "${APP_DIR}/Sleep.app" "${APP_MODULE_DIR}/Sleep.app"
 fi
