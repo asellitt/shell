@@ -36,5 +36,3 @@ if gem spec pry > /dev/null 2>&1; then
     PRY_MODULE_DIR="${DIR}/pry"
     link "${PRY_DIR}/.pryrc" "${PRY_MODULE_DIR}/rc"
 fi
-
-1+1
