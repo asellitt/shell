@@ -6,6 +6,10 @@
 	"installed_packages":
 	[
 		"AlignTab",
-		"Material Theme"
+		"Cucumber",
+		"GitGutter",
+		"Material Theme",
+		"Package Control",
+		"RSpec"
 	]
 }

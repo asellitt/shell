@@ -1,0 +1,14 @@
+[
+   {"caption" : "-"},
+    {
+      "id": "aligntab",
+      "caption": "Align By",
+      "children": [
+          {
+          "caption": "Rocket ( => )",
+          "command": "align_tab",
+           "args": {"user_input" : "=>"}
+          }
+      ]
+  }
+]
