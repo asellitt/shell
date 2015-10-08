@@ -1,8 +1,11 @@
 #! /bin/bash
-PREFIX="INSTALL"
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+source "${DIR}/install/util_functions.sh"
+source "${DIR}/install/install_functions.sh"
+
+PREFIX="INSTALL"
 SWITCHES=$@
-source "${DIR}/install/functions.sh"
 
 parse_commandline_arguments $SWITCHES
 
@@ -13,7 +16,5 @@ agree_to_xcode_license $LICENSE
 update_packages $UPDATE
 install_required_packages
 log_into_lastpass
-
-source $DIR/install/modules.sh
-
 install_banner $BANNER $BANNER_FILE
+install_modules
