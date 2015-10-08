@@ -1,8 +1,10 @@
 {
+	"always_show_minimap_viewport": false,
 	"bold_folder_labels": true,
 	"caret_style": "phase",
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"default_line_ending": "unix",
+	"draw_minimap_border": false,
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
@@ -14,7 +16,8 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
+		"Markdown"
 	],
 	"line_padding_bottom": 2,
 	"line_padding_top": 2,

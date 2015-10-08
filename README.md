@@ -8,6 +8,13 @@ What happens when a friend of yours talks up GitHub?
 
 You make github repo!
 
+## Installation
+
+```bash
+$> git clone https://github.com/asellitt/dotfiles.git
+$> dotfiles/install.sh -u -l
+```
+
 ## Usage
 
 ```bash
