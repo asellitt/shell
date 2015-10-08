@@ -18,14 +18,14 @@ $> dotfiles/install.sh -u -l
 ## Usage
 
 ```bash
-$> ./install.sh -h
+$> dotfiles -h
 
 asellitt's dotfiles install script
 
-usage: install [-b|--banner bannerFile]
-               [-h|--help]
-               [-u|--update]
-               [-l|--license]
+usage: dotfiles [-b|--banner bannerFile]
+                [-h|--help]
+                [-u|--update]
+                [-l|--license]
 ```
 
 ## Requirements

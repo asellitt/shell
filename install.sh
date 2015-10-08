@@ -7,6 +7,7 @@ source "${DIR}/install/functions.sh"
 parse_commandline_arguments $SWITCHES
 
 log "Linking dotfiles"
+create_symlinked_executable
 ensure_secret_dir_exists
 agree_to_xcode_license $LICENSE
 update_packages $UPDATE

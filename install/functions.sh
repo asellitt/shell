@@ -3,10 +3,10 @@
 function usage() {
   echo "asellitt's dotfiles install script"
   echo ""
-  echo "usage: install [-b|--banner bannerFile]"
-  echo "               [-h|--help]"
-  echo "               [-u|--update]"
-  echo "               [-l|--license]"
+  echo "usage: dotfiles [-b|--banner bannerFile]"
+  echo "                [-h|--help]"
+  echo "                [-u|--update]"
+  echo "                [-l|--license]"
   echo ""
 }
 
@@ -36,6 +36,14 @@ function parse_commandline_arguments() {
     esac
     shift
   done
+}
+
+function create_symlinked_executable() {
+  local dotfiles_dir="${DIR}"
+  local executable_dir="${DIR}/bash/path"
+
+  log "Creating executable"
+  link "${executable_dir}/dotfiles" "${dotfiles_dir}/install.sh"
 }
 
 function ensure_secret_dir_exists() {
