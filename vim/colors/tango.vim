@@ -70,9 +70,11 @@ hi Error        ctermfg=white ctermbg=red
 " Diff
 hi DiffAdd      guifg=fg guibg=#3465a4 gui=none
 hi DiffAdd      ctermfg=gray ctermbg=blue cterm=none
+hi diffAdded    ctermfg=green
 hi DiffChange   guifg=fg guibg=#555753 gui=none
 hi DiffChange   ctermfg=gray ctermbg=darkgray cterm=none
 hi DiffDelete   guibg=bg
 hi DiffDelete   ctermfg=gray ctermbg=none cterm=none
-hi DiffText     guifg=fg guibg=#c4a000 gui=none
+hi DiffRemoved  ctermfg=red
+hi DiffText     guifg=fg guibg=#c4a00 gui=none
 hi DiffText     ctermfg=gray ctermbg=yellow cterm=none
