@@ -9,6 +9,7 @@ endif
 
 let colors_name = "anthsational"
 
+" Git Diff colors
 hi diffAdded    ctermfg=darkgreen
 hi DiffRemoved  ctermfg=darkred
 hi Special      ctermfg=darkmagenta
