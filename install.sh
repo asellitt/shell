@@ -1,7 +1,5 @@
 #! /bin/bash
-
-DOTFILES_DIR=$(dirname `realpath $0`)
-
+DOTFILES_DIR=$(dirname `readlink $0`)
 source "${DOTFILES_DIR}/install/util_functions.sh"
 source "${DOTFILES_DIR}/install/install_functions.sh"
 
