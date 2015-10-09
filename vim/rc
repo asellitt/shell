@@ -21,6 +21,8 @@ set scrolloff=5
 " Show what mode your in (insert, etc.)
 set warn
 
+colorscheme tango
+
 " Map <ctrl> + <up> and <ctrl> + <down> to scroll the page without moving the
 " cursor, using <ctrl> + <e> and <ctrl> + <y> respectively.
 " map <C-Down> 
