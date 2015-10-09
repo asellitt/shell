@@ -1,8 +1,9 @@
 #! /bin/bash
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-source "${DIR}/install/util_functions.sh"
-source "${DIR}/install/install_functions.sh"
+DOTFILES_DIR=$(dirname `realpath $0`)
+
+source "${DOTFILES_DIR}/install/util_functions.sh"
+source "${DOTFILES_DIR}/install/install_functions.sh"
 
 PREFIX="INSTALL"
 

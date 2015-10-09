@@ -16,7 +16,7 @@ else
 
       log "Installing Pow config"
       POW_DIR="${HOME}"
-      POW_MODULE_DIR="${DIR}/pow"
+      POW_MODULE_DIR="${DOTFILES_DIR}/pow"
       link "${POW_DIR}/.powconfig" "${POW_MODULE_DIR}/config"
   fi
 fi

@@ -49,7 +49,7 @@ function package() {
 }
 
 function determine_color_code() {
-  local prefix=$1
+  local x =$1
   local color_offset=0
 
   for (( i=0; i<${#prefix}; i++ )); do

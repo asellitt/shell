@@ -29,8 +29,8 @@ function parse_commandline_arguments() {
 }
 
 function create_symlinked_executable() {
-  local dotfiles_dir="${DIR}"
-  local executable_dir="${DIR}/bash/path"
+  local dotfiles_dir="${DOTFILES_DIR}"
+  local executable_dir="${DOTFILES_DIR}/bash/path"
 
   log "Creating executable"
   link "${executable_dir}/dotfiles" "${dotfiles_dir}/install.sh"
@@ -38,7 +38,7 @@ function create_symlinked_executable() {
 
 function ensure_secret_dir_exists() {
   log "Ensuring secrets directory exist"
-  mkdir -p "${DIR}/secret"
+  mkdir -p "${DOTFILES_DIR}/secret"
 }
 
 function agree_to_xcode_license() {
@@ -99,7 +99,7 @@ function install_banner() {
   local banner_file=$2
 
   if [[ $banner == true ]]; then
-    local banner_dir="$DIR/bash/header"
+    local banner_dir="${DOTFILES_DIR}/bash/header"
     if [[ ! -f "${banner_dir}/${banner_file}" ]]; then
       log "Banner ${banner_file} doesnt exist, available banners:"
       ls ${banner_dir}
@@ -111,12 +111,11 @@ function install_banner() {
 }
 
 function install_modules() {
-  log "Finding compatible modules in: ${DIR}"
+  log "Finding compatible modules in: ${DOTFILES_DIR}"
 
-  for modules in */ ; do
+  for modules in ${DOTFILES_DIR}/*/ ; do
       local module="${modules%/}"
-      local module_dir="${DIR}/${module}"
-      local module_config="${module_dir}/config.sh"
+      local module_config="${module}/config.sh"
 
       if [ -f "$module_config" ]; then
         PREFIX="INSTALL"

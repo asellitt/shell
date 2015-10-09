@@ -6,7 +6,7 @@ log "Begin Sublime config"
 if [ `uname` != 'Darwin' ]; then
   log "This isn't OSX! Skipping config"
 else
-  SUBLIME_MODULE_DIR="${DIR}/sublime"
+  SUBLIME_MODULE_DIR="${DOTFILES_DIR}/sublime"
   SUBLIME_INSTALL_DIR="${HOME}/Library/Application Support"
   log "OSX detected"
 

@@ -5,7 +5,7 @@ log "Begin Gem config"
 
 log "Installing Gem config"
 GEM_DIR="${HOME}"
-GEM_MODULE_DIR="${DIR}/gem"
+GEM_MODULE_DIR="${DOTFILES_DIR}/gem"
 link "${GEM_DIR}/.gemrc" "${GEM_MODULE_DIR}/rc"
 
 # default gems
@@ -33,6 +33,6 @@ fi
 if gem spec pry > /dev/null 2>&1; then
     log "   Installing Pry config"
     PRY_DIR="${HOME}"
-    PRY_MODULE_DIR="${DIR}/pry"
+    PRY_MODULE_DIR="${DOTFILES_DIR}/pry"
     link "${PRY_DIR}/.pryrc" "${PRY_MODULE_DIR}/rc"
 fi

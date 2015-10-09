@@ -5,7 +5,7 @@ log "Begin Bash config"
 
 log "Installing Bash config"
 BASH_DIR="${HOME}"
-BASH_MODULE_DIR="${DIR}/bash"
+BASH_MODULE_DIR="${DOTFILES_DIR}/bash"
 link "${BASH_DIR}/.bashrc" "${BASH_MODULE_DIR}/rc"
 link "${BASH_DIR}/.bash_profile" "${BASH_MODULE_DIR}/profile"
 link "${BASH_DIR}/.bash_include" "${BASH_MODULE_DIR}/include"

@@ -155,7 +155,7 @@ else
 
   log "Linking applications"
   APP_DIR="${HOME}/Applications"
-  APP_MODULE_DIR="${DIR}/osx/apps"
+  APP_MODULE_DIR="${DOTFILES_DIR}/osx/apps"
   link "${APP_DIR}/Lock.app" "${APP_MODULE_DIR}/Lock.app"
   link "${APP_DIR}/Logout.app" "${APP_MODULE_DIR}/Logout.app"
   link "${APP_DIR}/Restart.app" "${APP_MODULE_DIR}/Restart.app"
