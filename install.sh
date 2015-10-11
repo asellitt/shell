@@ -1,5 +1,6 @@
 #! /bin/bash
-DOTFILES_DIR=$(dirname `readlink $0`)
+exec_loc=$(readlink $0 || realpath $0)
+DOTFILES_DIR=$(dirname $exec_loc)
 source "${DOTFILES_DIR}/install/util_functions.sh"
 source "${DOTFILES_DIR}/install/install_functions.sh"
 
