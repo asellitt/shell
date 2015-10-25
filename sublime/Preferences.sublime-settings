@@ -31,7 +31,8 @@
 	"rulers":
 	[
 		80,
-		105
+		100,
+		120
 	],
 	"save_on_focus_lost": true,
 	"show_full_path": true,
