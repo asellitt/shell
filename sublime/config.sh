@@ -35,6 +35,7 @@ else
       link "${SUBLIME_USER_PACKAGE_DIR}/Markdown (Standard).sublime-settings" "${SUBLIME_MODULE_DIR}/Markdown (Standard).sublime-settings"
       log "   Installing User Macros"
       link "${SUBLIME_USER_PACKAGE_DIR}/pry_binding.sublime-macro" "${SUBLIME_MODULE_DIR}/pry_binding.sublime-macro"
+      link "${SUBLIME_USER_PACKAGE_DIR}/binding_remote_pry.sublime-macro" "${SUBLIME_MODULE_DIR}/binding_remote_pry.sublime-macro"
       link "${SUBLIME_USER_PACKAGE_DIR}/show_me_the_page.sublime-macro" "${SUBLIME_MODULE_DIR}/show_me_the_page.sublime-macro"
       log "   Installing User Snippets"
       link "${SUBLIME_USER_PACKAGE_DIR}/ruby_do_end.sublime-snippet" "${SUBLIME_MODULE_DIR}/ruby_do_end.sublime-snippet"
