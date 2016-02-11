@@ -9,14 +9,7 @@
 	{
 		"args":
 		{
-			"characters": "require"
-		},
-		"command": "insert"
-	},
-	{
-		"args":
-		{
-			"characters": " "
+			"characters": "require "
 		},
 		"command": "insert"
 	},
@@ -45,21 +38,7 @@
 	{
 		"args":
 		{
-			"characters": ";"
-		},
-		"command": "insert"
-	},
-	{
-		"args":
-		{
-			"characters": "pry"
-		},
-		"command": "insert"
-	},
-	{
-		"args":
-		{
-			"characters": " binding"
+			"characters": "; binding.pry"
 		},
 		"command": "insert"
 	},
