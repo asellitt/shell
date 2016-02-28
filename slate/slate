@@ -4,7 +4,8 @@ config nudgePercentOf         screenSize
 config resizePercentOf        screenSize
 
 # Shortcut Aliases
-alias trip ctrl;alt;cmd
+alias mod ctrl;alt
+alias trip cmd;${mod}
 alias trex shift;${trip}
 
 # Monitor Aliases
@@ -19,10 +20,10 @@ alias tri 2
 #
 
 # Resize Window Edges
-bind pad2:cmd chain push down  bar-resize:screenSizeY/6 | push down  bar-resize:screenSizeY/3 | push down  bar-resize:screenSizeY/2 | push down  bar-resize:screenSizeY*2/3  | push down  bar-resize:screenSizeY*5/6 | push down  bar-resize:screenSizeY
-bind pad4:cmd chain push left  bar-resize:screenSizeX/6 | push left  bar-resize:screenSizeX/3 | push left  bar-resize:screenSizeX/2 | push left  bar-resize:screenSizeX*2/3  | push left  bar-resize:screenSizeX*5/6 | push left  bar-resize:screenSizeX
-bind pad6:cmd chain push right bar-resize:screenSizeX/6 | push right bar-resize:screenSizeX/3 | push right bar-resize:screenSizeX/2 | push right bar-resize:screenSizeX*2/3  | push right bar-resize:screenSizeX*5/6 | push right bar-resize:screenSizeX
-bind pad8:cmd chain push up    bar-resize:screenSizeY/6 | push up    bar-resize:screenSizeY/3 | push up    bar-resize:screenSizeY/2 | push up    bar-resize:screenSizeY*2/3  | push up    bar-resize:screenSizeY*5/6 | push up    bar-resize:screenSizeY
+bind down:${trip}  chain push down  bar-resize:screenSizeY/6 | push down  bar-resize:screenSizeY/3 | push down  bar-resize:screenSizeY/2 | push down  bar-resize:screenSizeY*2/3  | push down  bar-resize:screenSizeY*5/6 | push down  bar-resize:screenSizeY
+bind left:${trip}  chain push left  bar-resize:screenSizeX/6 | push left  bar-resize:screenSizeX/3 | push left  bar-resize:screenSizeX/2 | push left  bar-resize:screenSizeX*2/3  | push left  bar-resize:screenSizeX*5/6 | push left  bar-resize:screenSizeX
+bind right:${trip} chain push right bar-resize:screenSizeX/6 | push right bar-resize:screenSizeX/3 | push right bar-resize:screenSizeX/2 | push right bar-resize:screenSizeX*2/3  | push right bar-resize:screenSizeX*5/6 | push right bar-resize:screenSizeX
+bind up:${trip}    chain push up    bar-resize:screenSizeY/6 | push up    bar-resize:screenSizeY/3 | push up    bar-resize:screenSizeY/2 | push up    bar-resize:screenSizeY*2/3  | push up    bar-resize:screenSizeY*5/6 | push up    bar-resize:screenSizeY
 
 # Resize Window Corners
 bind pad1:cmd chain corner bottom-left  resize:screenSizeX/6;screenSizeY/6 | corner bottom-left  resize:screenSizeX/3;screenSizeY/3 | corner bottom-left  resize:screenSizeX/2;screenSizeY/2 | corner bottom-left  resize:screenSizeX*2/3;screenSizeY*2/3 | corner bottom-left  resize:screenSizeX*5/6;screenSizeY*5/6 | corner bottom-left  resize:screenSizeX;screenSizeY
@@ -34,14 +35,8 @@ bind pad9:cmd chain corner top-right    resize:screenSizeX/6;screenSizeY/6 | cor
 bind left:${trip}  push left  bar-resize:screenSizeX/2
 bind right:${trip} push right bar-resize:screenSizeX/2
 bind up:${trip}    move screenOriginX;screenOriginY screenSizeX;screenSizeY
-bind pad5:cmd      move screenOriginX;screenOriginY screenSizeX;screenSizeY
 bind down:${trip}  grid padding:5 0:6,6 1:6,6
 bind /:${trip}     hint ZXCVB
-
-# Move Monitor Bindings
-bind z:${trip} throw ${mac} resize
-bind x:${trip} throw ${sec} resize
-bind c:${trip} throw ${tri} resize
 
 # Nudge Window Bindings
 bind pad4:${trip} nudge -5% +0
@@ -49,6 +44,10 @@ bind pad6:${trip} nudge +5% +0
 bind pad8:${trip} nudge +0 -5%
 bind pad2:${trip} nudge +0 +5%
 
+# Move Monitor Bindings
+bind z:${trip} throw ${mac} resize
+bind x:${trip} throw ${sec} resize
+bind c:${trip} throw ${tri} resize
 
 
 #
@@ -102,9 +101,9 @@ layout triple 'Twitter':REPEAT          throw ${tri}
 layout triple 'Twitter':REPEAT          corner bottom-right resize:screenSizeX*2/6;screenSizeY/2
 
 # Switch Layout Bindings
-bind 1:${trip} layout single
-bind 2:${trip} layout dual
-bind 3:${trip} layout triple
+bind f1:${trip} layout single
+bind f2:${trip} layout dual
+bind f3:${trip} layout triple
 
 
 
