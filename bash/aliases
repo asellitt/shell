@@ -20,6 +20,7 @@ alias g='git'
 alias l='ll'
 alias f='findhistory'
 alias c='j'
+alias ag='ag --color --color-match 34\;46 --color-line-number 1\;33\;40 --literal --column --smart-case --numbers --nogroup'
 
 # ssh
 alias compile-ssh-config='echo -n > ~/.ssh/config && cat ~/.ssh/*.config > ~/.ssh/config'
@@ -30,7 +31,7 @@ alias duh="sudo du -hxP --max-depth=2 | grep '^[0-9]*\.*[0-9]*G'"
 
 # development
 alias v='vim'
-alias b='bundle'
+alias b='RUBY_GC_TUNE_VERBOSE=0 bundle'
 alias be='b exec'
 alias ber='be rake'
 alias bes='be rspec --color --format documentation -b'
@@ -53,3 +54,4 @@ alias fuck-you-structure-sql='git checkout -- db/structure.sql'
 # fun
 alias minecraft='pushd .;cd /media/one/games/minecraft;./start.sh;popd'
 alias mud='emacs -batch -l dunnet'
+alias weather='curl http://wttr.in/'
