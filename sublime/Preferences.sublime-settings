@@ -8,16 +8,9 @@
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
-	"font_face": "Menlo",
-	"font_size": 13.0,
-	"hide_minimap": true,
-	"highlight_modified_tabs": true,
-	"hilight_line": true,
-	"hot_exit": true,
-	"ignored_packages":
+	"file_exclude_patters":
 	[
-		"Markdown",
-		"Vintage"
+		".*"
 	],
 	"folder_exclude_patterns":
 	[
@@ -35,9 +28,16 @@
 		"tmp",
 		"vendor"
 	],
-	"file_exclude_patters":
+	"font_face": "Menlo",
+	"font_size": 13.0,
+	"hide_minimap": true,
+	"highlight_modified_tabs": true,
+	"hilight_line": true,
+	"hot_exit": true,
+	"ignored_packages":
 	[
-		".*"
+		"Markdown",
+		"Vintage"
 	],
 	"line_padding_bottom": 2,
 	"line_padding_top": 2,
