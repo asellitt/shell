@@ -19,6 +19,26 @@
 		"Markdown",
 		"Vintage"
 	],
+	"folder_exclude_patterns":
+	[
+		".buildkite",
+		".bundle",
+		".git",
+		".github",
+		"bin",
+		"cops",
+		"foreman",
+		"log",
+		"node_modules",
+		"public",
+		"results",
+		"tmp",
+		"vendor"
+	],
+	"file_exclude_patters":
+	[
+		".*"
+	],
 	"line_padding_bottom": 2,
 	"line_padding_top": 2,
 	"material_theme_accent_lime": true,
