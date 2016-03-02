@@ -1,0 +1,4 @@
+{
+  "shell_cmd": "git buildkite",
+  "working_dir": "${file_path}"
+}

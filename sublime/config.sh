@@ -28,6 +28,8 @@ else
       SUBLIME_USER_PACKAGE_DIR="${SUBLIME_INSTALL_DIR}/Packages/User"
       log "   Installing User Key Bindings"
       link "${SUBLIME_USER_PACKAGE_DIR}/Default (OSX).sublime-keymap" "${SUBLIME_MODULE_DIR}/Default (OSX).sublime-keymap"
+      log "   Installing User Builds"
+      link "${SUBLIME_USER_PACKAGE_DIR}/buildkite.sublime-build" "${SUBLIME_MODULE_DIR}/buildkite.sublime-build"
       log "   Installing User Settings"
       link "${SUBLIME_USER_PACKAGE_DIR}/Package Control.sublime-settings" "${SUBLIME_MODULE_DIR}/Package Control.sublime-settings"
       link "${SUBLIME_USER_PACKAGE_DIR}/Preferences.sublime-settings" "${SUBLIME_MODULE_DIR}/Preferences.sublime-settings"
