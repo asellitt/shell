@@ -58,6 +58,7 @@
 	"save_on_focus_lost": true,
 	"show_full_path": true,
 	"show_minimap": false,
+	"show_panel_on_build": false,
 	"tab_completion": false,
 	"tab_size": 2,
 	"theme": "Material-Theme.sublime-theme",
