@@ -8,4 +8,6 @@ if(defined?(PryDebugger) || defined?(PryByebug))
 
   # Config
   Pry.config.pager = false
+
+  alias :drop_mic :exit!
 end
