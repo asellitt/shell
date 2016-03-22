@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"AlignTab",
+		"Better CoffeeScript",
 		"Cucumber",
 		"Cucumber Step Finder",
 		"GitGutter",
