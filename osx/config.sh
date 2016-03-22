@@ -54,6 +54,9 @@ else
   defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool true
   defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerHorizSwipeGesture -int 1
   defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 1
+  log "   Disable shake-to-find cursor"
+  defaults write NSGlobalDomain CGDisableCursorLocationMagnification -bool true
+
 
   log "Setting Dock preferences"
   log "   Enable 2D dock"

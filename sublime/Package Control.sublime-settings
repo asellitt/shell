@@ -6,13 +6,20 @@
 	"installed_packages":
 	[
 		"AlignTab",
+		"Babel",
 		"Better CoffeeScript",
+		"Case Conversion",
 		"Cucumber",
 		"Cucumber Step Finder",
+		"Default File Type",
 		"GitGutter",
+		"GitSavvy",
 		"MarkdownEditing",
 		"Material Theme",
 		"Package Control",
-		"RSpec"
+		"Path Tools",
+		"RSpec",
+		"SideBarEnhancements",
+		"Slate"
 	]
 }

@@ -75,6 +75,7 @@ function update_packages() {
       brew update
       brew upgrade
     fi
+    source ~/.bashrc
   fi
 }
 

@@ -8,6 +8,26 @@
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
+	"file_exclude_patters":
+	[
+		".*"
+	],
+	"folder_exclude_patterns":
+	[
+		".buildkite",
+		".bundle",
+		".git",
+		".github",
+		"bin",
+		"cops",
+		"foreman",
+		"log",
+		"node_modules",
+		"public",
+		"results",
+		"tmp",
+		"vendor"
+	],
 	"font_face": "Menlo",
 	"font_size": 13.0,
 	"hide_minimap": true,
@@ -30,6 +50,7 @@
 	"remember_open_files": true,
 	"rulers":
 	[
+		72,
 		80,
 		100,
 		120
@@ -37,6 +58,7 @@
 	"save_on_focus_lost": true,
 	"show_full_path": true,
 	"show_minimap": false,
+	"show_panel_on_build": false,
 	"tab_completion": false,
 	"tab_size": 2,
 	"theme": "Material-Theme.sublime-theme",
