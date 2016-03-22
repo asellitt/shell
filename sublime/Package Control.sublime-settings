@@ -8,6 +8,7 @@
 		"AlignTab",
 		"Babel",
 		"Better CoffeeScript",
+		"Case Conversion",
 		"Cucumber",
 		"Cucumber Step Finder",
 		"Default File Type",
@@ -16,7 +17,9 @@
 		"MarkdownEditing",
 		"Material Theme",
 		"Package Control",
+		"Path Tools",
 		"RSpec",
+		"SideBarEnhancements",
 		"Slate"
 	]
 }
