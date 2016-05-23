@@ -56,7 +56,11 @@ else
   defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 1
   log "   Disable shake-to-find cursor"
   defaults write NSGlobalDomain CGDisableCursorLocationMagnification -bool true
-
+  log "   Fuck off that stuid arse force click fuckery"
+  defaults write NSGlobalDomain com.apple.trackpad.forceClick -bool false
+  defaults write com.apple.AppleMultitouchTrackpad ForceSuppressed -bool true
+  defaults write com.apple.AppleMultitouchTrackpad ActuateDetents -bool false
+  defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerTapGesture -int 2
 
   log "Setting Dock preferences"
   log "   Enable 2D dock"
