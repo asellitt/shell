@@ -1,7 +1,8 @@
 {
 	"extensions":
 	[
-		"rb"
+		"rb",
+		"pp"
 	],
 	"tab_size": 2
 }
