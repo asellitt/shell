@@ -8,8 +8,8 @@ function findhistory() {
     history | grep -i "$@" ;
 }
 
-# bundle install, db:migrate, db:test prepare
-function bimp {
+# bundle install, db:migrate, db:test prepare, npm install
+function bimpn {
     echo '####################################'
     echo '  bundle install --local'
     echo '####################################'
@@ -22,6 +22,10 @@ function bimp {
     echo '  bundle exec rake db:test:prepare'
     echo '####################################'
     bundle exec rake db:test:prepare
+    echo '####################################'
+    echo '  npm install'
+    echo '####################################'
+    npm install
 }
 
 # current git branch
