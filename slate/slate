@@ -64,7 +64,7 @@ layout single 'Google Chrome':REPEAT    throw ${mac} resize:screenSizeX;screenSi
 layout single 'Sequel Pro':REPEAT       throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'Slack':REPEAT            throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'Sublime Text':REPEAT     throw ${mac} resize:screenSizeX;screenSizeY
-layout single 'iTerm':REPEAT            throw ${mac} resize:screenSizeX;screenSizeY
+layout single 'iTerm2':REPEATP           throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'SourceTree':REPEAT       throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'Airmail':REPEAT          throw ${mac} resize:screenSizeX;screenSizeY
 layout single 'Twitter':REPEAT          throw ${mac} resize:screenSizeX/6;screenSizeY
@@ -76,8 +76,8 @@ layout dual 'Sublime Text':REPEAT       throw ${sec} resize:screenSizeX;screenSi
 layout dual 'Airmail':REPEAT            throw ${mac}
 layout dual 'Slack':REPEAT              throw ${mac}
 layout dual 'Slack':REPEAT              push right bar-resize:screenSizeX*5/6
-layout dual 'iTerm':REPEAT              throw ${mac} resize:screenSizeX;screenSizeY
-layout dual 'iTerm':REPEAT              push right bar-resize:screenSizeX*2/3
+layout dual 'iTerm2':REPEATP             throw ${mac} resize:screenSizeX;screenSizeY
+layout dual 'iTerm2':REPEATP             push right bar-resize:screenSizeX*2/3
 layout dual 'SourceTree':REPEAT         throw ${mac} resize:screenSizeX;screenSizeY
 layout dual 'SourceTree':REPEAT         push right bar-resize:screenSizeX*2/3
 layout dual 'Twitter':REPEAT            throw ${mac} resize:screenSizeX/6;screenSizeY
@@ -92,8 +92,8 @@ layout triple 'Airmail':REPEAT          push left bar-resize:screenSizeX*5/6
 layout triple 'Sublime Text':REPEAT     throw ${sec} resize:screenSizeX;screenSizeY
 layout triple 'Slack':REPEAT            throw ${tri}
 layout triple 'Slack':REPEAT            push down bar-resize:screenSizeY/2
-layout triple 'iTerm':REPEAT            throw ${tri}
-layout triple 'iTerm':REPEAT            push up bar-resize:screenSizeY/2
+layout triple 'iTerm2':REPEATP           throw ${tri}
+layout triple 'iTerm2':REPEATP           push up bar-resize:screenSizeY/2
 layout triple 'SourceTree':REPEAT       throw ${tri}
 layout triple 'SourceTree':REPEAT       push up bar-resize:screenSizeY/2
 layout triple 'Twitter':REPEAT          throw ${tri}
