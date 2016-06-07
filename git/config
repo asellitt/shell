@@ -13,6 +13,7 @@
   p  = push-curent
   s  = status
   br = new-branch
+  nb = new-branch
   cl = clone
   co = checkout
   cm = commit

@@ -8,6 +8,9 @@ echo -e "$GREEN- Starting: new-branch for '$1' -$CLEAR"
 echo $'\nExecuting: git checkout master'
 git checkout master
 
+echo $'\nExecuting: git fetch'
+git fetch
+
 echo $'\nExecuting: git pull'
 git pull
 
