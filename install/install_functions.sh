@@ -69,6 +69,8 @@ function update_packages() {
   if [[ $update == true ]]; then
     if hash boxen 2>/dev/null; then
       log "Boxen detected, updating boxen"
+      log "Resetting the sudo askpass timer, because fuck you boxen."
+      sudo ls >/dev/null
       boxen
     elif hash brew 2>/dev/null; then
       log "Brew installed, updating brew"
