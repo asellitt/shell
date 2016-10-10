@@ -29,6 +29,7 @@
   sc = spring-clean
   pr = pull-request
   su = set-upstream
+  yolo = push --force
 [credential]
   helper = /opt/boxen/bin/boxen-git-credential
 [color]
