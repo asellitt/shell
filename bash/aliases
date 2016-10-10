@@ -50,6 +50,7 @@ alias irb='pry'
 alias bn='boxen'
 alias replica-tunnel='ssh -fNg -L 3307:127.0.0.1:3306 reporting-db00'
 alias fuck-you-structure-sql='git checkout -- db/structure.sql'
+alias log-into-aws-market='aws-vault login envato-customer-marketplace-app-cloudformation-user'
 
 # fun
 alias minecraft='pushd .;cd /media/one/games/minecraft;./start.sh;popd'
