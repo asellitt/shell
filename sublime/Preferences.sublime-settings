@@ -33,7 +33,7 @@
 	"hide_minimap": true,
 	"highlight_modified_tabs": true,
 	"hilight_line": true,
-	"hot_exit": true,
+	"hot_exit": false,
 	"ignored_packages":
 	[
 		"Markdown",
