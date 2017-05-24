@@ -1,0 +1,7 @@
+{
+    "prettier_options": {
+        "trailingComma": "all",
+        "semi": false
+    },
+    "auto_format_on_save": true,
+}

@@ -1,5 +1,22 @@
 {
 	"always_show_minimap_viewport": false,
+	"binary_file_patterns":
+	[
+		"*.dds",
+		"*.eot",
+		"*.gif",
+		"*.ico",
+		"*.jar",
+		"*.jpeg",
+		"*.jpg",
+		"*.pdf",
+		"*.png",
+		"*.swf",
+		"*.tga",
+		"*.ttf",
+		"*.zip",
+		"screenshots/**"
+	],
 	"bold_folder_labels": true,
 	"caret_style": "phase",
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
@@ -14,7 +31,6 @@
 	],
 	"folder_exclude_patterns":
 	[
-		".buildkite",
 		".bundle",
 		".git",
 		".github",
@@ -29,7 +45,7 @@
 		"vendor"
 	],
 	"font_face": "Menlo",
-	"font_size": 13.0,
+	"font_size": 12,
 	"hide_minimap": true,
 	"highlight_modified_tabs": true,
 	"hilight_line": true,
