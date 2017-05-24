@@ -8,7 +8,7 @@ function findhistory() {
     history | grep -i "$@" ;
 }
 
-# bundle install, db:migrate, db:test prepare, npm install
+# bundle install, db:migrate, db:privileged:cleanup_lhm, db:test prepare, npm install
 function bimpn {
     echo '####################################'
     echo '  bundle install --local'
@@ -18,6 +18,10 @@ function bimpn {
     echo '  bundle exec rake db:migrate'
     echo '####################################'
     bundle exec rake db:migrate
+    echo '####################################'
+    echo '  be rails runner -e development Lhm.cleanup(true)'
+    echo '####################################'
+    bundle exec rails runner -e development 'Lhm.cleanup(true)'
     echo '####################################'
     echo '  bundle exec rake db:test:prepare'
     echo '####################################'
