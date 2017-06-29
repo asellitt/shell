@@ -23,6 +23,9 @@
 		"Path Tools",
 		"RSpec",
 		"SideBarEnhancements",
-		"Slate"
+		"Slate",
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-contrib-stylelint"
 	]
 }
