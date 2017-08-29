@@ -145,6 +145,11 @@ elif [ -f /usr/local/share/chruby/chruby.sh ]; then
     source /usr/local/share/chruby/auto.sh
 fi
 
+if [ -f $(brew --prefix nvm)/nvm.sh ]; then
+    export NVM_DIR="$HOME/.nvm"
+    .  $(brew --prefix nvm)/nvm.sh
+fi
+
 # FU VIM! GET STUFFED
 #export EDITOR="subl -n -w"
 #export GIT_EDITOR=${EDITOR}
@@ -157,3 +162,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 export GOPATH=$HOME/src/.go
 export LPASS_AGENT_TIMEOUT=0
+
+# envato elements shit
+export PATH="/usr/local/opt/elasticsearch@2.4/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"

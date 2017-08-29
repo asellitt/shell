@@ -59,7 +59,6 @@ function post_install_message() {
   local post_install_message=$1
 
   if [ -z "$POST_INSTALL_MESSAGES" ] ; then
-    log "post install message not set"
     POST_INSTALL_MESSAGES=()
   fi
 
