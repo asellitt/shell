@@ -1,6 +1,15 @@
 #! /bin/bash
 exec_loc=$(readlink $0 || realpath $0)
 DOTFILES_DIR=$(dirname $exec_loc)
+if [ -z "$DOTFILES_DIR" ] ; then
+  DOTFILES_DIR="`dirname \"$0\"`"
+  DOTFILES_DIR="`( cd \"$DOTFILES_DIR\" && pwd )`"
+  if [ -z "$DOTFILES_DIR" ] ; then
+    echo "Could not determine script location"
+    exit 1
+  fi
+fi
+
 source "${DOTFILES_DIR}/install/util_functions.sh"
 source "${DOTFILES_DIR}/install/install_functions.sh"
 
