@@ -77,25 +77,20 @@ function update_packages() {
       log "Brew installed, updating brew"
       brew update
       brew upgrade
+    else
+      log "Neither boxen nor brew installed, installing brew"
+      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     fi
     source ~/.bashrc
   fi
 }
 
 function install_required_packages() {
-  if hash boxen 2>/dev/null; then
-    log 'Boxen detected, skipping package installation'
-  else
-    if ! hash brew 2>/dev/null; then
-      log 'Install brew first: http://brew.sh'
-    else
-      log 'Brew detected, installing required packages'
-      package 'autojump'
-      package 'gh'
-      package 'lastpass-cli'
-      package 'the_silver_searcher'
-    fi
-  fi
+  package "autojump"
+  package "coreutils"
+  package "hub"
+  package "lastpass-cli"
+  package "the_silver_searcher"
 }
 
 function install_banner() {
