@@ -1,8 +1,14 @@
 [user]
   name  = Anthony Sellitti
   email = anthony.sellitti@envato.com
+[include]
+	path = /Users/asellitt/src/shell/secret/git.config.secret
+[core]
+	excludesfile = /Users/asellitt/.gitignore
 [color]
   ui = auto
+[push]
+  default = simple
 [alias]
   a  = add
   b  = personal-build
@@ -30,34 +36,18 @@
   pr = pull-request
   su = set-upstream
   yolo = push --force
-[credential]
-  helper = /opt/boxen/bin/boxen-git-credential
-[color]
-  ui = auto
-[core]
-	excludesfile = /Users/asellitt/.gitignore
 [diff]
   tool = diffmerge
 [difftool "diffmerge"]
   cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
 [merge]
   tool = diffmerge
 [mergetool "diffmerge"]
   cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
   trustExitCode = true
-[push]
-  default = simple
-[hub]
-  protocol = https
-
-[gh]
-  protocol = https
-  autoUpdate = always
-[difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path =
 [mergetool "sourcetree"]
   cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
   trustExitCode = true
-[include]
-	path = /Users/asellitt/src/shell/secret/git.config.secret
