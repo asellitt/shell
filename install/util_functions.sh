@@ -40,11 +40,18 @@ function link() {
 function package() {
   local package=$1
 
-  if brew list $package &>/dev/null; then
-    log "   ${package} installed, skipping"
+  if hash boxen 2>/dev/null; then
+    log "  Boxen detected, skipping ${package} installation"
   else
-    log "   ${package} not installed, installing"
-    brew install $package
+    if hash brew 2>/dev/null; then
+      log "  Brew detected, installing ${package}"
+      if brew list $package &>/dev/null; then
+        log "     ${package} installed, skipping"
+      else
+        log "     ${package} not installed, installing"
+        brew install $package
+      fi
+    fi
   fi
 }
 
