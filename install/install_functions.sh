@@ -48,6 +48,7 @@ function agree_to_xcode_license() {
     if [ `uname` == 'Darwin' ]; then
       log "OSX detected"
       log "Agreeing to xcode license, because fuck you OSX"
+      sudo xcode-select --install
       sudo xcodebuild -license
     fi
   fi
