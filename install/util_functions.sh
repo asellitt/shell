@@ -70,8 +70,8 @@ function print_post_install_messages() {
 
   echo ""
   echo ""
-  echo ""
   log "Post install messages:"
+  echo ""
   printf '%s\n' "${POST_INSTALL_MESSAGES[@]}"
 }
 
