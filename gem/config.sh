@@ -8,6 +8,9 @@ GEM_DIR="${HOME}"
 GEM_MODULE_DIR="${DOTFILES_DIR}/gem"
 link "${GEM_DIR}/.gemrc" "${GEM_MODULE_DIR}/rc"
 
+log "Update RubyGems"
+gem update --system
+
 # default gems
 log "Installing handy gems"
 if ! gem spec bundler > /dev/null 2>&1; then
