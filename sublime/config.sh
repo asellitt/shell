@@ -56,8 +56,6 @@ else
       log "   Installing Syntax Highlighter"
       link "${SUBLIME_USER_PACKAGE_DIR}/syntax_highlighting.py" "${SUBLIME_MODULE_DIR}/syntax_highlighting.py"
 
-      log "Installing Color Scheme"
-      SUBLIME_COLOR_SCHEME_DIR="${SUBLIME_INSTALL_DIR}/Packages/Color Scheme - Default"
-      link "${SUBLIME_COLOR_SCHEME_DIR}/Blackbolt.tmTheme" "${SUBLIME_MODULE_DIR}/theme"
+      post_install_message "SUBLIME: If this is the first run, visit https://packagecontrol.io/installation to install Package Control"
   fi
 fi

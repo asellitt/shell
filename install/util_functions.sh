@@ -55,6 +55,27 @@ function package() {
   fi
 }
 
+function post_install_message() {
+  local post_install_message=$1
+
+  if [ -z "$POST_INSTALL_MESSAGES" ] ; then
+    log "post install message not set"
+    POST_INSTALL_MESSAGES=()
+  fi
+
+  POST_INSTALL_MESSAGES[${#POST_INSTALL_MESSAGES[@]}]=$post_install_message
+}
+
+function print_post_install_messages() {
+  PREFIX="POSTINSTAL"
+
+  echo ""
+  echo ""
+  echo ""
+  log "Post install messages:"
+  printf '%s\n' "${POST_INSTALL_MESSAGES[@]}"
+}
+
 function determine_color_code() {
   local prefix=$1
   local color_offset=0

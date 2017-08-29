@@ -27,3 +27,4 @@ install_required_packages
 log_into_lastpass
 install_banner $BANNER $BANNER_FILE
 install_modules
+print_post_install_messages
