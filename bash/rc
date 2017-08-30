@@ -133,7 +133,7 @@ bind '"\e[A"':history-search-backward
 bind '"\e[B"':history-search-forward
 bind Space:magic-space
 
-export PATH=$PATH:$HOME/path:/user/local/sbin/:$HOME/.git-commands:$HOME/.rbenv/bin:$HOME/pebble-dev/PebbleSDK-2.3/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin
+export PATH=$PATH:$HOME/path:/user/local/sbin/:$HOME/.git-commands:$HOME/.rbenv/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin
 #export CC=/usr/local/bin/gcc-4.2
 export CLICOLOR=1
 

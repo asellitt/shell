@@ -17,3 +17,8 @@ nvm install --lts
 nvm use --lts
 PREFIX="NODE"
 
+log "Installing handy packages"
+if hash npm 2>/dev/null; then
+  log "  npm detected, installing packages"
+  npm install nativefier -g
+fi

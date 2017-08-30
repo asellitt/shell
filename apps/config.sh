@@ -15,6 +15,7 @@ fi
 
 log "Installing casks"
 cask "aws-vault"
+cask "calibre"
 cask "dropbox"
 cask "gimp"
 cask "google-chrome"
@@ -29,6 +30,7 @@ cask "slack"
 cask "slate"
 cask "sourcetree"
 # cask "sublime-text" yes, true. but im on the dev channel
+cask "tripmode"
 
 log "Installing packages"
 package "autojump"
