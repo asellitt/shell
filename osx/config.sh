@@ -38,7 +38,7 @@ else
   log "   Set a shorter Delay until key repeat"
   defaults write NSGlobalDomain InitialKeyRepeat -int 35
   log "   Set a Superman speed keyboard repeat rate"
-  defaults write NSGlobalDomain KeyRepeat -int 0
+  defaults write NSGlobalDomain KeyRepeat -int 1
   log "   Disable “natural” scrolling"
   defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
   log "   Enable tap to click for this user and for the login screen"
@@ -47,7 +47,7 @@ else
   defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
   log "   Enable bottom right corner to right-click"
   defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
-  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -int 0
   defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
   defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
   log "   Enable swipe between pages with three fingers"
@@ -122,7 +122,7 @@ else
   defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
   defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
   log "   Disable the “Are you sure you want to open this application?” dialog"
-  defaults write com.apple.LaunchServices  LSQuarantine -bool false
+  defaults write com.apple.LaunchServices LSQuarantine -bool false
   log "   Automatically quit printer app once the print jobs complete"
   defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
   log "   Disable the crash reporter"
@@ -131,6 +131,9 @@ else
   defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
   log "   Disable useless Dashboard"
   defaults write com.apple.dashboard mcx-disabled -bool true
+  log "   Disable mission control shortcuts"
+  defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 33 '{<dict><key>enabled</key><false/></dict>'
+  defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 35 '{<dict><key>enabled</key><false/></dict>'
   log "   Disable that weird arse dictionary popup crap (cmd+ctrl+D)"
   defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 70 '<dict><key>enabled</key><false/></dict>'
 
@@ -159,6 +162,7 @@ else
   killall Finder /dev/null 2>&1
   killall SystemUIServer /dev/null 2>&1
   killall Dock /dev/null 2>&1
+  killall cfprefsd /dev/null 2>&1
 
   log "Linking applications"
   APP_DIR="${HOME}/Applications"
