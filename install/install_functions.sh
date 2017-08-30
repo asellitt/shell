@@ -85,14 +85,6 @@ function update_packages() {
   fi
 }
 
-function install_required_packages() {
-  package "autojump"
-  package "coreutils"
-  package "hub"
-  package "lastpass-cli"
-  package "the_silver_searcher"
-}
-
 function install_banner() {
   local banner=$1
   local banner_file=$2

@@ -55,6 +55,24 @@ function package() {
   fi
 }
 
+function cask() {
+  local package=$1
+
+  if hash boxen 2>/dev/null; then
+    log "  Boxen detected, skipping ${package} installation"
+  else
+    if hash brew 2>/dev/null; then
+      log "  Brew detected, installing ${package}"
+      if brew cask list $package &>/dev/null; then
+        log "     ${package} installed, skipping"
+      else
+        log "     ${package} not installed, installing"
+        brew cask install $package
+      fi
+    fi
+  fi
+}
+
 function post_install_message() {
   local post_install_message=$1
 
