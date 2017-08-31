@@ -132,8 +132,8 @@ else
   log "   Disable useless Dashboard"
   defaults write com.apple.dashboard mcx-disabled -bool true
   log "   Disable mission control shortcuts"
-  defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 33 '{<dict><key>enabled</key><false/></dict>'
-  defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 35 '{<dict><key>enabled</key><false/></dict>'
+  defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 33 '<dict><key>enabled</key><false/></dict>'
+  defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 35 '<dict><key>enabled</key><false/></dict>'
   log "   Disable that weird arse dictionary popup crap (cmd+ctrl+D)"
   defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 70 '<dict><key>enabled</key><false/></dict>'
 
@@ -173,3 +173,13 @@ else
   link "${APP_DIR}/Shutdown.app" "${APP_MODULE_DIR}/Shutdown.app"
   link "${APP_DIR}/Sleep.app" "${APP_MODULE_DIR}/Sleep.app"
 fi
+
+post install for keyboard config
+post_install_message "OSX: Dont forget to update your keyboard setings:"
+post_install_message "     Keyboard->Keyboard->Modifier Keys->Apple Internal Keyboard->Caps Lock Key => Escape"
+post_install_message "     Keyboard->Keyboard->Modifier Keys->Ergodox->Control => Command"
+post_install_message "     Keyboard->Keyboard->Modifier Keys->Ergodox->Command => Control"
+post_install_message "     Keyboard->Keyboard->Modifier Keys->Ergodox->Command => Control"
+post_install_message "     Keyboard->Keyboard->Touch Bar shows => Expanded Control Strip"
+post_install_message "     Keyboard->Shortcuts->Mission Control->Mission Control Enabled => Disable"
+post_install_message "     Keyboard->Shortcuts->Mission Control->Application windows Enabled => Disable"
