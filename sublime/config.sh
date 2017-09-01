@@ -40,6 +40,7 @@ else
       link "${SUBLIME_USER_PACKAGE_DIR}/Babel.sublime-settings" "${SUBLIME_MODULE_DIR}/Babel.sublime-settings"
       link "${SUBLIME_USER_PACKAGE_DIR}/Base File.sublime-settings" "${SUBLIME_MODULE_DIR}/Base File.sublime-settings"
       link "${SUBLIME_USER_PACKAGE_DIR}/JavaScript (Babel).sublime-settings" "${SUBLIME_MODULE_DIR}/JavaScript (Babel).sublime-settings"
+      link "${SUBLIME_INSTALL_DIR}/Packages/Babel/JavaScript (Babel).sublime-syntax" "${SUBLIME_MODULE_DIR}/JavaScript (Babel).sublime-syntax"
       link "${SUBLIME_USER_PACKAGE_DIR}/JavaScript.sublime-settings" "${SUBLIME_MODULE_DIR}/JavaScript.sublime-settings"
       link "${SUBLIME_USER_PACKAGE_DIR}/JsPrettier.sublime-settings" "${SUBLIME_MODULE_DIR}/JsPrettier.sublime-settings"
       link "${SUBLIME_USER_PACKAGE_DIR}/Markdown (Standard).sublime-settings" "${SUBLIME_MODULE_DIR}/Markdown (Standard).sublime-settings"
