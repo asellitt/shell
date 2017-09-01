@@ -45,6 +45,7 @@ else
       link "${SUBLIME_USER_PACKAGE_DIR}/JsPrettier.sublime-settings" "${SUBLIME_MODULE_DIR}/JsPrettier.sublime-settings"
       link "${SUBLIME_USER_PACKAGE_DIR}/Markdown (Standard).sublime-settings" "${SUBLIME_MODULE_DIR}/Markdown (Standard).sublime-settings"
       link "${SUBLIME_USER_PACKAGE_DIR}/Markdown.sublime-settings" "${SUBLIME_MODULE_DIR}/Markdown.sublime-settings"
+      link "${SUBLIME_USER_PACKAGE_DIR}/Shell-Unix-Generic.sublime-settings" "${SUBLIME_MODULE_DIR}/Shell-Unix-Generic.sublime-settings"
       log "   Installing User Macros"
       link "${SUBLIME_USER_PACKAGE_DIR}/binding_pry.sublime-macro" "${SUBLIME_MODULE_DIR}/binding_pry.sublime-macro"
       link "${SUBLIME_USER_PACKAGE_DIR}/binding_remote_pry.sublime-macro" "${SUBLIME_MODULE_DIR}/binding_remote_pry.sublime-macro"
@@ -54,8 +55,8 @@ else
       link "${SUBLIME_USER_PACKAGE_DIR}/ruby_do_variable_end.sublime-snippet" "${SUBLIME_MODULE_DIR}/ruby_do_variable_end.sublime-snippet"
       log "   Installing User Context Menu"
       link "${SUBLIME_USER_PACKAGE_DIR}/Context.sublime-menu" "${SUBLIME_MODULE_DIR}/Context.sublime-menu"
-      log "   Installing Syntax Highlighter"
-      link "${SUBLIME_USER_PACKAGE_DIR}/syntax_highlighting.py" "${SUBLIME_MODULE_DIR}/syntax_highlighting.py"
+      # log "   Installing Syntax Highlighter"
+      # link "${SUBLIME_USER_PACKAGE_DIR}/syntax_highlighting.py" "${SUBLIME_MODULE_DIR}/syntax_highlighting.py"
 
       post_install_message "SUBLIME: If this is the first run, visit https://packagecontrol.io/installation to install Package Control"
   fi
