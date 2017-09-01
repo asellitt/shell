@@ -174,7 +174,6 @@ else
   link "${APP_DIR}/Sleep.app" "${APP_MODULE_DIR}/Sleep.app"
 fi
 
-post install for keyboard config
 post_install_message "OSX: Dont forget to update your keyboard setings:"
 post_install_message "     Keyboard->Keyboard->Modifier Keys->Apple Internal Keyboard->Caps Lock Key => Escape"
 post_install_message "     Keyboard->Keyboard->Modifier Keys->Ergodox->Control => Command"
