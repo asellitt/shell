@@ -7,9 +7,13 @@ log "Installing required ruby version manager"
 package 'chruby'
 package 'ruby-install'
 
-if hash ruby-install 2>/dev/null; then
-  log "Installing latest ruby"
-  ruby-install ruby --no-reinstall
+if [[ $UPDATE == true ]]; then
+  if hash ruby-install 2>/dev/null; then
+    log "Fetching latest ruby definitions"
+    ruby-install --latest
+    log "Installing latest ruby"
+    ruby-install ruby --no-reinstall
+  fi
 fi
 
 RUBY_DIR="${HOME}"

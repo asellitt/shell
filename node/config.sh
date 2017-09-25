@@ -10,12 +10,14 @@ package 'yarn --without-node'
 log "Ensuring local nvm directory exists"
 mkdir ~/.nvm 2>/dev/null
 
-log "Installing latest node"
-unset PREFIX
-. $(brew --prefix nvm)/nvm.sh
-nvm install --lts
-nvm use --lts
-PREFIX="NODE"
+if [[ $UPDATE == true ]]; then
+  log "Installing latest node"
+  unset PREFIX
+  . $(brew --prefix nvm)/nvm.sh
+  nvm install --lts
+  nvm use --lts
+  PREFIX="NODE"
+fi
 
 log "Installing handy packages"
 if hash npm 2>/dev/null; then
