@@ -75,8 +75,8 @@ function update_packages() {
       boxen
     elif hash brew 2>/dev/null; then
       log "Brew installed, updating brew"
-      brew update
-      brew upgrade
+      brew update -v
+      brew upgrade -v
     else
       log "Neither boxen nor brew installed, installing brew"
       /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
