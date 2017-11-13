@@ -30,6 +30,7 @@ cask "slate"
 cask "sourcetree"
 # cask "sublime-text" yes, true. but im on the dev channel
 cask "tripmode"
+cask "whatsapp"
 
 log "Installing packages"
 package "autojump"
@@ -38,4 +39,4 @@ package "heroku"
 package "hub"
 package "lastpass-cli"
 package "the_silver_searcher"
-
+package "redis"
