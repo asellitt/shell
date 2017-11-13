@@ -35,7 +35,7 @@ bind pad9:cmd chain corner top-right    resize:screenSizeX/6;screenSizeY/6 | cor
 bind left:${trip}  push left  bar-resize:screenSizeX/2
 bind right:${trip} push right bar-resize:screenSizeX/2
 bind up:${trip}    move screenOriginX;screenOriginY screenSizeX;screenSizeY
-bind down:${trip}  grid padding:5 0:6,6 1:6,6
+bind g:${trip}     grid padding:5 0:6,6 1:6,6
 bind /:${trip}     hint ZXCVB
 
 # Nudge Window Bindings
