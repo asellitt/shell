@@ -23,4 +23,6 @@ log "Installing handy packages"
 if hash npm 2>/dev/null; then
   log "  npm detected, installing packages"
   npm install nativefier -g
+  npm install prettier -g
+  npm install create-react-app -g
 fi
