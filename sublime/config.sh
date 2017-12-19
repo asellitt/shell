@@ -55,6 +55,8 @@ else
       link "${SUBLIME_USER_PACKAGE_DIR}/ruby_do_variable_end.sublime-snippet" "${SUBLIME_MODULE_DIR}/ruby_do_variable_end.sublime-snippet"
       log "   Installing User Context Menu"
       link "${SUBLIME_USER_PACKAGE_DIR}/Context.sublime-menu" "${SUBLIME_MODULE_DIR}/Context.sublime-menu"
+      log "   Installing Theme"
+      link "${SUBLIME_USER_PACKAGE_DIR}/theme.tmTheme" "${SUBLIME_MODULE_DIR}/theme"
       # log "   Installing Syntax Highlighter"
       # link "${SUBLIME_USER_PACKAGE_DIR}/syntax_highlighting.py" "${SUBLIME_MODULE_DIR}/syntax_highlighting.py"
 
