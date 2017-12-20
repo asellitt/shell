@@ -37,7 +37,7 @@ function link() {
   ln -s "${from}" "${to}"
 }
 
-function package() {
+function brew_install() {
   local package=$1
 
   if hash boxen 2>/dev/null; then
@@ -55,7 +55,7 @@ function package() {
   fi
 }
 
-function cask() {
+function cask_install() {
   local package=$1
 
   if hash boxen 2>/dev/null; then
@@ -70,6 +70,16 @@ function cask() {
         brew cask install $package
       fi
     fi
+  fi
+}
+
+function mas_install() {
+  local identifier=$1
+  local application=$2
+
+  if hash mas 2>/dev/null; then
+    log "  Mas detected, installing ${application}"
+    mas install $identifier
   fi
 }
 
