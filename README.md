@@ -10,15 +10,39 @@ You make github repo!
 
 ## Installation
 
+### Ensure the machine's SSH Key is known to github
+
+#### Create SSH Key
+
 ```bash
-$> git clone https://github.com/asellitt/shell.git
-$> shell/install.sh -u -l
+ssh-keygen -t rsa -b 4096 -C "asellitt@newmachine.com"
+eval "$(ssh-agent -s)"
+ssh-add -K ~/.ssh/id_rsa
+pbcopy < ~/.ssh/id_rsa.pub
+```
+
+#### Add SSH Key
+
+```
+Profile Pic
+    > Settings
+        > SSH and GPG keys
+            > Add SSH key
+                > Name key/Pate Key
+                    > Add
+```
+
+### Fetch `shell` and run
+
+```bash
+git clone https://github.com/asellitt/shell.git
+shell/install.sh -u -l
 ```
 
 ## Usage
 
 ```bash
-$> dotfiles -h
+dotfiles -h
 
 asellitt's dotfiles install script
 
