@@ -4,8 +4,8 @@ PREFIX="RUBY"
 log "Begin Ruby config"
 
 log "Installing required ruby version manager"
-package 'chruby'
-package 'ruby-install'
+brew_install 'chruby'
+brew_install 'ruby-install'
 
 if [[ $UPDATE == true ]]; then
   if hash ruby-install 2>/dev/null; then

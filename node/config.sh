@@ -4,8 +4,8 @@ PREFIX="NODE"
 log "Begin Node config"
 
 log "Installing required node version manager"
-package 'nvm'
-package 'yarn --without-node'
+brew_install 'nvm'
+brew_install 'yarn --without-node'
 
 log "Ensuring local nvm directory exists"
 mkdir ~/.nvm 2>/dev/null
