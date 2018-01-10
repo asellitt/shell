@@ -11,8 +11,8 @@ You make github repo!
 ## Installation
 
 ```bash
-$> git clone https://github.com/asellitt/dotfiles.git
-$> dotfiles/install.sh -u -l
+$> git clone https://github.com/asellitt/shell.git
+$> shell/install.sh -u -l
 ```
 
 ## Usage
@@ -28,6 +28,7 @@ usage: dotfiles [-b|--banner bannerFile]
                 [-l|--license]
 ```
 
-## Requirements
+## Manual Installs
 
-- [lastpass-cli](https://github.com/lastpass/lastpass-cli) For secret config
+* [Sublime Text 3 (Dev)](https://www.sublimetext.com/3dev) No cask for this, license required.
+* [XChode](https://itunes.apple.com/au/app/xcode/id497799835?mt=12) Version 8 or higher (required for `mas`)
