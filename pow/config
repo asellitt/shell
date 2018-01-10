@@ -1,3 +1,0 @@
-export PATH=/Users/anthony/.rbenv/shims:/Users/anthony/.rbenv/bin:/shims:$(rbenv prefix):$PATH
-export ENABLE_HTTPS="yes"
-export POW_TIMEOUT=3600

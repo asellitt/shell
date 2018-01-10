@@ -1,6 +1,0 @@
-module.exports = {
-  config: {
-    fontSize: 12,
-    fontFamily: "Monaco, monospace"
-  }
-}
