@@ -3,5 +3,5 @@
         "trailingComma": "es5",
         "semi": false
     },
-    "auto_format_on_save": true,
+    "auto_format_on_save": false,
 }
