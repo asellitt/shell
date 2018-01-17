@@ -34,7 +34,7 @@
 		".bundle",
 		".git",
 		".github",
-		"bin",
+		"build",
 		"cops",
 		"foreman",
 		"log",
