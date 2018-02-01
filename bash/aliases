@@ -54,6 +54,7 @@ alias log-into-aws-market='aws-vault login envato-customer-marketplace-app-cloud
 alias fuckme='npm'
 alias fuckyoueslint='yarn run eslint:fix'
 alias readlink='greadlink'
+alias box-sync-lock-files='find ~/Box\ Sync/ -print0 | xargs -0 chflags uchg && find ~/Box\ Sync/ -type d -print0 | xargs -0 chflags nouchg'
 
 # fun
 alias minecraft='pushd .;cd /media/one/games/minecraft;./start.sh;popd'
