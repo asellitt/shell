@@ -49,3 +49,4 @@ log "Installing App Store applications"
 mas_install "540348655" "Monosnap"
 # mas_install "497799835" "Xcode" yup, but this is required before mas can be installed
 mas_install "926036361" "LastPass"
+mas_install "425424353" "The Unarchiver"

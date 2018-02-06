@@ -54,8 +54,14 @@ alias log-into-aws-market='aws-vault login envato-customer-marketplace-app-cloud
 alias fuckme='npm'
 alias fuckyoueslint='yarn run eslint:fix'
 alias readlink='greadlink'
+alias box-sync-lock-files='find ~/Box\ Sync/ -print0 | xargs -0 chflags uchg && find ~/Box\ Sync/ -type d -print0 | xargs -0 chflags nouchg'
 
 # fun
 alias minecraft='pushd .;cd /media/one/games/minecraft;./start.sh;popd'
 alias mud='emacs -batch -l dunnet'
 alias weather='curl http://wttr.in/'
+
+# elements
+alias run-the-fucking-test='yarn wes test:e2e'
+alias show-the-fucking-test='yarn wes test:e2e-show'
+alias run-the-fucking-test-server='yarn wes e2e:dev'
