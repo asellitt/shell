@@ -14,6 +14,7 @@
 		"Cucumber",
 		"Cucumber Step Finder",
 		"Default File Type",
+		"Elixir",
 		"Fix Mac Path",
 		"GitGutter",
 		"GitSavvy",
@@ -26,7 +27,7 @@
 		"SideBarEnhancements",
 		"Slate",
 		"SublimeLinter",
-		"SublimeLinter-contrib-stylelint",
-		"SublimeLinter-eslint"
+		"SublimeLinter-eslint",
+		"SublimeLinter-stylelint"
 	]
 }
