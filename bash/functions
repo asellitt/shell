@@ -1,72 +1,75 @@
 # tab name changer
 function tabname() {
-    echo -ne "\033]0;$@\007"
+  echo -ne "\033]0;$@\007"
 }
 
 # history searcher
 function findhistory() {
-    history | grep -i "$@" ;
+  history | grep -i "$@" ;
 }
 
 # bundle install, db:migrate, db:privileged:cleanup_lhm, db:test prepare, npm install
 function bimpn {
-    echo '####################################'
-    echo '  bundle install --local'
-    echo '####################################'
-    bundle install --local
-    echo '####################################'
-    echo '  bundle exec rake db:migrate'
-    echo '####################################'
-    bundle exec rake db:migrate
-    echo '####################################'
-    echo '  be rails runner -e development Lhm.cleanup(true)'
-    echo '####################################'
-    bundle exec rails runner -e development 'Lhm.cleanup(true)'
-    echo '####################################'
-    echo '  bundle exec rake db:test:prepare'
-    echo '####################################'
-    bundle exec rake db:test:prepare
-    echo '####################################'
-    echo '  npm install'
-    echo '####################################'
-    npm install
+  echo '####################################'
+  echo '  bundle install --local'
+  echo '####################################'
+  bundle install --local
+  echo '####################################'
+  echo '  bundle exec rake db:migrate'
+  echo '####################################'
+  bundle exec rake db:migrate
+  echo '####################################'
+  echo '  be rails runner -e development Lhm.cleanup(true)'
+  echo '####################################'
+  bundle exec rails runner -e development 'Lhm.cleanup(true)'
+  echo '####################################'
+  echo '  bundle exec rake db:test:prepare'
+  echo '####################################'
+  bundle exec rake db:test:prepare
+  echo '####################################'
+  echo '  npm install'
+  echo '####################################'
+  npm install
 }
 
 # current git branch
 function current-branch {
-    git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1 /' | sed -e 's/^ *//g' -e 's/ *$//g'
+  git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1 /' | sed -e 's/^ *//g' -e 's/ *$//g'
 }
 
 # git easy push
 function geps {
-    git push $* origin $(current-branch)
-    #git build
+  git push $* origin $(current-branch)
+  #git build
 }
 
 # git easy pull
 function gepl {
-    git pull --rebase $* origin $(current-branch)
+  git pull --rebase $* origin $(current-branch)
 }
 
 # git checkout fuzzy
 function gcf {
-    branch="$(git branch | cut -b3- | grep "$1")"
-    if [[ -n "$branch" ]]; then
-        git checkout "$branch"
-    else
-        echo "Couldn't find branch matching $1." >&2
-    fi
+  branch="$(git branch | cut -b3- | grep "$1")"
+  if [[ -n "$branch" ]]; then
+    git checkout "$branch"
+  else
+    echo "Couldn't find branch matching $1." >&2
+  fi
 }
 
 # rage-quit
 function fuck() {
-    killall -9 $2;
-    if [ $? == 0 ]
-    then
-        echo
-        echo " (╯°□°）╯︵$(echo $2|flip &2>/dev/null)"
-        echo
-    fi
+  killall -9 $2;
+  if [ $? == 0 ]; then
+    tableflip $2
+  fi
+}
+
+function tableflip() {
+  echo
+  echo " (╯°□°）╯︵$(echo $1|flip)"
+  echo
 }
 
 function killport() {
