@@ -9,6 +9,7 @@ if hash boxen 2>/dev/null; then
 elif hash brew 2>/dev/null; then
   log "  Brew detected, tapping caskroom"
   brew tap caskroom/cask
+  brew tap caskroom/fonts
 else
   log "  Brew not detected, skipping tap"
 fi
@@ -34,6 +35,7 @@ cask_install "sourcetree"
 cask_install "tripmode"
 cask_install "visual-studio-code"
 cask_install "whatsapp"
+cask_install "font-fira-code"
 
 log "Installing packages"
 brew_install "autojump"

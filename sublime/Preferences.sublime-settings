@@ -44,8 +44,13 @@
 		"tmp",
 		"vendor"
 	],
-	"font_face": "Menlo",
+	"font_face": "Fira Code Retina",
 	"font_size": 12,
+	"font_options":
+	[
+		"subpixel_antialias",
+		"gray_antialias"
+	],
 	"hide_minimap": true,
 	"highlight_modified_tabs": true,
 	"hilight_line": true,
