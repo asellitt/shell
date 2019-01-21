@@ -25,4 +25,5 @@ if hash npm 2>/dev/null; then
   npm install nativefier -g
   npm install prettier -g
   npm install create-react-app -g
+  npm install git-mob -g
 fi

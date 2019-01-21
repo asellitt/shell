@@ -1,0 +1,76 @@
+{
+  "coauthors": {
+    "kc": {
+      "name": "Kelle Connolly",
+      "email": "kelle.connolly@envato.com"
+    },
+    "mc": {
+      "name": "Mario Cuba",
+      "email": "mario.cuba@envato.com"
+    },
+    "ab": {
+      "name": "Anthony Bordonaro",
+      "email": "anthony.bordonaro@envato.com"
+    },
+    "da": {
+      "name": "Damien Adermann",
+      "email": "damien.adermann@envato.com"
+    },
+    "od": {
+      "name": "Oliver Diestel",
+      "email": "oliver.diestel@envato.com"
+    },
+    "lp": {
+      "name": "Lucas Parry",
+      "email": "lucas@envato.com"
+    },
+    "tf": {
+      "name": "Tanya Fonina",
+      "email": "tanya.fonina@envato.com"
+    },
+    "pj": {
+      "name": "Prasanna Joshi",
+      "email": "prasanna.joshi@envato.com"
+    },
+    "db": {
+      "name": "Daniel Budden",
+      "email": "daniel.budden@envato.com"
+    },
+    "gs": {
+      "name": "Glen Stampoultzis",
+      "email": "glen.stampoultzis@envato.com"
+    },
+    "lh": {
+      "name": "Lindsay Holmwood",
+      "email": "lindsay.holmwood@envato.com"
+    },
+    "jg": {
+      "name": "Jamie Grooby",
+      "email": "jamie.grooby@envato.com"
+    },
+    "gt": {
+      "name": "Grant Tibbey",
+      "email": "grant.tibbey@envato.com"
+    },
+    "sd": {
+      "name": "Stacey Douglas",
+      "email": "stacey.douglas@envato.com"
+    },
+    "ih": {
+      "name": "Istvan Huszar",
+      "email": "istvan.huszar@envato.com"
+    },
+    "mt": {
+      "name": "Mark Turnley",
+      "email": "mark.turnley@envato.com"
+    },
+    "as": {
+      "name": "Anthony Sellitti",
+      "email": "anthony.sellitti@envato.com"
+    },
+    "gb": {
+      "name": "Glenn Baker",
+      "email": "glenn.baker@envato.com"
+    }
+  }
+}
