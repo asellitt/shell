@@ -1,0 +1,10 @@
+{
+    "workbench.startupEditor": "welcomePage",
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "'FiraCode-Retina', Menlo, Monaco, 'Courier New', monospace",
+    "files.autoSave": "onWindowChange",
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "all",
+    "editor.cursorStyle": "line-thin",
+    "editor.fontLigatures": true
+}
