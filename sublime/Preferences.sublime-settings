@@ -45,12 +45,12 @@
 		"vendor"
 	],
 	"font_face": "Fira Code Retina",
-	"font_size": 12,
 	"font_options":
 	[
 		"subpixel_antialias",
 		"gray_antialias"
 	],
+	"font_size": 12,
 	"hide_minimap": true,
 	"highlight_modified_tabs": true,
 	"hilight_line": true,
