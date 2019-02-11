@@ -36,7 +36,7 @@
   sc = spring-clean
   pr = pull-request
   su = set-upstream
-  yolo = push --force
+  yolo = push --force-with-lease
   pickaxe = log -p -S
   pa = log -p -S
 [diff]
