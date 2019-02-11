@@ -2,9 +2,10 @@
   name  = Anthony Sellitti
   email = anthony.sellitti@envato.com
 [include]
-	path = /Users/asellitt/src/shell/secret/git.config.secret
+  path = /Users/asellitt/src/shell/secret/git.config.secret
 [core]
-	excludesfile = /Users/asellitt/.gitignore
+  excludesfile = /Users/asellitt/.gitignore
+  editor = sublime -n -w
 [color]
   ui = auto
 [push]
