@@ -36,6 +36,8 @@
   pr = pull-request
   su = set-upstream
   yolo = push --force
+  pickaxe = log -p -S
+  pa = log -p -S
 [diff]
   tool = diffmerge
 [difftool "diffmerge"]
