@@ -4,20 +4,24 @@ PREFIX="NODE"
 log "Begin Node config"
 
 log "Installing required node version manager"
-brew_install 'nvm'
-brew_install 'yarn --without-node'
+brew_install 'n'
 
-log "Ensuring local nvm directory exists"
-mkdir ~/.nvm 2>/dev/null
+log "Installing yarn"
+brew_install 'yarn'
+
+NODE_DIR="${HOME}"
+NODE_MODULE_DIR="${DOTFILES_DIR}/node"
 
 if [[ $UPDATE == true ]]; then
-  log "Installing latest node"
-  unset PREFIX
-  . $(brew --prefix nvm)/nvm.sh
-  nvm install --lts
-  nvm use --lts
-  PREFIX="NODE"
+  local node_version=$(cat "${NODE_MODULE_DIR}/version")
+
+  if hash n 2>/dev/null; then
+    log "Installing latest node: ${node_version}"
+    N_PREFIX=${NODE_DIR} n ${node_version}
+  fi
 fi
+
+link "${NODE_DIR}/.nvmrc" "${NODE_MODULE_DIR}/version"
 
 log "Installing handy packages"
 if hash npm 2>/dev/null; then
