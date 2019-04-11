@@ -27,8 +27,13 @@
 		"RSpec",
 		"SideBarEnhancements",
 		"Slate",
+		"sublime-rufo",
 		"SublimeLinter",
 		"SublimeLinter-eslint",
 		"SublimeLinter-stylelint"
+	],
+	"repositories":
+	[
+		"https://github.com/ruby-formatter/sublime-rufo"
 	]
 }
