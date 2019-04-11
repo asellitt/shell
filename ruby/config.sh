@@ -16,10 +16,10 @@ if [[ $UPDATE == true ]]; then
   if hash ruby-install 2>/dev/null; then
     log "Fetching latest ruby definitions"
     ruby-install --latest
-    log "Installing latest ruby"
+    log "Installing latest ruby: ${ruby_version}"
     ruby-install ruby "${ruby_version}" --no-reinstall
 
-    log "Switching to correct ruby version"
+    log "Switching to correct ruby version: ${ruby_version}"
     source /usr/local/share/chruby/chruby.sh
     source /usr/local/share/chruby/auto.sh
   fi
