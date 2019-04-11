@@ -57,6 +57,7 @@ alias readlink='greadlink'
 alias box-sync-lock-files='find ~/Box\ Sync/ -print0 | xargs -0 chflags uchg && find ~/Box\ Sync/ -type d -print0 | xargs -0 chflags nouchg'
 alias fuck-you-rubocop='bundle exec rubocop --auto-correct'
 alias fuck-you-rubocrap='bundle exec rubocop --auto-correct'
+alias run-rufo='git diff --cached --name-only --diff-filter=ACM | grep "\.rb$" | xargs bundle exec rufo'
 
 # fun
 alias minecraft='pushd .;cd /media/one/games/minecraft;./start.sh;popd'
