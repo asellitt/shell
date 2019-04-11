@@ -9,7 +9,7 @@ if hash boxen 2>/dev/null; then
 elif hash brew 2>/dev/null; then
   log "  Brew detected, tapping caskroom"
   brew tap caskroom/cask
-  brew tap caskroom/fonts
+  brew tap homebrew/cask-fonts
 else
   log "  Brew not detected, skipping tap"
 fi
