@@ -72,5 +72,6 @@ else
     link "${SUBLIME_USER_PACKAGE_DIR}/deselect_command_palette_text.py" "${SUBLIME_MODULE_DIR}/deselect_command_palette_text.py"
 
     post_install_message "SUBLIME: If this is the first run, visit https://packagecontrol.io/installation to install Package Control"
+    post_install_message ""
   fi
 fi

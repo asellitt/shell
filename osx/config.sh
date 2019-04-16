@@ -182,3 +182,4 @@ post_install_message "     Keyboard->Keyboard->Modifier Keys->Ergodox->Command =
 post_install_message "     Keyboard->Keyboard->Touch Bar shows => Expanded Control Strip"
 post_install_message "     Keyboard->Shortcuts->Mission Control->Mission Control Enabled => Disable"
 post_install_message "     Keyboard->Shortcuts->Mission Control->Application windows Enabled => Disable"
+post_install_message ""
