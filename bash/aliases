@@ -49,15 +49,18 @@ alias powrestart='touch ~/.pow/restart.txt'
 alias irb='pry'
 alias bn='boxen'
 alias replica-tunnel='ssh -fNg -L 3307:127.0.0.1:3306 reporting-db00'
-alias fuck-you-structure-sql='git checkout -- db/structure.sql'
 alias log-into-aws-market='aws-vault login envato-customer-marketplace-app-cloudformation-user'
-alias fuckme='npm'
-alias fuckyoueslint='yarn run eslint:fix'
 alias readlink='greadlink'
 alias box-sync-lock-files='find ~/Box\ Sync/ -print0 | xargs -0 chflags uchg && find ~/Box\ Sync/ -type d -print0 | xargs -0 chflags nouchg'
+alias run-rufo='git diff --cached --name-only --diff-filter=ACM | grep "\.rb$" | xargs bundle exec rufo'
+
+#ragevelopment
+alias fuckme='npm'
+alias fuck-you-structure-sql='git checkout -- db/structure.sql'
+alias fuck-you-eslint='yarn run eslint:fix'
 alias fuck-you-rubocop='bundle exec rubocop --auto-correct'
 alias fuck-you-rubocrap='bundle exec rubocop --auto-correct'
-alias run-rufo='git diff --cached --name-only --diff-filter=ACM | grep "\.rb$" | xargs bundle exec rufo'
+alias fuck-you-rufo='git diff --cached --name-only --diff-filter=ACM | grep "\.rb$" | xargs bundle exec rufo'
 
 # fun
 alias minecraft='pushd .;cd /media/one/games/minecraft;./start.sh;popd'
