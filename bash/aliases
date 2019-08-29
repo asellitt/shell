@@ -61,16 +61,14 @@ alias fuck-you-eslint='yarn run eslint:fix'
 alias fuck-you-rubocop='bundle exec rubocop --auto-correct'
 alias fuck-you-rubocrap='bundle exec rubocop --auto-correct'
 alias fuck-you-rufo='git diff --cached --name-only --diff-filter=ACM | grep "\.rb$" | xargs bundle exec rufo'
-
-# fun
-alias minecraft='pushd .;cd /media/one/games/minecraft;./start.sh;popd'
-alias mud='emacs -batch -l dunnet'
-alias weather='curl http://wttr.in/'
-
-# elements
 alias run-the-fucking-test='yarn wes test:e2e'
 alias show-the-fucking-test='yarn wes test:e2e-show'
 alias run-the-fucking-test-server='yarn wes e2e:dev'
 alias run-the-fucking-account-test='yarn wea test:e2e'
 alias show-the-fucking-account-test='yarn wea test:e2e-show'
 alias run-the-fucking-account-test-server='yarn wea e2e:dev'
+
+# fun
+alias minecraft='pushd .;cd /media/one/games/minecraft;./start.sh;popd'
+alias mud='emacs -batch -l dunnet'
+alias weather='curl http://wttr.in/'
