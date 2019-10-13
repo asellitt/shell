@@ -166,3 +166,7 @@ export LPASS_AGENT_TIMEOUT=0
 # envato elements shit
 export PATH="/usr/local/opt/elasticsearch@2.4/bin:$PATH"
 export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
+
+# for asdf. obviously.
+source $HOME/.asdf/asdf.sh
+source $HOME/.asdf/completions/asdf.bash
