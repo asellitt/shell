@@ -169,3 +169,6 @@ export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
 
 # for asdf. obviously.
 source /usr/local/opt/asdf/asdf.sh
+
+# to compile ergodox firmware
+export PATH="/usr/local/opt/avr-gcc@6/bin:$PATH"
