@@ -7,9 +7,13 @@ log "Tapping the caskroom"
 if hash boxen 2>/dev/null; then
   log "  Boxen detected, skipping tap"
 elif hash brew 2>/dev/null; then
-  log "  Brew detected, tapping caskroom"
-  brew tap caskroom/cask
+  log "  Brew detected, tapping additional casks"
   brew tap homebrew/cask-fonts
+  brew tap homebrew/cask-drivers
+  if [[ $UPDATE == true ]]; then
+    log "  Upgrading casks"
+    brew cask upgrade -v
+  fi
 else
   log "  Brew not detected, skipping tap"
 fi
@@ -25,6 +29,7 @@ cask_install "gimp"
 cask_install "google-chrome"
 cask_install "imageoptim"
 cask_install "iterm2"
+cask_install "kensington-trackball-works"
 cask_install "licecap"
 cask_install "macdown"
 cask_install "psequel"
