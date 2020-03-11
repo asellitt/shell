@@ -105,13 +105,13 @@ function install_modules() {
   log "Finding compatible modules in: ${DOTFILES_DIR}"
 
   for modules in ${DOTFILES_DIR}/*/ ; do
-      local module="${modules%/}"
-      local module_config="${module}/config.sh"
+    local module="${modules%/}"
+    local module_config="${module}/config.sh"
 
-      if [ -f "$module_config" ]; then
-        PREFIX="INSTALL"
-        log "Installing '${module}' config"
-        source $module_config
-      fi
+    if [ -f "$module_config" ]; then
+      PREFIX="INSTALL"
+      log "Installing '${module}' config"
+      source $module_config
+    fi
   done
 }

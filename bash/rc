@@ -145,9 +145,9 @@ elif [ -f /usr/local/share/chruby/chruby.sh ]; then
     source /usr/local/share/chruby/auto.sh
 fi
 
-if [ -f $(brew --prefix nvm)/nvm.sh ]; then
-    export NVM_DIR="$HOME/.nvm"
-    .  $(brew --prefix nvm)/nvm.sh
+if [ -f $(brew --prefix asdf)/asdf.sh ]; then
+    . $(brew --prefix asdf)/asdf.sh
+    . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
 fi
 
 # FU VIM! GET STUFFED
@@ -167,8 +167,6 @@ export LPASS_AGENT_TIMEOUT=0
 export PATH="/usr/local/opt/elasticsearch@2.4/bin:$PATH"
 export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
 
-# for asdf. obviously.
-source /usr/local/opt/asdf/asdf.sh
 
 # to compile ergodox firmware
 export PATH="/usr/local/opt/avr-gcc@6/bin:$PATH"

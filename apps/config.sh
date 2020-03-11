@@ -43,7 +43,6 @@ cask_install "visual-studio-code"
 cask_install "whatsapp"
 
 log "Installing packages"
-brew_install "asdf"
 brew_install "autojump"
 brew_install "coreutils"
 brew_install "heroku"
