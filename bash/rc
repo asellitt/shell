@@ -152,6 +152,8 @@ if hash direnv 2>/dev/null;then
     eval "$(direnv hook bash)"
 fi
 
+export LESS="-R"
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
