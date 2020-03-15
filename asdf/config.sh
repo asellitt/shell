@@ -13,17 +13,22 @@ fi
 
 ASDF_HOME_DIR="${HOME}"
 ASDF_MODULE_DIR="${DOTFILES_DIR}/asdf"
-ilink "${ASDF_HOME_DIR}/.tool-versions" "${ASDF_MODULE_DIR}/tool-versions"
+link "${ASDF_HOME_DIR}/.tool-versions" "${ASDF_MODULE_DIR}/tool-versions"
 link "${ASDF_HOME_DIR}/.asdfrc" "${RUBY_MODULE_DIR}/rc"
 
 if hash asdf 2>/dev/null; then
   log "  asdf detected, installing version managers"
 
-  # log "  Installing required ruby version manager"
-  # asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+  log "  Installing required ruby version manager"
+  brew_install "ruby-build"
+  asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 
-  # log "  Installing required nodejs version manager"
-  # asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+  log "  Installing required nodejs version manager"
+  brew_install "coreutils"
+  brew_install "gpg"
+  asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+  log "  Importing nodejs release team keyring"
+  bash ${ASDF_HOME_DIR}/.asdf/plugins/nodejs/bin/import-release-team-keyring
 
   log "  Installing required erlang version manager"
   asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git

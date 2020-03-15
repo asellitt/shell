@@ -143,25 +143,20 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-if hash rbenv 2>/dev/null;then
-    export PATH=$PATH:$HOME/.rbenv/bin
-    eval "$(rbenv init -)"
-elif [ -f /usr/local/share/chruby/chruby.sh ]; then
-    source /usr/local/share/chruby/chruby.sh
-    source /usr/local/share/chruby/auto.sh
-fi
-
 if [ -f $(brew --prefix asdf)/asdf.sh ]; then
     . $(brew --prefix asdf)/asdf.sh
     . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
+fi
+
+if hash direnv 2>/dev/null;then
+    eval "$(direnv hook bash)"
 fi
 
 # FU VIM! GET STUFFED
 #export EDITOR="subl -n -w"
 #export GIT_EDITOR=${EDITOR}
 
-export LESS="-R"
-#eval "$(lesspipe)"
+export LESS="-R"#eval "$(lesspipe)"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -172,7 +167,6 @@ export LPASS_AGENT_TIMEOUT=0
 # envato elements shit
 export PATH="/usr/local/opt/elasticsearch@2.4/bin:$PATH"
 export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
-
 
 # to compile ergodox firmware
 export PATH="/usr/local/opt/avr-gcc@6/bin:$PATH"
