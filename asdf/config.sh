@@ -27,8 +27,12 @@ if hash asdf 2>/dev/null; then
   brew_install "coreutils"
   brew_install "gpg"
   asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-  log "  Importing nodejs release team keyring"
-  bash ${ASDF_HOME_DIR}/.asdf/plugins/nodejs/bin/import-release-team-keyring
+  # SLOW: uncomment if shit goes weeeeird with a nodejs install
+  # log "  Importing nodejs release team keyring"
+  # bash ${ASDF_HOME_DIR}/.asdf/plugins/nodejs/bin/import-release-team-keyring
+
+  log "  Installing required yarn version manager"
+  asdf plugin-add yarn
 
   log "  Installing required erlang version manager"
   asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git

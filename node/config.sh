@@ -3,9 +3,6 @@
 PREFIX="NODE"
 log "Begin Node config"
 
-log "Installing yarn"
-brew_install 'yarn'
-
 NODE_DIR="${HOME}"
 NODE_MODULE_DIR="${DOTFILES_DIR}/node"
 
