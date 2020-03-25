@@ -1,6 +1,7 @@
 bundler
+ejson
 pry
-pry-git
 pry-byebug
+pry-git
 pry-stack_explorer
 solargraph
