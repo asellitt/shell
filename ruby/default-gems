@@ -1,0 +1,7 @@
+bundler
+ejson
+pry
+pry-byebug
+pry-git
+pry-stack_explorer
+solargraph
