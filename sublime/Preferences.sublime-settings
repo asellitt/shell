@@ -50,7 +50,7 @@
 		"subpixel_antialias",
 		"gray_antialias"
 	],
-	"font_size": 12,
+	"font_size": 14,
 	"hide_minimap": true,
 	"highlight_modified_tabs": true,
 	"hilight_line": true,
