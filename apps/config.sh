@@ -20,6 +20,7 @@ fi
 
 log "Installing casks"
 cask_install "1password"
+cask_install "authy"
 cask_install "aws-vault"
 cask_install "calibre"
 cask_install "discord"
