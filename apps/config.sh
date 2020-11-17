@@ -12,7 +12,7 @@ elif hash brew 2>/dev/null; then
   brew tap homebrew/cask-drivers
   if [[ $UPDATE == true ]]; then
     log "  Upgrading casks"
-    brew cask upgrade -v
+    brew upgrade --cask -v
   fi
 else
   log "  Brew not detected, skipping tap"
