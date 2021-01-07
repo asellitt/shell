@@ -63,11 +63,11 @@ function cask_install() {
   else
     if hash brew 2>/dev/null; then
       log "  Brew detected, installing ${package}"
-      if brew cask list $package &>/dev/null; then
+      if brew cask list --cask $package &>/dev/null; then
         log "     ${package} installed, skipping"
       else
         log "     ${package} not installed, installing"
-        brew cask install $package
+        brew install --cask $package
       fi
     fi
   fi
