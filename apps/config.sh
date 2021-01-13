@@ -18,6 +18,13 @@ else
   log "  Brew not detected, skipping tap"
 fi
 
+if hash mas 2>/dev/null; then
+  if [[ $UPDATE == true ]]; then
+    log "  Mas detected, upgrading apps"
+    brew upgrade --cask -v
+  fi
+fi
+
 log "Installing casks"
 cask_install "1password"
 cask_install "authy"
@@ -60,8 +67,9 @@ brew_install "the_silver_searcher"
 brew_install "watch"
 
 log "Installing App Store applications"
+mas_install "441258766" "Magnet"
 mas_install "540348655" "Monosnap"
-# mas_install "497799835" "Xcode" yup, but this is required before mas can be installed
 mas_install "926036361" "LastPass"
 mas_install "425424353" "The Unarchiver"
 mas_install "603117688" "CCMenu"
+# mas_install "497799835" "Xcode" yup, but this is required before mas can be installed
