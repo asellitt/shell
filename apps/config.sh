@@ -4,9 +4,7 @@ PREFIX="APPS"
 log "Begin Apps config"
 
 log "Tapping the caskroom"
-if hash boxen 2>/dev/null; then
-  log "  Boxen detected, skipping tap"
-elif hash brew 2>/dev/null; then
+if hash brew 2>/dev/null; then
   log "  Brew detected, tapping additional casks"
   brew tap homebrew/cask-fonts
   brew tap homebrew/cask-drivers

@@ -40,17 +40,13 @@ function link() {
 function brew_install() {
   local package=$1
 
-  if hash boxen 2>/dev/null; then
-    log "  Boxen detected, skipping ${package} installation"
-  else
-    if hash brew 2>/dev/null; then
-      log "  Brew detected, installing ${package}"
-      if brew list $package &>/dev/null; then
-        log "     ${package} installed, skipping"
-      else
-        log "     ${package} not installed, installing"
-        brew install $package
-      fi
+  if hash brew 2>/dev/null; then
+    log "  Brew detected, installing ${package}"
+    if brew list $package &>/dev/null; then
+      log "     ${package} installed, skipping"
+    else
+      log "     ${package} not installed, installing"
+      brew install $package
     fi
   fi
 }
@@ -58,17 +54,13 @@ function brew_install() {
 function cask_install() {
   local package=$1
 
-  if hash boxen 2>/dev/null; then
-    log "  Boxen detected, skipping ${package} installation"
-  else
-    if hash brew 2>/dev/null; then
-      log "  Brew detected, installing ${package}"
-      if brew list --cask $package &>/dev/null; then
-        log "     ${package} installed, skipping"
-      else
-        log "     ${package} not installed, installing"
-        brew install --cask $package
-      fi
+  if hash brew 2>/dev/null; then
+    log "  Brew detected, installing ${package}"
+    if brew list --cask $package &>/dev/null; then
+      log "     ${package} installed, skipping"
+    else
+      log "     ${package} not installed, installing"
+      brew install --cask $package
     fi
   fi
 }
