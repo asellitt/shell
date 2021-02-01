@@ -51,6 +51,7 @@ cask_install "sourcetree"
 cask_install "tripmode"
 cask_install "visual-studio-code"
 cask_install "whatsapp"
+cask_install "zsa-wally"
 
 log "Installing packages"
 brew_install "autojump"
