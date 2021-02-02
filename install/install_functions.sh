@@ -68,17 +68,12 @@ function update_packages() {
   local update=$1
 
   if [[ $update == true ]]; then
-    if hash boxen 2>/dev/null; then
-      log "Boxen detected, updating boxen"
-      log "Resetting the sudo askpass timer, because fuck you boxen."
-      sudo ls >/dev/null
-      boxen
-    elif hash brew 2>/dev/null; then
+    if hash brew 2>/dev/null; then
       log "Brew installed, updating brew"
       brew update -v
       brew upgrade -v
     else
-      log "Neither boxen nor brew installed, installing brew"
+      log "Brew not installed, installing brew"
       /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     fi
     source ~/.bashrc
