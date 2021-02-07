@@ -55,6 +55,8 @@ function agree_to_xcode_license() {
 }
 
 function log_into_lastpass() {
+  PREFIX="LASTPASS"
+
   if [[ -f "${HOME}/.lpass/username" ]]; then
     log "lastpass-cli already logged in, continuing"
   else

@@ -27,12 +27,16 @@ function log() {
   echo -e "${erst}"
 }
 
+function remove() {
+  local to=$1
+  log "   Removing ${to}"
+  rm "${to}" 2>/dev/null
+}
+
 function link() {
   local to=$1
   local from=$2
-
-  log "   Removing ${to}"
-  rm "${to}" 2>/dev/null
+  remove "${to}"
   log "   Linking ${from}"
   ln -s "${from}" "${to}"
 }
