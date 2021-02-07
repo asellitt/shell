@@ -7,13 +7,7 @@ BASH_DIR="${HOME}"
 BASH_MODULE_DIR="${DOTFILES_DIR}/bash"
 
 if [[ -z $BASH_VERSION ]]; then
-  log "Bash not in use, removing config"
-  remove "${BASH_DIR}/.bashrc"
-  remove "${BASH_DIR}/.bash_profile"
-  remove "${BASH_DIR}/.bash_include"
-  remove "${BASH_DIR}/.bash_aliases"
-  remove "${BASH_DIR}/.bash_functions"
-  remove "${BASH_DIR}/.bash_logout"
+  log "Bash not in use skipping config"
 else
   log "Installing Bash config"
   link "${BASH_DIR}/.bashrc" "${BASH_MODULE_DIR}/rc"
