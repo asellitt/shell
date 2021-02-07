@@ -30,7 +30,7 @@ function parse_commandline_arguments() {
 
 function create_symlinked_executable() {
   local dotfiles_dir="${DOTFILES_DIR}"
-  local executable_dir="${DOTFILES_DIR}/bash/path"
+  local executable_dir="${DOTFILES_DIR}/shell/path"
 
   log "Creating executable"
   link "${executable_dir}/dotfiles" "${dotfiles_dir}/install.sh"
@@ -85,7 +85,7 @@ function install_banner() {
   local banner_file=$2
 
   if [[ $banner == true ]]; then
-    local banner_dir="${DOTFILES_DIR}/bash/header"
+    local banner_dir="${DOTFILES_DIR}/shell/header"
     if [[ ! -f "${banner_dir}/${banner_file}" ]]; then
       log "Banner ${banner_file} doesnt exist, available banners:"
       ls ${banner_dir}
