@@ -14,7 +14,7 @@ fi
 ASDF_HOME_DIR="${HOME}"
 ASDF_MODULE_DIR="${DOTFILES_DIR}/asdf"
 link "${ASDF_HOME_DIR}/.tool-versions" "${ASDF_MODULE_DIR}/tool-versions"
-link "${ASDF_HOME_DIR}/.asdfrc" "${RUBY_MODULE_DIR}/rc"
+link "${ASDF_HOME_DIR}/.asdfrc" "${ASDF_MODULE_DIR}/rc"
 
 if hash asdf 2>/dev/null; then
   log "  asdf detected, installing version managers"
