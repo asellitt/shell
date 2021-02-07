@@ -5,9 +5,10 @@ log "Begin Bash config"
 
 BASH_DIR="${HOME}"
 BASH_MODULE_DIR="${DOTFILES_DIR}/bash"
+local shell_version=$($SHELL --version)
 
-if [[ -z $BASH_VERSION ]]; then
-  log "Bash not in use skipping config"
+if [[ "${shell_version}" != *"bash"* ]]; then
+  log "Bash not in use, skipping config"
 else
   log "Installing Bash config"
   link "${BASH_DIR}/.bashrc" "${BASH_MODULE_DIR}/rc"
