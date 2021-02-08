@@ -1,6 +1,6 @@
 # Header definitions
-if [ -f ~/.bash_header ]; then
-    . ~/.bash_header
+if [ -f ~/.header ]; then
+    . ~/.header
 fi
 
 # Function definitions

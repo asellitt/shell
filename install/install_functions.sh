@@ -93,7 +93,7 @@ function install_banner() {
       ls ${banner_dir}
     else
       log "Installing banner: ${banner_file}"
-      link "${HOME}/.bash_header" "${banner_dir}/${banner_file}"
+      link "${HOME}/.header" "${banner_dir}/${banner_file}"
     fi
   fi
 }
