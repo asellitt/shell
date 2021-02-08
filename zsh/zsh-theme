@@ -1,0 +1,128 @@
+# vim:ft=zsh ts=2 sw=2 sts=2
+
+### Segment drawing
+# A few utility functions to make it easy and re-usable to draw segmented prompts
+
+# Begin a segment
+# Takes 2 arguments:
+#   - foreground: colour
+#   - segment: prompt string
+prompt_segment() {
+  echo -n "%K{black}%F{$1}$2"
+}
+
+# End the prompt, closing any open segments
+prompt_end() {
+  prompt_segment white " $>"
+  echo -n "%k%f"
+}
+
+### Prompt components
+
+# Context: user@hostname (who am I and where am I)
+prompt_context() {
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    prompt_segment cyan "%n"
+    prompt_segment default "@"
+    prompt_segment magenta "%m"
+  fi
+}
+
+# ASDF: current tool versions
+prompt_asdf() {
+  if [[ -f ".tool-versions" ]]; then
+    local versions
+
+    while read i
+    do
+      local v=${i/ /:}
+      versions+="${v} "
+    done < .tool-versions
+
+    prompt_segment white " [ "
+    prompt_segment cyan $versions
+    prompt_segment white "]"
+  fi
+}
+
+# Git: branch/detached head, dirty status
+prompt_git() {
+  (( $+commands[git] )) || return
+  if [[ "$(git config --get oh-my-zsh.hide-status 2>/dev/null)" = 1 ]]; then
+    return
+  fi
+  local PL_BRANCH_CHAR
+  () {
+    local LC_ALL="" LC_CTYPE="en_US.UTF-8"
+    PL_BRANCH_CHAR=$'\ue0a0'         # 
+  }
+  local ref dirty mode repo_path
+
+   if [[ "$(git rev-parse --is-inside-work-tree 2>/dev/null)" = "true" ]]; then
+    repo_path=$(git rev-parse --git-dir 2>/dev/null)
+    dirty=$(parse_git_dirty)
+    ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git rev-parse --short HEAD 2> /dev/null)"
+
+    if [[ -e "${repo_path}/BISECT_LOG" ]]; then
+      mode=" <B>"
+    elif [[ -e "${repo_path}/MERGE_HEAD" ]]; then
+      mode=" >M<"
+    elif [[ -e "${repo_path}/rebase" || -e "${repo_path}/rebase-apply" || -e "${repo_path}/rebase-merge" || -e "${repo_path}/../.dotest" ]]; then
+      mode=" >R>"
+    fi
+
+    setopt promptsubst
+    autoload -Uz vcs_info
+
+    zstyle ':vcs_info:*' enable git
+    zstyle ':vcs_info:*' get-revision true
+    zstyle ':vcs_info:*' check-for-changes true
+    zstyle ':vcs_info:*' stagedstr '✚'
+    zstyle ':vcs_info:*' unstagedstr '±'
+    zstyle ':vcs_info:*' formats ' %u%c'
+    zstyle ':vcs_info:*' actionformats ' %u%c'
+    vcs_info
+
+    prompt_segment white " [ "
+    if [[ -n $dirty ]]; then
+      prompt_segment yellow "${ref/refs\/heads\//$PL_BRANCH_CHAR }${vcs_info_msg_0_%% }${mode}"
+    else
+      prompt_segment green "${ref/refs\/heads\//$PL_BRANCH_CHAR }${vcs_info_msg_0_%% }${mode}"
+    fi
+    prompt_segment white " ]"
+  fi
+}
+
+# Dir: current working directory
+prompt_dir() {
+  prompt_segment white " : "
+  prompt_segment red "%~"
+}
+
+# Time: time at prompt load
+prompt_time() {
+  prompt_segment blue "\n%D{%a %f %b %L:%M:%S %p} "
+}
+
+# Status:
+# - was there an error
+# - am I root
+# - are there background jobs?
+prompt_status() {
+  [[ $RETVAL -ne 0 ]] && prompt_segment red "✘"
+  [[ $UID -eq 0 ]] && prompt_segment yellow "⚡"
+  [[ $(jobs -l | wc -l) -gt 0 ]] && prompt_segment cyan "⚙"
+}
+
+build_prompt() {
+  RETVAL=$?
+  prompt_context
+  prompt_asdf
+  prompt_git
+  prompt_dir
+  prompt_time
+  prompt_status
+  prompt_end
+}
+
+PROMPT='%{%f%b%k%}$(build_prompt) '

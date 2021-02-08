@@ -1,11 +1,14 @@
 # Header definitions
-if [ -f ~/.bash_header ]; then
-    . ~/.bash_header
+if [ -f ~/.header ]; then
+    . ~/.header
 fi
 
 # Function definitions
 if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
+fi
+if [ -f ~/.functions ]; then
+    . ~/.functions
 fi
 
 # Alias definitions

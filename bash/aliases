@@ -14,27 +14,17 @@ alias cls='clear'
 alias x='exit'
 alias ll='ls -alFh'
 alias la='ls -Ah'
-alias rf='rm -rf'
 alias v='vim'
 alias g='hub'
 alias l='ll'
 alias f='findhistory'
-alias c='j'
 alias ag='ag --color --color-match 34\;46 --color-line-number 1\;33\;40 --literal --column --smart-case --numbers --nogroup'
-
-# ssh
-alias compile-ssh-config='echo -n > ~/.ssh/config && cat ~/.ssh/*.config > ~/.ssh/config'
-alias ssh='compile-ssh-config && ssh'
 
 # diagnostic
 alias duh="sudo du -hxP --max-depth=2 | grep '^[0-9]*\.*[0-9]*G'"
 
 # development
-alias v='vim'
-alias b='RUBY_GC_TUNE_VERBOSE=0 bundle'
-alias be='b exec'
 alias ber='be rake'
-alias bes='be rspec --color --format documentation'
 alias bec='GHERKIN_RUBY=true be cucumber'
 alias bew='be unicorn_rails -c config/unicorn.rb'
 alias berc='DISABLE_SPRING=true be rails c'

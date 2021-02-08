@@ -1,0 +1,16 @@
+function fuck() {
+  killall -9 $2;
+  if [[ $? -eq 0 ]]; then
+    tableflip $2
+  fi
+}
+
+function tableflip() {
+  echo
+  echo " (╯°□°）╯︵$(echo $1|flip)"
+  echo
+}
+
+function killport() {
+  kill -9 $( lsof -i:$1 -t )
+}

@@ -25,7 +25,7 @@ else
     log "Installing Sublime config"
 
     log "Installing 'sublime' command"
-    ln -sF "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" "${DOTFILES_DIR}/bash/path/sublime"
+    ln -sF "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" "${DOTFILES_DIR}/bash/shell/sublime"
 
     log "Installing User Packages"
     SUBLIME_USER_PACKAGE_DIR="${SUBLIME_INSTALL_DIR}/Packages/User"
