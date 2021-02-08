@@ -21,6 +21,8 @@ else
       log "  Updating Oh My Zsh"
       exec ${ZSH_DIR}/.oh-my-zsh/tools/upgrade.sh
     fi
+
+    link "${ZSH_DIR}/.oh-my-zsh/themes/asellitt.zsh-theme" "${ZSH_MODULE_DIR}/zsh-theme"
   fi
 
   link "${ZSH_DIR}/.zshrc" "${ZSH_MODULE_DIR}/rc"
