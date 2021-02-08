@@ -28,3 +28,5 @@ install_banner $BANNER $BANNER_FILE
 install_modules
 log_into_lastpass
 print_post_install_messages
+
+exit 0
