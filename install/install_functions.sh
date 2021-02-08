@@ -14,6 +14,9 @@ function parse_commandline_arguments() {
       -l|--license)
         LICENSE=true
         ;;
+      -i|--install)
+        INSTALL=true
+        ;;
       -h|--help)
         usage
         exit
