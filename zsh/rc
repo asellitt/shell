@@ -113,4 +113,7 @@ source $ZSH/oh-my-zsh.sh
 if [ -f ~/.functions ]; then
     . ~/.functions
 fi
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
 

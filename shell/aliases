@@ -1,0 +1,9 @@
+alias rf='rm -rf'
+alias c='j'
+
+alias b='bundle'
+alias be='b exec'
+alias bes='be rspec --color --format documentation'
+
+alias compile-ssh-config='echo -n > ~/.ssh/config && cat ~/.ssh/*.config > ~/.ssh/config'
+alias ssh='compile-ssh-config && ssh'
