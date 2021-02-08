@@ -22,4 +22,6 @@ else
       exec ${ZSH_DIR}/.oh-my-zsh/tools/upgrade.sh
     fi
   fi
+
+  link "${ZSH_DIR}/.zshrc" "${ZSH_MODULE_DIR}/rc"
 fi
