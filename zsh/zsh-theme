@@ -101,7 +101,7 @@ prompt_dir() {
 
 # Time: time at prompt load
 prompt_time() {
-  prompt_segment blue "\n%D{%a %f %b %L:%M:%S %p}"
+  prompt_segment blue "\n%D{%a %f %b %L:%M:%S %p} "
 }
 
 # Status:
