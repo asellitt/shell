@@ -34,6 +34,7 @@ else
   cask_install "authy"
   cask_install "aws-vault"
   cask_install "box-sync"
+  cask_install "caffeine"
   cask_install "calibre"
   cask_install "coconutbattery"
   cask_install "discord"
