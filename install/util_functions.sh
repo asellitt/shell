@@ -67,8 +67,8 @@ function cask_install() {
 }
 
 function mas_install() {
-  local identifier=$1
-  local application=$2
+  local application=$1
+  local identifier=$2
 
   if hash mas 2>/dev/null; then
     log "  Mas detected, installing ${application}"
