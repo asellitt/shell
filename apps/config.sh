@@ -33,6 +33,7 @@ else
   cask_install "1password"
   cask_install "authy"
   cask_install "aws-vault"
+  cask_install "box-sync"
   cask_install "calibre"
   cask_install "coconutbattery"
   cask_install "discord"
@@ -50,15 +51,16 @@ else
   cask_install "psequel"
   cask_install "screen"
   cask_install "sequel-pro"
+  cask_install "sigil"
   cask_install "signal"
   cask_install "slack"
   cask_install "sourcetree"
-  # cask_install "sublime-text" yes, true. but im on the dev channel
   cask_install "tripmode"
-  cask_install "vlc"
   cask_install "visual-studio-code"
+  cask_install "vlc"
   cask_install "whatsapp"
   cask_install "zsa-wally"
+  # cask_install "sublime-text" yes, true. but im on the dev channel
 
   log "Installing packages"
   brew_install "autojump"
@@ -74,6 +76,7 @@ else
 
   log "Installing App Store applications"
   mas_install "CCMenu" "603117688"
+  mas_install "Disk Care" "913724705"
   mas_install "LastPass" "926036361"
   mas_install "Magnet" "441258766"
   mas_install "Monosnap" "540348655"
