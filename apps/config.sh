@@ -44,7 +44,7 @@ else
   cask_install "google-chrome"
   cask_install "imageoptim"
   cask_install "iterm2"
-  cask_install "kensington-trackball-works"
+  # cask_install "kensington-trackball-works" # need something called kensingtonworks for Big Sur
   cask_install "licecap"
   cask_install "logitech-myharmony"
   cask_install "macdown"
