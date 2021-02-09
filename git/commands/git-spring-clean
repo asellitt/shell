@@ -6,5 +6,6 @@ GREEN="\033[0;32m"
 echo -e "$GREEN- Starting: spring-clean -$CLEAR"
 git branch |
   grep -v "^[* ] master$" |
+  grep -v "^[* ] main$" |
   grep -v "^[* ] production$" |
   xargs git branch -D
