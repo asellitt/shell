@@ -33,7 +33,6 @@ else
   cask_install "1password"
   cask_install "authy"
   cask_install "aws-vault"
-  cask_install "background-music"
   cask_install "calibre"
   cask_install "coconutbattery"
   cask_install "discord"
