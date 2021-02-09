@@ -44,18 +44,19 @@ else
   cask_install "google-chrome"
   cask_install "imageoptim"
   cask_install "iterm2"
-  # cask_install "kensington-trackball-works" # need something called kensingtonworks for Big Sur
+  cask_install "kensingtonworks" # pretty sure this will fail, but we need this app for big turd
   cask_install "licecap"
   cask_install "logitech-myharmony"
   cask_install "macdown"
   cask_install "psequel"
+  cask_install "screen"
   cask_install "sequel-pro"
   cask_install "signal"
   cask_install "slack"
-  cask_install "slate"
   cask_install "sourcetree"
   # cask_install "sublime-text" yes, true. but im on the dev channel
   cask_install "tripmode"
+  cask_install "vlc"
   cask_install "visual-studio-code"
   cask_install "whatsapp"
   cask_install "zsa-wally"
