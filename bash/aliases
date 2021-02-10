@@ -24,7 +24,6 @@ alias ag='ag --color --color-match 34\;46 --color-line-number 1\;33\;40 --litera
 alias duh="sudo du -hxP --max-depth=2 | grep '^[0-9]*\.*[0-9]*G'"
 
 # development
-alias ber='be rake'
 alias bec='GHERKIN_RUBY=true be cucumber'
 alias bew='be unicorn_rails -c config/unicorn.rb'
 alias berc='DISABLE_SPRING=true be rails c'
