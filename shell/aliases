@@ -8,3 +8,5 @@ alias ber='be rake'
 
 alias compile-ssh-config='echo -n > ~/.ssh/config && cat ~/.ssh/*.config > ~/.ssh/config'
 alias ssh='compile-ssh-config && ssh'
+
+alias fuckingrobots='git diff --cached --name-only --diff-filter=ACM | grep -E "^Gemfile$|\.rb$" | xargs bundle exec rufo'
