@@ -43,9 +43,11 @@ else
   cask_install "font-fira-code"
   cask_install "gimp"
   cask_install "google-chrome"
+  cask_install "huiontablet"
   cask_install "imageoptim"
   cask_install "iterm2"
   cask_install "kensingtonworks" # pretty sure this will fail, but we need this app for big turd
+  cask_install "krita"
   cask_install "licecap"
   cask_install "logitech-myharmony"
   cask_install "macdown"
