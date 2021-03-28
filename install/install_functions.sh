@@ -58,15 +58,26 @@ function agree_to_xcode_license() {
   fi
 }
 
-function log_into_lastpass() {
-  PREFIX="LASTPASS"
-
-  if [[ -f "${HOME}/.lpass/username" ]]; then
-    log "lastpass-cli already logged in, continuing"
-  else
-    log "lastpass-cli installed, username:"
-    read username
-    lpass login $username
+function log_into_password_manager() {
+  PREFIX="BITWARDEN"
+  if hash bw 2>/dev/null && hash jq 2>/dev/null; then
+    case $(bw status | jq -r ".status") in
+      "unauthenticated")
+        log "Bitwarden installed, logging in"
+        bw login
+        ;;
+      "locked")
+        log "Bitwarden installed, unlocking"
+        bw unlock
+        ;;
+      "unlocked")
+        log "Bitwarden logged in"
+        ;;
+      *)
+        log 'Bitwarden status returned an unexpected state'
+    esac
+    log "Syncing bitwarden vault"
+    bw sync
   fi
 }
 

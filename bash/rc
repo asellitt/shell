@@ -147,7 +147,6 @@ export LESS="-R"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export GOPATH=$HOME/src/.go
-export LPASS_AGENT_TIMEOUT=0
 
 # envato elements shit
 export PATH="/usr/local/opt/elasticsearch@2.4/bin:$PATH"

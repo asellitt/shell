@@ -26,7 +26,7 @@ agree_to_xcode_license $LICENSE
 update_packages $UPDATE
 install_banner $BANNER $BANNER_FILE
 install_modules
-log_into_lastpass
+log_into_password_manager
 print_post_install_messages
 
 exit 0
