@@ -33,7 +33,8 @@
   sa = stash
   sm = submodule
   st = status
-  mm = merge-master
+  mmr = merge-master
+  mmn = merge-main
   to-deploy = log --merges --grep='pull request' --format='%s (%cN)' origin/production..origin/master
   sc = spring-clean
   pr = pull-request
