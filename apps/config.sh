@@ -82,6 +82,7 @@ else
   log "Installing App Store applications"
   mas_install "CCMenu" "603117688"
   mas_install "Disk Care" "913724705"
+  mas_install "IP Camera Viewer 2" "595565459"
   mas_install "Magnet" "441258766"
   mas_install "Monosnap" "540348655"
   mas_install "Pages" "409201541"
