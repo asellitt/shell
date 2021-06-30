@@ -84,6 +84,7 @@ else
   mas_install "Disk Care" "913724705"
   mas_install "IP Camera Viewer 2" "595565459"
   mas_install "Magnet" "441258766"
+  mas_install "Mic Drop" "1489816366"
   mas_install "Monosnap" "540348655"
   mas_install "Pages" "409201541"
   mas_install "Ring" "1142753258"
