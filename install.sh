@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 
 exec_loc=$(readlink $0 || realpath $0)
 DOTFILES_DIR=$(dirname $exec_loc)
