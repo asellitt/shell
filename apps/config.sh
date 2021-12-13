@@ -57,7 +57,6 @@ else
   cask_install "sequel-pro"
   cask_install "sigil"
   cask_install "signal"
-  cask_install "slack"
   cask_install "sourcetree"
   cask_install "tripmode"
   cask_install "visual-studio-code"
