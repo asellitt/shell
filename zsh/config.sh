@@ -26,4 +26,5 @@ else
   fi
 
   link "${ZSH_DIR}/.zshrc" "${ZSH_MODULE_DIR}/rc"
+  link "${ZSH_DIR}/.zprofile" "${ZSH_MODULE_DIR}/profile"
 fi
