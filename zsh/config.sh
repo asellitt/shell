@@ -12,6 +12,9 @@ if [[ "${shell_version}" != *"zsh"* ]]; then
 else
   log "Installing Zsh config"
 
+  link "${ZSH_DIR}/.zshrc" "${ZSH_MODULE_DIR}/rc"
+  link "${ZSH_DIR}/.zprofile" "${ZSH_MODULE_DIR}/profile"
+
   if [[ ! -d "${ZSH_DIR}/.oh-my-zsh" ]]; then
     log "  Oh My Zsh not installed, installing"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -24,7 +27,4 @@ else
 
     link "${ZSH_DIR}/.oh-my-zsh/themes/asellitt.zsh-theme" "${ZSH_MODULE_DIR}/zsh-theme"
   fi
-
-  link "${ZSH_DIR}/.zshrc" "${ZSH_MODULE_DIR}/rc"
-  link "${ZSH_DIR}/.zprofile" "${ZSH_MODULE_DIR}/profile"
 fi
