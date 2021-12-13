@@ -93,7 +93,12 @@ function update_packages() {
       log "Brew not installed, installing brew"
       /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     fi
-    source ~/.bashrc
+    if [[ -f ~/.zshrc ]]
+      source ~/.zshrc
+    fi
+    if [[ -f ~/.bashrc ]]
+      source ~/.bashrc
+    fi
   fi
 }
 
