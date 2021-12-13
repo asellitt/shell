@@ -7,17 +7,8 @@ if [ `uname` != 'Darwin' ]; then
   log "This isn't OSX! Skipping config"
 else
   SUBLIME_MODULE_DIR="${DOTFILES_DIR}/sublime"
-  SUBLIME_INSTALL_DIR="${HOME}/Library/Application Support"
+  SUBLIME_INSTALL_DIR="${HOME}/Library/Application Support/Sublime Text"
   log "OSX detected"
-
-  SUBLIME_INSTALL_DIR="${HOME}/Library/Application Support"
-  if [ -d "${SUBLIME_INSTALL_DIR}/Sublime Text 3" ]; then
-    log "   Found Sublime Text 3"
-    SUBLIME_INSTALL_DIR="${SUBLIME_INSTALL_DIR}/Sublime Text 3"
-  elif [ -d "${SUBLIME_INSTALL_DIR}/Sublime Text 2" ]; then
-    log "   Found Sublime Text 2"
-    SUBLIME_INSTALL_DIR="${SUBLIME_INSTALL_DIR}/Sublime Text 2"
-  fi
 
   if [ ! -d "${SUBLIME_INSTALL_DIR}" ]; then
     log "Looks like Sublime is not installed. Skipping config"
