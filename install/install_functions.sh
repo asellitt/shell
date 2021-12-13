@@ -121,13 +121,13 @@ function install_banner() {
 function install_modules() {
   log "Finding compatible modules in: ${DOTFILES_DIR}"
 
-  for modules in ${DOTFILES_DIR}/*/ ; do
-    local module="${modules%/}"
-    local module_config="${module}/config.sh"
+  for shell_modules in ${DOTFILES_DIR}/*/ ; do
+    local shell_module="${shell_modules%/}"
+    local module_config="${shell_module}/config.sh"
 
     if [ -f "$module_config" ]; then
       PREFIX="INSTALL"
-      log "Installing '${module}' config"
+      log "Installing '${shell_module}' config"
       source $module_config
     fi
   done
