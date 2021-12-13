@@ -36,7 +36,7 @@ Profile Pic
 
 ```bash
 git clone https://github.com/asellitt/shell.git
-shell/install.sh -u -l
+shell/install.sh -u -l -i
 ```
 
 ## Usage
