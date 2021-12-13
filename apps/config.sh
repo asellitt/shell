@@ -62,7 +62,6 @@ else
   cask_install "tripmode"
   cask_install "visual-studio-code"
   cask_install "vlc"
-  cask_install "whatsapp"
   cask_install "zsa-wally"
   # cask_install "sublime-text" yes, true. but im on the dev channel
 
