@@ -91,7 +91,7 @@ function update_packages() {
       brew upgrade -v
     else
       log "Brew not installed, installing brew"
-      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     fi
     source ~/.bashrc
   fi
