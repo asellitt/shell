@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 
 PREFIX="ASDF"
 log "Begin asdf config"

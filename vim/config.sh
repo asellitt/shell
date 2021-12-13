@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 
 PREFIX="VIM"
 log "Begin Vim config"

@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 
 PREFIX="OSX"
 log "Begin OSX config"

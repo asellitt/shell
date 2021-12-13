@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 
 PREFIX="RUBY"
 log "Begin Ruby config"

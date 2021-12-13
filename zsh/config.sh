@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 
 PREFIX="ZSH"
 log "Begin Zsh config"

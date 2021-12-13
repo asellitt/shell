@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 
 PREFIX="SUBLIME"
 log "Begin Sublime config"

@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 
 function usage() {
   echo "asellitt's dotfiles install script"

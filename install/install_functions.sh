@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 
 function parse_commandline_arguments() {
   while [ "$1" != "" ]; do
