@@ -69,7 +69,7 @@ else
   brew_install "coreutils"
   brew_install "direnv"
   brew_install "heroku"
-  brew_install "hub"
+  brew_install "gh"
   brew_install "jq"
   brew_install "mas"
   brew_install "redis"

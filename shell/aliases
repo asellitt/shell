@@ -1,5 +1,6 @@
 alias rf='rm -rf'
 alias c='j'
+alias g='gh'
 
 alias b='bundle'
 alias be='b exec'
