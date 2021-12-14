@@ -28,14 +28,14 @@ Profile Pic
     > Settings
         > SSH and GPG keys
             > Add SSH key
-                > Name key/Pate Key
+                > Name key/Paste Key
                     > Add
 ```
 
 ### Fetch `shell` and run
 
 ```bash
-git clone https://github.com/asellitt/shell.git
+git clone git@github.com:asellitt/shell.git
 shell/install.sh -u -l -i
 ```
 
@@ -46,10 +46,11 @@ dotfiles -h
 
 asellitt's dotfiles install script
 
-usage: dotfiles [-b|--banner bannerFile]
-                [-h|--help]
-                [-u|--update]
-                [-l|--license]
+usage: dotfiles [-b|--banner bannerFile]  Sets up a terminal banner
+                [-h|--help]               Prints this message
+                [-u|--update]             Updates dependencies
+                [-i|--install]            Installs apps
+                [-l|--license]            Open the apple license dialog
 ```
 
 ## Manual Installs
