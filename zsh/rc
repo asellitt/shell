@@ -4,8 +4,7 @@ source ${HOME}/.header
 export PATH=$PATH:${HOME}/path:${HOME}/.git-commands
 
 # Brew shell completion, see: https://docs.brew.sh/Shell-Completion
-if type brew &>/dev/null
-then
+if type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
   autoload -Uz compinit
@@ -120,9 +119,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 if [ -f ~/.functions ]; then
-    . ~/.functions
+    source ~/.functions
 fi
 if [ -f ~/.aliases ]; then
-    . ~/.aliases
+    source ~/.aliases
 fi
 
