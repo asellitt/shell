@@ -34,7 +34,6 @@
 	[
 		".bundle",
 		".git",
-		".github",
 		"build",
 		"cops",
 		"foreman",
