@@ -44,11 +44,11 @@
 		"tmp",
 		"vendor"
 	],
-	"font_face": "Fira Code Retina",
+	"font_face": "Fira Code",
 	"font_options":
 	[
-		"subpixel_antialias",
-		"gray_antialias"
+		"gray_antialias",
+		"dlig"
 	],
 	"font_size": 14,
 	"hide_minimap": true,
