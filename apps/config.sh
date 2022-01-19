@@ -54,6 +54,7 @@ else
   cask_install "licecap"
   cask_install "logitech-myharmony"
   cask_install "macdown"
+  cask_install "openemu"
   cask_install "sequel-pro"
   cask_install "sigil"
   cask_install "signal"
