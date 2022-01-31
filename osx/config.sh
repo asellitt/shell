@@ -1,6 +1,8 @@
 #! /bin/zsh
 
 PREFIX="OSX"
+OSX_MODULE_DIR="${DOTFILES_DIR}/osx"
+APP_MODULE_DIR="${OSX_MODULE_DIR}/apps"
 log "Begin OSX config"
 
 if [ `uname` != 'Darwin' ]; then
@@ -137,26 +139,10 @@ else
   log "   Disable that weird arse dictionary popup crap (cmd+ctrl+D)"
   defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 70 '<dict><key>enabled</key><false/></dict>'
 
-  # PREFDIR="$HOME/Library/Preferences"
-  # rm "$PREFDIR"/com.apple.symbolichotkeys.plist 2>/dev/null
-  # ln -s $DIR/osx/com.apple.symbolichotkeys.plist "$PREFDIR"/
-
   log "Fixing HOME/END key behaviour"
-  KEYDIR="$HOME/Library/KeyBindings"
-  mkdir $KEYDIR 2>/dev/null
-  echo "
-      {
-          /* Remap Home / End keys to be correct */
-          \"\UF729\" = \"moveToBeginningOfLine:\"; /* Home */
-          \"\UF72B\" = \"moveToEndOfLine:\"; /* End */
-          \"$\UF729\" = \"moveToBeginningOfLineAndModifySelection:\"; /* Shift + Home */
-          \"$\UF72B\" = \"moveToEndOfLineAndModifySelection:\"; /* Shift + End */
-          \"^\UF729\" = \"moveToBeginningOfDocument:\"; /* Ctrl + Home */
-          \"^\UF72B\" = \"moveToEndOfDocument:\"; /* Ctrl + End */
-          \"$^\UF729\" = \"moveToBeginningOfDocumentAndModifySelection:\"; /* Shift + Ctrl + Home */
-          \"$^\UF72B\" = \"moveToEndOfDocumentAndModifySelection:\"; /* Shift + Ctrl + End */
-      }
-  " > $KEYDIR/DefaultKeyBinding.dict
+  KEY_DIR="$HOME/Library/KeyBindings"
+  mkdir $KEY_DIR 2>/dev/null
+  link "${KEY_DIR}/DefaultKeyBinding.dict" "${OSX_MODULE_DIR}/DefaultKeyBinding.dict"
 
   log "Restarting apps"
   killall Finder /dev/null 2>&1
@@ -166,7 +152,6 @@ else
 
   log "Linking applications"
   APP_DIR="${HOME}/Applications"
-  APP_MODULE_DIR="${DOTFILES_DIR}/osx/apps"
   link "${APP_DIR}/Lock.app" "${APP_MODULE_DIR}/Lock.app"
   link "${APP_DIR}/Logout.app" "${APP_MODULE_DIR}/Logout.app"
   link "${APP_DIR}/Restart.app" "${APP_MODULE_DIR}/Restart.app"
