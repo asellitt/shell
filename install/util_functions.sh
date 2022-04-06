@@ -5,7 +5,7 @@ function usage() {
   echo ""
   echo "usage: dotfiles [-b|--banner <bannerFile>: install banner file]"
   echo "                [-h|--help: show this message]"
-  echo "                [-i|--install: install appls]"
+  echo "                [-i|--install: install apps]"
   echo "                [-u|--update: update dependencies]"
   echo "                [-l|--license: accept OSX license]"
   echo ""
