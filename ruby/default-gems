@@ -1,4 +1,5 @@
 bundler
+bundler-stats
 ejson
 pry
 pry-byebug
