@@ -53,6 +53,7 @@ else
   cask_install "krita"
   cask_install "licecap"
   cask_install "logitech-myharmony"
+  cask_install "logseq"
   cask_install "macdown"
   cask_install "openemu"
   cask_install "sequel-pro"
@@ -67,6 +68,7 @@ else
 
   log "Installing packages"
   brew_install "autojump"
+  cask_install "awscli"
   brew_install "bitwarden-cli"
   brew_install "coreutils"
   brew_install "direnv"
