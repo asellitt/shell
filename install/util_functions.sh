@@ -107,4 +107,3 @@ function determine_color_code() {
 
   COLOR="\033[0;${color_offset}m"
 }
-
