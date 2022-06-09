@@ -1,6 +1,6 @@
 #! /bin/zsh
 
-exec_loc=$(readlink $0 || realpath $0)
+exec_loc=$(readlink $0)
 DOTFILES_DIR=$(dirname $exec_loc)
 if [ -z "$DOTFILES_DIR" ] ; then
   DOTFILES_DIR="`dirname \"$0\"`"
