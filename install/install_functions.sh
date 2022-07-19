@@ -17,6 +17,10 @@ function parse_commandline_arguments() {
       -i|--install)
         INSTALL=true
         ;;
+      -m|--mode)
+        MODE=$2
+        shift
+        ;;
       -h|--help)
         usage
         exit
