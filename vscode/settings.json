@@ -1,51 +1,66 @@
 {
-    "workbench.startupEditor": "none",
-    "editor.minimap.enabled": false,
-    "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
-    "files.autoSave": "onFocusChange",
-    "editor.tabSize": 2,
-    "editor.renderWhitespace": "all",
-    "editor.cursorStyle": "line-thin",
-    "editor.fontLigatures": true,
-    "editor.rulers": [80, 120],
-    "git.autofetch": true,
-    "editor.fontSize": 14,
-    "terminal.integrated.fontSize": 14,
-    "explorer.confirmDelete": false,
-    "files.associations": {
-        "*.hcl": "terraform"
+  "workbench.startupEditor": "none",
+  "editor.minimap.enabled": false,
+  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+  "files.autoSave": "onFocusChange",
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
+  "editor.cursorStyle": "line-thin",
+  "editor.fontLigatures": true,
+  "editor.rulers": [80, 120],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "git.autofetch": true,
+  "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
+  "explorer.confirmDelete": false,
+  "files.associations": {
+    "*.hcl": "terraform"
+  },
+  "[gemfile]": {
+    "editor.formatOnSave": true
+  },
+  "[ruby]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
     },
-    "[gemfile]": {
-        "editor.formatOnSave": true
-    },
-    "[ruby]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "mbessey.vscode-rufo"
-    },
-    "[markdown]": {
-        "editor.unicodeHighlight.ambiguousCharacters": false,
-        "editor.unicodeHighlight.invisibleCharacters": false,
-        "editor.wordWrap": "on",
-        "editor.quickSuggestions": false,
-        "editor.formatOnSave": true,
-    },
-    "[javascript]": {
-        "editor.maxTokenizationLineLength": 2500,
-        "editor.formatOnSave": true,
-    },
-    "editor.scrollBeyondLastLine": false,
-    "files.exclude": {
-        "**/node_modules": true,
-        "**/__repo__": true,
-        "**/build": true,
-        "**/bin": true,
-    },
-    "githubPullRequests.fileListLayout": "flat",
-    "cSpell.words": [
-        "dyno",
-        "dynos",
-        "envato",
-        "sidekiq",
-        "recurly",
-    ]
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.maxTokenizationLineLength": 2500,
+    "editor.formatOnSave": true
+  },
+  "editor.scrollBeyondLastLine": false,
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/__repo__": true,
+    "**/build": true,
+    "**/bin": true
+  },
+  "githubPullRequests.fileListLayout": "flat",
+  "prettier.printWidth": 120,
+  "cSpell.userWords": [
+    "Braintree",
+    "dyno",
+    "dynos",
+    "envato",
+    "HACD",
+    "Medibank",
+    "Medibank's",
+    "recurly",
+    "RMIT",
+    "Sellitti",
+    "sidekiq",
+    "Unico"
+  ],
+  "ruby.rubocop.onSave": false
 }
