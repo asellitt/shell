@@ -31,7 +31,6 @@ if [[ ! $INSTALL == true ]]; then
   log "Skipping app installation"
 else
   log "Installing common casks"
-  cask_install "caffeine"
   cask_install "firefox"
   cask_install "font-fira-code"
   cask_install "google-chrome"
@@ -70,6 +69,7 @@ else
       cask_install "authy"
       cask_install "bitwarden"
       cask_install "box-sync"
+      cask_install "caffeine"
       cask_install "calibre"
       cask_install "coconutbattery"
       cask_install "discord"
