@@ -4,7 +4,7 @@
 	path = /Users/asellitt/src/shell/secret/git.config.secret
 [core]
 	excludesfile = /Users/asellitt/.gitignore
-  editor = sublime -n -w
+  editor = vim
 [color]
   ui = auto
 [push]
