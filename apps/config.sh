@@ -86,7 +86,6 @@ else
       cask_install "signal"
       cask_install "slack"
       cask_install "sourcetree"
-      cask_install "tripmode"
       cask_install "vlc"
       cask_install "zsa-wally"
 
