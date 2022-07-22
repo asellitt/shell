@@ -31,6 +31,7 @@ if [[ ! $INSTALL == true ]]; then
   log "Skipping app installation"
 else
   log "Installing common casks"
+  cask_install "barrier"
   cask_install "firefox"
   cask_install "font-fira-code"
   cask_install "imageoptim"
