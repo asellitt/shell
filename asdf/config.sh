@@ -22,7 +22,7 @@ if hash asdf 2>/dev/null; then
   brew_install "ruby-build"
   asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
 
-  if [[ ! $MODE == "WORK" ]]; then
+  if [[ $MODE == "PERSONAL" ]]; then
     log "  Installing required nodejs version manager"
     brew_install "coreutils"
     brew_install "gpg"
