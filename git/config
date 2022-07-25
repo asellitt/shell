@@ -1,5 +1,5 @@
 [user]
-  name  = Anthony Sellitti
+  name = Anthony Sellitti
   email = 1116257+asellitt@users.noreply.github.com
 [include]
 	path = /Users/asellitt/src/shell/secret/git.config.secret
