@@ -130,5 +130,9 @@ if [ -f $(brew --prefix asdf)/libexec/asdf.sh ]; then
     source $(brew --prefix asdf)/libexec/asdf.sh
 fi
 
+if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then 
+  source ~/.nix-profile/etc/profile.d/nix.sh;
+fi
+
 # ruby processes seem to cause fork bombs. This seems to help
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
