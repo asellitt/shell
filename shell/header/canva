@@ -1,0 +1,31 @@
+ERS="\033[1;0m"          # echo-friendly reset
+ECYAN="\033[1;36m"        # echo-friendly foreground LIGHT CYAN
+EBLUE="\033[1;34m"        # echo-friendly foreground LIGHT BLUE
+ENAVY="\033[0;34m"        # echo-friendly foreground DARK BLUE
+EPURP="\033[0;35m"        # echo-friendly foreground DARK MAGENTA
+
+clear
+
+echo -en "$ECYAN"; echo -n "         =??00??=   "; echo -en "$EBLUE"; echo -n "                    "; echo -en "$ENAVY"; echo -n "                    "; echo -en "$EPURP"; echo "                    "
+echo -en "$ECYAN"; echo -n "       ?0000??0000  "; echo -en "$EBLUE"; echo -n "                    "; echo -en "$ENAVY"; echo -n "                    "; echo -en "$EPURP"; echo "                    "
+echo -en "$ECYAN"; echo -n "     =0000=    =000 "; echo -en "$EBLUE"; echo -n "                    "; echo -en "$ENAVY"; echo -n "                    "; echo -en "$EPURP"; echo "                    "
+echo -en "$ECYAN"; echo -n "    ?000?       000 "; echo -en "$EBLUE"; echo -n "                    "; echo -en "$ENAVY"; echo -n "                    "; echo -en "$EPURP"; echo "                    "
+echo -en "$ECYAN"; echo -n "   ?000=        000 "; echo -en "$EBLUE"; echo -n "                    "; echo -en "$ENAVY"; echo -n "                    "; echo -en "$EPURP"; echo "                    "
+echo -en "$ECYAN"; echo -n "  ?000?         000 "; echo -en "$EBLUE"; echo -n "                    "; echo -en "$ENAVY"; echo -n "                   ="; echo -en "$EPURP"; echo "?0=                 "
+echo -en "$ECYAN"; echo -n " =0000         ?00= "; echo -en "$EBLUE"; echo -n "                    "; echo -en "$ENAVY"; echo -n "                  =0"; echo -en "$EPURP"; echo "000=                "
+echo -en "$ECYAN"; echo -n " 0000=         0?   "; echo -en "$EBLUE"; echo -n "   =??=   ==    ==  "; echo -en "$ENAVY"; echo -n "   =?=      =?=   00"; echo -en "$EPURP"; echo " =0?     =??=   ==  "
+echo -en "$ECYAN"; echo -n "=0000               "; echo -en "$EBLUE"; echo -n " =00000=?000   =000 "; echo -en "$ENAVY"; echo -n "  ?0000    =000   00"; echo -en "$EPURP"; echo " =0=   =00000??000  "
+echo -en "$ECYAN"; echo -n "?000=               "; echo -en "$EBLUE"; echo -n "=000? =0000?   =000 "; echo -en "$ENAVY"; echo -n " 000000    000?   00"; echo -en "$EPURP"; echo "=?0   =000? =0000?  "
+echo -en "$ECYAN"; echo -n "0000               ="; echo -en "$EBLUE"; echo -n "000?   0000    ?000 "; echo -en "$ENAVY"; echo -n "00 ?000    000?   ?0"; echo -en "$EPURP"; echo "000  =000?   0000=  "
+echo -en "$ECYAN"; echo -n "0000               0"; echo -en "$EBLUE"; echo -n "000    0000    00000"; echo -en "$ENAVY"; echo -n "0  0000    000?    ?"; echo -en "$EPURP"; echo "000?00000    0000   "
+echo -en "$ECYAN"; echo -n "0000              =0"; echo -en "$EBLUE"; echo -n "00=    000?    00000"; echo -en "$ENAVY"; echo -n "   000?   ?000?     "; echo -en "$EPURP"; echo "00===000?    000?   "
+echo -en "$ECYAN"; echo -n "0000              00"; echo -en "$EBLUE"; echo -n "00    =000=   ?0000="; echo -en "$ENAVY"; echo -n "  =000=   00000    ?"; echo -en "$EPURP"; echo "0   ?000     000=   "
+echo -en "$ECYAN"; echo -n "0000             ?00"; echo -en "$EBLUE"; echo -n "00    ?000    0000? "; echo -en "$ENAVY"; echo -n "  ?000   =0?000   =0"; echo -en "$EPURP"; echo "=   ?000    ?000   ="
+echo -en "$ECYAN"; echo -n "?000?           =000"; echo -en "$EBLUE"; echo -n "00    0000   00000  "; echo -en "$ENAVY"; echo -n "  ?000   0==000   0?"; echo -en "$EPURP"; echo "    ?000    0000   0"
+echo -en "$ECYAN"; echo -n " 0000          =0??0"; echo -en "$EBLUE"; echo -n "00   00000  ?0000?  "; echo -en "$ENAVY"; echo -n "  0000 =0?  000= 0? "; echo -en "$EPURP"; echo "    ?000   00000  ?0"
+echo -en "$ECYAN"; echo -n " ?000?        =0? =0"; echo -en "$EBLUE"; echo -n "00?=0??000=?0=000=  "; echo -en "$ENAVY"; echo -n "  ?00000?   00000?  "; echo -en "$EPURP"; echo "    =0000=0??000=?0="
+echo -en "$ECYAN"; echo -n "  00000=    =00?   ?"; echo -en "$EBLUE"; echo -n "0000=  0000?  000   "; echo -en "$ENAVY"; echo -n "   0000?     000=   "; echo -en "$EPURP"; echo "     ?0000?  00000  "
+echo -en "$ECYAN"; echo -n "   ?0000000000=     "; echo -en "$EBLUE"; echo -n " ==      =     =    "; echo -en "$ENAVY"; echo -n "     =        =     "; echo -en "$EPURP"; echo "       ==      =    "
+echo -en "$ECYAN"; echo -n "     ?00000?=       "; echo -en "$EBLUE"; echo -n "                    "; echo -en "$ENAVY"; echo -n "                    "; echo -en "$EPURP"; echo "                    "
+
+echo -e "$ERS"
