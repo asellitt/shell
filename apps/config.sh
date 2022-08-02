@@ -60,7 +60,10 @@ else
   case $MODE in
     "WORK")
       log "Installing casks (WORK MODE)"
+
       log "Installing packages (WORK MODE)"
+      brew_install "watchman"
+      
       log "Installing App Store applications (WORK MODE)"
       ;;
     "PERSONAL")
