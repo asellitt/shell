@@ -10,6 +10,7 @@
   ui = auto
 [push]
   default = simple
+  autoSetupRemote = true
 [pull]
   rebase = false
 [alias]
@@ -21,6 +22,7 @@
   l  = smart-log
   p  = push-curent
   s  = status
+  ap = add --patch
   br = new-branch
   nb = new-branch
   cl = clone
