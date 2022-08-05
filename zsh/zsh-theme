@@ -48,7 +48,13 @@ prompt_asdf() {
 # Git: branch/detached head, dirty status
 prompt_git() {
   (( $+commands[git] )) || return
-  if [[ "$(git config --get oh-my-zsh.hide-status 2>/dev/null)" = 1 ]]; then
+    if [[ "$(git config --get oh-my-zsh.hide-status 2>/dev/null)" = 1 ]]; then
+    branch=$(git branch --show-current 2> /dev/null)
+    
+    prompt_segment white " [ "
+    prompt_segment cyan "${branch}"
+    prompt_segment white " ] "
+    
     return
   fi
   local PL_BRANCH_CHAR
