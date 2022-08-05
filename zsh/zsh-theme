@@ -53,7 +53,7 @@ prompt_git() {
     
     prompt_segment white " [ "
     prompt_segment cyan "${branch}"
-    prompt_segment white " ] "
+    prompt_segment white " ]"
     
     return
   fi
