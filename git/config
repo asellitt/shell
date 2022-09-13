@@ -15,12 +15,10 @@
   rebase = false
 [alias]
   a  = add
-  b  = personal-build
   c  = commit
   d  = diff
   f  = fetch
   l  = smart-log
-  p  = push-curent
   s  = status
   ap = add --patch
   br = new-branch
@@ -30,7 +28,6 @@
   cm = commit
   cp = cherry-pick
   pl = pull
-  ps = push-current
   rb = reabse
   sa = stash
   sm = submodule
