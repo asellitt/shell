@@ -14,12 +14,12 @@
 [pull]
   rebase = false
 [alias]
-  a  = add
-  c  = commit
-  d  = diff
-  f  = fetch
-  l  = smart-log
-  s  = status
+  a = add
+  c = commit
+  d = diff
+  f = fetch
+  l = smart-log
+  s = status
   ap = add --patch
   br = new-branch
   nb = new-branch
