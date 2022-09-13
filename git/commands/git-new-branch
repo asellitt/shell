@@ -3,16 +3,16 @@
 CLEAR="\033[1;0m"
 GREEN="\033[0;32m"
 
-echo -e "$GREEN- Starting: new-branch for '$1' -$CLEAR"
+echo -e "$GREEN- Starting: new-branch on $1 for '$2' -$CLEAR"
 
-echo $'\nExecuting: git checkout master'
-git checkout master
+echo $"\nExecuting: git checkout $1"
+git checkout $1
 
-echo $'\nExecuting: git fetch'
-git fetch
+echo $"\nExecuting: git fetch origin $1"
+git fetch origin $1
 
 echo $'\nExecuting: git pull'
 git pull
 
-echo $"Executing: git checkout -b $1"
-git checkout -b $1
+echo $"Executing: git checkout -b $2"
+git checkout -b asellitt--$2

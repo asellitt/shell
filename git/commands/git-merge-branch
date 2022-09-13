@@ -1,0 +1,24 @@
+#!/bin/bash
+
+CLEAR="\033[1;0m"
+GREEN="\033[0;32m"
+
+echo -e "$GREEN- Starting: merge-branch on $1 to branch '$BRANCH' -$CLEAR"
+
+echo $"\nExecuting: git checkout $1"
+git checkout $1
+
+echo $"\nExecuting: git fetch origin $1"
+git fetch origin $1
+
+echo $"\nExecuting: git pull (on $1)"
+git pull
+
+echo $'\nExecuting: git checkout branch'
+git checkout -
+
+echo $'\nExecuting: git pull (on branch)'
+git pull
+
+echo $"\nExecuting: git merge $1"
+git merge $1

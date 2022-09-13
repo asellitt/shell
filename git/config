@@ -21,26 +21,24 @@
   l = smart-log
   s = status
   ap = add --patch
-  br = new-branch
-  nb = new-branch
   cl = clone
   co = checkout
   cm = commit
   cp = cherry-pick
   pl = pull
-  rb = reabse
   sa = stash
   sm = submodule
   st = status
-  mmr = merge-master
-  mmn = merge-main
   to-deploy = log --merges --grep='pull request' --format='%s (%cN)' origin/production..origin/master
-  sc = spring-clean
   pr = pull-request
-  su = set-upstream
   yolo = push --force-with-lease
   pickaxe = log -p -S
   pa = log -p -S
+  mb = merge-branch
+  nb = new-branch
+  rb = rebase-brach
+  sc = spring-clean
+  su = set-upstream
 [diff]
   tool = diffmerge
 [difftool "diffmerge"]

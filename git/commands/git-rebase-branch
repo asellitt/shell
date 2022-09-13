@@ -1,0 +1,24 @@
+#!/bin/bash
+
+CLEAR="\033[1;0m"
+GREEN="\033[0;32m"
+
+echo -e "$GREEN- Starting: rebase-branch on '$1' -$CLEAR"
+
+echo $"\nExecuting: git checkout $1"
+git checkout $1
+
+echo $"\nExecuting: git fetch origin $1"
+git fetch origin $1
+
+echo $"\nExecuting: git pull (on $1)"
+git pull
+
+echo $'\nExecuting: git checkout branch'
+g checkout -
+
+echo $'\nExecuting: git pull (on branch)'
+git pull
+
+echo $"Executing: git rebase $1"
+git rebase $1
