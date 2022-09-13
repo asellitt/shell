@@ -4,8 +4,22 @@ CLEAR="\033[1;0m"
 GREEN="\033[0;32m"
 
 echo -e "$GREEN- Starting: spring-clean -$CLEAR"
+echo ''
+echo "Nuking local branches"
 git branch |
+  grep -v "^* " |
   grep -v "^[* ] master$" |
   grep -v "^[* ] main$" |
   grep -v "^[* ] production$" |
-  xargs git branch -D
+  grep -v "^[* ] green$" |
+  xargs git branch -d
+
+echo ''
+echo "Nuking remote branches"
+git branch -r |
+  grep -v "^* " |
+  grep -v "^[* ] master$" |
+  grep -v "^[* ] main$" |
+  grep -v "^[* ] production$" |
+  grep -v "^[* ] green$" |
+  xargs git branch -d -r
