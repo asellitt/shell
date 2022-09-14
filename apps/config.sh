@@ -60,6 +60,7 @@ else
   case $MODE in
     "WORK")
       log "Installing casks (WORK MODE)"
+      cask install "obsidian"
 
       log "Installing packages (WORK MODE)"
       brew_install "watchman"
