@@ -2,10 +2,12 @@
 
 CLEAR="\033[1;0m"
 GREEN="\033[0;32m"
+CYAN="\033[1;36m"
 
 echo -e "$GREEN- Starting: spring-clean -$CLEAR"
+
 echo ''
-echo "Nuking local branches"
+echo -e "$CYAN- Nuking local branches -$CLEAR"
 git branch |
   grep -v "^* " |
   grep -v "^[* ] master$" |
@@ -15,7 +17,7 @@ git branch |
   xargs git branch -d
 
 echo ''
-echo "Nuking remote branches"
+echo -e "$CYAN- Nuking remote branches -$CLEAR"
 git branch -r |
   grep -v "^* " |
   grep -v "^[* ] master$" |

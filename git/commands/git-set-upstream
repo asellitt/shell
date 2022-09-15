@@ -2,11 +2,11 @@
 
 CLEAR="\033[1;0m"
 GREEN="\033[0;32m"
+CYAN="\033[1;36m"
 BRANCH="$(git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1 /')"
 
-echo -e "${GREEN}- Starting: set-upstream on branch '${BRANCH}'-${CLEAR}"
+echo -e "$GREEN- Starting: set-upstream on branch '$BRANCH' -$CLEAR"
 echo ''
-echo "Executing: git branch --set-upstream-to=origin/${BRANCH} ${BRANCH}"
-echo ''
+echo -e "$CYAN- Executing: git branch --set-upstream-to=origin/$BRANCH $BRANCH -$CLEAR"
 
 git branch --set-upstream-to=origin/${BRANCH} ${BRANCH}
