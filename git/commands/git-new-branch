@@ -2,17 +2,22 @@
 
 CLEAR="\033[1;0m"
 GREEN="\033[0;32m"
+CYAN="\033[1;36m"
 
 echo -e "$GREEN- Starting: new-branch on $1 for '$2' -$CLEAR"
 
-echo $"\nExecuting: git checkout $1"
+echo ''
+echo "$CYAN- Executing: git checkout $1 -$CLEAR"
 git checkout $1
 
-echo $"\nExecuting: git fetch origin $1"
+echo ''
+echo "$CYAN- Executing: git fetch origin $1 -$CLEAR"
 git fetch origin $1
 
-echo $'\nExecuting: git pull'
+echo ''
+echo "$CYAN- Executing: git pull -$CLEAR"
 git pull
 
-echo $"Executing: git checkout -b $2"
+echo ''
+echo "$CYAN- Executing: git checkout -b $2 -$CLEAR"
 git checkout -b asellitt--$2

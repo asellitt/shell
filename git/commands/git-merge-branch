@@ -2,23 +2,30 @@
 
 CLEAR="\033[1;0m"
 GREEN="\033[0;32m"
+CYAN="\033[1;36m"
 
 echo -e "$GREEN- Starting: merge-branch on $1 to branch '$BRANCH' -$CLEAR"
 
-echo $"\nExecuting: git checkout $1"
+echo ''
+echo "$CYAN- Executing: git checkout $1 -$CLEAR"
 git checkout $1
 
-echo $"\nExecuting: git fetch origin $1"
+echo ''
+echo "$CYAN- Executing: git fetch origin $1 -$CLEAR"
 git fetch origin $1
 
-echo $"\nExecuting: git pull (on $1)"
+echo ''
+echo "$CYAN- Executing: git pull (on $1) -$CLEAR"
 git pull
 
-echo $'\nExecuting: git checkout branch'
+echo ''
+echo "$CYAN- Executing: git checkout branch -$CLEAR"
 git checkout -
 
-echo $'\nExecuting: git pull (on branch)'
+echo ''
+echo "$CYAN- Executing: git pull (on branch) -$CLEAR"
 git pull
 
-echo $"\nExecuting: git merge $1"
+echo ''
+echo "$CYAN- Executing: git merge $1 -$CLEAR"
 git merge $1
