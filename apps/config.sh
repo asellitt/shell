@@ -85,6 +85,7 @@ else
       cask_install "krita"
       cask_install "logitech-myharmony"
       cask_install "logseq"
+      cask_install "nextcloud"
       cask_install "openemu"
       cask_install "sequel-pro"
       cask_install "sigil"
