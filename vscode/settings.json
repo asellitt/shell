@@ -15,7 +15,12 @@
   "terminal.integrated.fontSize": 14,
   "explorer.confirmDelete": false,
   "files.associations": {
-    "*.hcl": "terraform"
+    "*.hcl": "terraform",
+    "*global.json": "jsonc"
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": null
   },
   "[gemfile]": {
     "editor.formatOnSave": true
@@ -62,5 +67,6 @@
     "sidekiq",
     "Unico"
   ],
-  "ruby.rubocop.onSave": false
+  "ruby.rubocop.onSave": false,
+  "cSpell.languageSettings": []
 }
