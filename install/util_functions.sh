@@ -16,9 +16,8 @@ function log() {
   local prefix=$(printf "%10s" $PREFIX)
   local message=$1
 
-  determine_color_code $prefix
+  local ecol=$(determine_color_code $prefix)
   local erst="\033[1;0m"
-  local ecol=$COLOR
 
   echo -en "${erst}"
   echo -n "[${col}"
@@ -102,9 +101,9 @@ function determine_color_code() {
   local color_offset=0
 
   for (( i=0; i<${#prefix}; i++ )); do
-    color_offset=$((color_offset + i * $(printf "%d" "'$i")))
+    color_offset=$((color_offset + $(printf "%d" "'${prefix:$i:1}")))
   done
   color_offset=$((31 + color_offset % 6))
 
-  COLOR="\033[0;${color_offset}m"
+  echo "\033[1;${color_offset}m"
 }
