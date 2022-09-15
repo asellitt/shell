@@ -17,7 +17,6 @@
   a = add
   c = commit
   d = diff
-  f = fetch
   l = smart-log
   s = status
   ap = add --patch
