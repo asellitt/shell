@@ -36,7 +36,7 @@
   pa = log -p -S
   mb = merge-branch
   nb = new-branch
-  rb = rebase-brach
+  rb = rebase-branch
   sc = spring-clean
   su = set-upstream
 [diff]
