@@ -8,4 +8,4 @@
   path = ~/.gitconfig.merge
 
 [core]
-	excludesfile = /Users/asellitt/.gitignore
+	excludesfile = ~/.gitignore

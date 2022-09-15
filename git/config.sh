@@ -24,7 +24,6 @@ fi
 git config --global include.path "${DOTFILES_DIR}/secret/git.config.secret"
 
 link "${GIT_DIR}/.gitignore" "${GIT_MODULE_DIR}/ignore"
-git config --global core.excludesfile "${GIT_DIR}/.gitignore"
 
 link "${GIT_DIR}/.git-completion.bash" "${GIT_MODULE_DIR}/completion.bash"
 link "${GIT_DIR}/.gitattributes" "${GIT_MODULE_DIR}/attributes"
