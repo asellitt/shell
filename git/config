@@ -6,6 +6,3 @@
   path = ~/.gitconfig.aliases
   path = ~/.gitconfig.diff
   path = ~/.gitconfig.merge
-
-[core]
-	excludesfile = ~/.gitignore
