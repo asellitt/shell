@@ -1,0 +1,25 @@
+[alias]
+  a = add
+  c = commit
+  d = diff
+  l = smart-log
+  s = status
+  ap = add --patch
+  cl = clone
+  co = checkout
+  cm = commit
+  cp = cherry-pick
+  pl = pull
+  sa = stash
+  sm = submodule
+  st = status
+  to-deploy = log --merges --grep='pull request' --format='%s (%cN)' origin/production..origin/master
+  pr = pull-request
+  yolo = push --force-with-lease
+  pickaxe = log -p -S
+  pa = log -p -S
+  mb = merge-branch
+  nb = new-branch
+  rb = rebase-branch
+  sc = spring-clean
+  su = set-upstream

@@ -1,55 +1,11 @@
-[user]
-  name = Anthony Sellitti
-  email = 1116257+asellitt@users.noreply.github.com
 [include]
 	path = /Users/asellitt/src/shell/secret/git.config.secret
+  path = ~/.gitconfig.user
+  path = ~/.gitconfig.core
+  path = ~/.gitconfig.commands
+  path = ~/.gitconfig.aliases
+  path = ~/.gitconfig.diff
+  path = ~/.gitconfig.merge
+
 [core]
 	excludesfile = /Users/asellitt/.gitignore
-  editor = vim
-[color]
-  ui = auto
-[push]
-  default = simple
-  autoSetupRemote = true
-[pull]
-  rebase = false
-[alias]
-  a = add
-  c = commit
-  d = diff
-  l = smart-log
-  s = status
-  ap = add --patch
-  cl = clone
-  co = checkout
-  cm = commit
-  cp = cherry-pick
-  pl = pull
-  sa = stash
-  sm = submodule
-  st = status
-  to-deploy = log --merges --grep='pull request' --format='%s (%cN)' origin/production..origin/master
-  pr = pull-request
-  yolo = push --force-with-lease
-  pickaxe = log -p -S
-  pa = log -p -S
-  mb = merge-branch
-  nb = new-branch
-  rb = rebase-branch
-  sc = spring-clean
-  su = set-upstream
-[diff]
-  tool = diffmerge
-[difftool "diffmerge"]
-  cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
-[difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path =
-[merge]
-  tool = diffmerge
-[mergetool "diffmerge"]
-  cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
-  trustExitCode = true
-[mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true

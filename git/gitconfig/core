@@ -1,0 +1,5 @@
+[core]
+	excludesfile = /Users/asellitt/.gitignore
+  editor = vim
+[color]
+  ui = auto
