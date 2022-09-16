@@ -10,7 +10,7 @@ echo ''
 echo -e "$CYAN- Nuking local branches -$CLEAR"
 git branch |
   grep -v "^* " |
-  grep -v "^[* ] master$" |
+  grep -v "/master$" |
   grep -v "^[* ] main$" |
   grep -v "^[* ] production$" |
   grep -v "^[* ] green$" |
@@ -20,8 +20,8 @@ echo ''
 echo -e "$CYAN- Nuking remote branches -$CLEAR"
 git branch -r |
   grep -v "^* " |
-  grep -v "^[* ] master$" |
-  grep -v "^[* ] main$" |
-  grep -v "^[* ] production$" |
-  grep -v "^[* ] green$" |
+  grep -v "/master$" |
+  grep -v "/main$" |
+  grep -v "/production$" |
+  grep -v "/green$" |
   xargs git branch -d -r
