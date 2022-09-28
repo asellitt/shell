@@ -21,3 +21,9 @@ function timeshell() {
     /usr/bin/time $shell -i -c exit | grep real
   done
 }
+
+function fix-self-assigned-ip {
+  sudo rm /Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist*
+  sudo rm /Library/Preferences/SystemConfiguration/NetworkInterfaces.plist*
+  sudo rm /Library/Preferences/SystemConfiguration/preferences.plist*
+}
