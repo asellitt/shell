@@ -68,5 +68,6 @@
     "Unico"
   ],
   "ruby.rubocop.onSave": false,
-  "cSpell.languageSettings": []
+  "cSpell.languageSettings": [],
+  "redhat.telemetry.enabled": false
 }
