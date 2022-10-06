@@ -15,8 +15,8 @@ echo -e "$CYAN- Executing: git fetch origin $1 -$CLEAR"
 git fetch origin $1
 
 echo ''
-echo -e "$CYAN- Executing: git pull -$CLEAR"
-git pull
+echo -e "$CYAN- Executing: git fast-forward merge (on $1) -$CLEAR"
+git merge origin $1
 
 echo ''
 echo -e "$CYAN- Executing: git checkout -b $2 -$CLEAR"
