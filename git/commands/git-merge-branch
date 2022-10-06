@@ -12,24 +12,16 @@ echo -e "$CYAN- Executing: git checkout $1 -$CLEAR"
 git checkout $1
 
 echo ''
-echo -e "$CYAN- Executing: git fetch origin $1 -$CLEAR"
-git fetch origin $1
-
-echo ''
-echo -e "$CYAN- Executing: git fast-forward merge (on $1) -$CLEAR"
-git merge origin $1
+echo -e "$CYAN- Executing: git update-branch (on '$1') -$CLEAR"
+git update-branch
 
 echo ''
 echo -e "$CYAN- Executing: git checkout branch -$CLEAR"
 git checkout -
 
 echo ''
-echo -e "$CYAN- Executing: git fetch (on branch) -$CLEAR"
-git fetch origin $BRANCH
-
-echo ''
-echo -e "$CYAN- Executing: git fast-foward merge (on branch) -$CLEAR"
-git merge origin $BRANCH
+echo -e "$CYAN- Executing: git update-branch (on '$BRANCH') -$CLEAR"
+git update-branch
 
 echo ''
 echo -e "$CYAN- Executing: git merge $1 -$CLEAR"

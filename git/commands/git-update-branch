@@ -1,0 +1,16 @@
+#!/bin/bash
+
+CLEAR="\033[1;0m"
+GREEN="\033[1;32m"
+CYAN="\033[1;36m"
+BRANCH="$(git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1 /')"
+
+echo -e "$GREEN- Starting: update-branch on '$BRANCH' -$CLEAR"
+
+echo ''
+echo -e "$CYAN- Executing: git fetch origin $BRANCH -$CLEAR"
+git fetch origin $BRANCH
+
+echo ''
+echo -e "$CYAN- Executing: git merge origin $BRANCH -$CLEAR"
+git merge origin $BRANCH
