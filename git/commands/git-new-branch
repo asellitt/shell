@@ -4,6 +4,11 @@ CLEAR="\033[1;0m"
 GREEN="\033[1;32m"
 CYAN="\033[1;36m"
 
+if [ "$#" -ne 2 ]; then
+  echo "usage: git nb <branch to branch from> <new branch name>"
+  exit 1
+fi
+
 echo -e "$GREEN- Starting: new-branch on $1 for '$2' -$CLEAR"
 
 echo ''
