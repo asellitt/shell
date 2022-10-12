@@ -12,5 +12,5 @@ echo -e "$CYAN- Executing: git fetch origin $BRANCH -$CLEAR"
 git fetch origin $BRANCH
 
 echo ''
-echo -e "$CYAN- Executing: git merge origin $BRANCH -$CLEAR"
-git merge origin $BRANCH
+echo -e "$CYAN- Executing: git pull origin $BRANCH -$CLEAR"
+git pull origin $BRANCH
