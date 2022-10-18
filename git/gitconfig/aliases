@@ -24,3 +24,4 @@
   sc = spring-clean
   su = set-upstream
   up = update-branch
+  rs = reset-branch
