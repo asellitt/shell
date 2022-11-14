@@ -46,6 +46,7 @@ else
   brew_install "gh"
   brew_install "jq"
   brew_install "mas"
+  brew_install "ncdu"
   brew_install "the_silver_searcher"
   brew_install "watch"
 
@@ -60,8 +61,9 @@ else
   case $MODE in
     "WORK")
       log "Installing casks (WORK MODE)"
-      cask install "obsidian"
-
+      cask_install "obsidian"
+      cask_install "sequel-pro"
+      
       log "Installing packages (WORK MODE)"
       brew_install "watchman"
       
