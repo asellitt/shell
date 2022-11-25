@@ -14,7 +14,7 @@ git branch |
   grep -v "^[* ] main$" |
   grep -v "^[* ] production$" |
   grep -v "^[* ] green$" |
-  xargs git branch -d
+  xargs git branch -D
 
 echo ''
 echo -e "$CYAN- Nuking remote branches -$CLEAR"
@@ -24,7 +24,7 @@ git branch -r |
   grep -v "/main$" |
   grep -v "/production$" |
   grep -v "/green$" |
-  xargs git branch -d -r
+  xargs git branch -D -r
 
 
 if [ $? -ne 0 ]; then
