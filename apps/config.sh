@@ -32,6 +32,7 @@ if [[ ! $INSTALL == true ]]; then
 else
   log "Installing common casks"
   cask_install "barrier"
+  cask_install "canva"
   cask_install "firefox"
   cask_install "font-fira-code"
   cask_install "imageoptim"
