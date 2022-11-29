@@ -90,7 +90,7 @@ else
       cask_install "logseq"
       cask_install "nextcloud"
       cask_install "openemu"
-      cask_install "sequel-pro"
+      cask_install "sequel-ace"
       cask_install "sigil"
       cask_install "signal"
       cask_install "slack"
