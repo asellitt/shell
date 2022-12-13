@@ -80,6 +80,7 @@ else
       cask_install "caffeine"
       cask_install "calibre"
       cask_install "coconutbattery"
+      cask_install "cyberduck"
       cask_install "discord"
       cask_install "drivethrurpg"
       cask_install "dropbox"
