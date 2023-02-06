@@ -1,0 +1,50 @@
+#!/bin/bash
+
+CLEAR="\033[1;0m"
+GREEN="\033[1;32m"
+CYAN="\033[1;36m"
+WHITE="\033[1;37m"
+RED="\033[1;31m"
+
+if [ "$#" -ne 2 ]; then
+  echo "usage: git cr <commit> <release-branch>"
+  exit 1
+fi
+
+echo -e "$GREEN- Starting: check-release of $1 on release '$2' -$CLEAR"
+
+echo ''
+echo -e "$CYAN- Executing: git fetch origin $2 -$CLEAR"
+git fetch origin $2
+
+echo ''
+echo -e "$CYAN- Executing: git checkout $2 -$CLEAR"
+git checkout $2
+
+echo ''
+echo -e "$CYAN- Executing: git log | grep '$1' -$CLEAR"
+git log | grep $1
+
+if [[ $? -eq 0 ]];then
+  echo ''
+  echo -e "$WHITE ------------------------- $CLEAR"
+  echo -e "$WHITE|                         |$CLEAR"
+  echo -e "$WHITE|$GREEN COMMIT FOUND IN RELEASE $WHITE|$CLEAR"
+  echo -e "$WHITE|                         |$CLEAR"
+  echo -e "$WHITE ------------------------- $CLEAR"
+else
+  echo ''
+  echo -e "$WHITE ----------------------------- $CLEAR"
+  echo -e "$WHITE|                             |$CLEAR"
+  echo -e "$WHITE|$RED COMMIT NOT FOUND IN RELEASE $WHITE|$CLEAR"
+  echo -e "$WHITE|                             |$CLEAR"
+  echo -e "$WHITE ----------------------------- $CLEAR"
+fi
+
+echo ''
+echo -e "$CYAN- Executing: git checkout - -$CLEAR"
+git checkout -
+
+echo ''
+echo -e "$CYAN- Executing: git branch -D $2 -$CLEAR"
+git branch -D $2

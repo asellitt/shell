@@ -25,3 +25,4 @@
   su = set-upstream
   up = update-branch
   rs = reset-branch
+  cr = check-release
