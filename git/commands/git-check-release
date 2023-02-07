@@ -45,6 +45,9 @@ echo ''
 echo -e "$CYAN- Executing: git checkout - -$CLEAR"
 git checkout -
 
-echo ''
-echo -e "$CYAN- Executing: git branch -D $2 -$CLEAR"
-git branch -D $2
+echo "main master green" | grep $2 &> /dev/null
+if [[ $? -eq 0 ]];then
+  echo ''
+  echo -e "$CYAN- Executing: git branch -D $2 -$CLEAR"
+  git branch -D $2
+fi
