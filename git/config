@@ -1,8 +1,9 @@
 [include]
 	path = /Users/asellitt/src/shell/secret/git.config.secret
-  path = ~/.gitconfig.user
-  path = ~/.gitconfig.core
-  path = ~/.gitconfig.commands
   path = ~/.gitconfig.aliases
+  path = ~/.gitconfig.commands
+  path = ~/.gitconfig.core
   path = ~/.gitconfig.diff
   path = ~/.gitconfig.merge
+  path = ~/.gitconfig.push
+  path = ~/.gitconfig.user
