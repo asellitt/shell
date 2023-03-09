@@ -126,7 +126,7 @@ fi
 if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
-if [-f ~/.aliases.machinespecific]; then
+if [ -f ~/.aliases.machinespecific ]; then
     source ~/.aliases.machinespecific
 fi
 
