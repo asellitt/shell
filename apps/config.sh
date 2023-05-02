@@ -41,6 +41,7 @@ else
   cask_install "kensingtonworks"
   cask_install "licecap"
   cask_install "macdown"
+  cask_install "steam"
   cask_install "visual-studio-code"
 
   log "Installing common packages"
