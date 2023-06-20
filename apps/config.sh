@@ -87,6 +87,7 @@ else
       cask_install "dropbox"
       cask_install "gimp"
       cask_install "google-chrome"
+      cask_install "home-assistant"
       cask_install "krita"
       cask_install "logitech-myharmony"
       cask_install "logseq"
