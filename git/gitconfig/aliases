@@ -26,3 +26,4 @@
   up = update-branch
   rs = reset-branch
   cr = check-release
+  gr = get-remote-branch

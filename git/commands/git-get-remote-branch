@@ -1,0 +1,22 @@
+#!/bin/bash
+
+CLEAR="\033[1;0m"
+GREEN="\033[1;32m"
+CYAN="\033[1;36m"
+WHITE="\033[1;37m"
+RED="\033[1;31m"
+
+if [ "$#" -ne 2 ]; then
+  echo "usage: git gr <branch>"
+  exit 1
+fi
+
+echo -e "$GREEN- Starting: get-remote-branch for branch $1 -$CLEAR"
+
+echo ''
+echo -e "$CYAN- Executing: git fetch origin $1 -$CLEAR"
+git fetch origin $1
+
+echo ''
+echo -e "$CYAN- Executing: git checkout $1 -$CLEAR"
+git checkout $1
