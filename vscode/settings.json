@@ -2,21 +2,22 @@
   "workbench.startupEditor": "none",
   "editor.minimap.enabled": false,
   "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
-  "files.autoSave": "onFocusChange",
   "editor.tabSize": 2,
   "editor.renderWhitespace": "all",
   "editor.cursorStyle": "line-thin",
   "editor.fontLigatures": true,
-  "editor.rulers": [80, 120],
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
+  "editor.rulers": [
+    80,
+    120
+  ],
   "git.autofetch": true,
   "editor.fontSize": 14,
   "terminal.integrated.fontSize": 14,
   "explorer.confirmDelete": false,
   "files.associations": {
     "*.hcl": "terraform",
-    "*global.json": "jsonc"
+    "*global.json": "jsonc",
+    "*.vil": "json"
   },
   "[jsonc]": {
     "editor.formatOnSave": false,
@@ -70,5 +71,8 @@
   "ruby.rubocop.onSave": false,
   "cSpell.languageSettings": [],
   "redhat.telemetry.enabled": false,
-  "terminal.integrated.enableMultiLinePasteWarning": false
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.colorTheme": "Default Dark+",
+  "files.autoSave": "onFocusChange"
 }
