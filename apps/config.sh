@@ -41,6 +41,7 @@ else
   cask_install "kensingtonworks"
   cask_install "licecap"
   cask_install "macdown"
+  cask_install "obsidian"
   cask_install "steam"
   cask_install "visual-studio-code"
 
@@ -91,7 +92,6 @@ else
       cask_install "home-assistant"
       cask_install "krita"
       cask_install "logitech-myharmony"
-      cask_install "logseq"
       cask_install "nextcloud"
       cask_install "openemu"
       cask_install "sequel-ace"
