@@ -65,7 +65,6 @@ else
   case $MODE in
     "WORK")
       log "Installing casks (WORK MODE)"
-      cask_install "obsidian"
       cask_install "sequel-pro"
       
       log "Installing packages (WORK MODE)"
