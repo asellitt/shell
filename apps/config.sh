@@ -102,7 +102,6 @@ else
       log "Installing packages (PERSONAL MODE)"
       brew_install "bitwarden-cli"
       brew_install "coreutils"
-      brew_install "heroku"
 
       log "Installing App Store applications (PERSONAL MODE)"
       mas_install "Disk Care" "913724705"
