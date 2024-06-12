@@ -130,7 +130,7 @@ if [ -f ~/.aliases.machinespecific ]; then
     source ~/.aliases.machinespecific
 fi
 
-if [ -x "$(command -v fzf)"]; then
+if [ -x "$(command -v fzf)" ]; then
   source <(fzf --zsh)
 fi
 
