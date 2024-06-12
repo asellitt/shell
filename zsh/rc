@@ -132,6 +132,7 @@ fi
 
 if [ -x "$(command -v fzf)" ]; then
   source <(fzf --zsh)
+  bindkey "${key[Up]}" fzf-history-widget
 fi
 
 # remove once ohmyzsh asdf plugin is updated to support v0.9.0
