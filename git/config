@@ -7,3 +7,4 @@
   path = ~/.gitconfig.merge
   path = ~/.gitconfig.push
   path = ~/.gitconfig.user
+  path = ~/.gitconfig.machinespecific
