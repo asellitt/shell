@@ -130,6 +130,10 @@ if [ -f ~/.aliases.machinespecific ]; then
     source ~/.aliases.machinespecific
 fi
 
+if [ -x "$(command -v fzf)"]; then
+  source <(fzf --zsh)
+fi
+
 # remove once ohmyzsh asdf plugin is updated to support v0.9.0
 if [ -f $(brew --prefix asdf)/libexec/asdf.sh ]; then
     source $(brew --prefix asdf)/libexec/asdf.sh
