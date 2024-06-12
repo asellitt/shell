@@ -46,6 +46,7 @@ else
   log "Installing common packages"
   brew_install "autojump"
   brew_install "direnv"
+  brew_install "fzf"
   brew_install "gh"
   brew_install "jq"
   brew_install "mas"
