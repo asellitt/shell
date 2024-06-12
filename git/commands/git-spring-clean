@@ -31,4 +31,5 @@ if [ $? -ne 0 ]; then
   echo ''
   echo -e "$CYAN- remote branch nuke failed, manually delete these: -$CLEAR"
   git branch -r | grep \'
+  git branch -r | grep \"
 fi
