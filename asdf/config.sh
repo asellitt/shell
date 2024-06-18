@@ -33,6 +33,9 @@ if hash asdf 2>/dev/null; then
 
     log "  Installing required yarn version manager"
     asdf plugin add yarn
+
+    log "  Installing required python version manager"
+    asdf plugin add python
   fi
 
   log "  Installing required erlang version manager"
