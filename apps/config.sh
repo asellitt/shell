@@ -29,6 +29,7 @@ if [[ ! $INSTALL == true ]]; then
   log "Skipping app installation"
 else
   log "Installing common casks"
+  cask_install "affinity-designer"
   cask_install "barrier"
   cask_install "canva"
   cask_install "firefox"
@@ -42,6 +43,7 @@ else
   cask_install "obsidian"
   cask_install "steam"
   cask_install "visual-studio-code"
+  cask_install "wave"
 
   log "Installing common packages"
   brew_install "autojump"
@@ -76,6 +78,7 @@ else
     "PERSONAL")
       log "Installing casks (PERSONAL MODE)"
       cask_install "authy"
+      cask_install "bambu-studio"
       cask_install "bitwarden"
       cask_install "caffeine"
       cask_install "calibre"
