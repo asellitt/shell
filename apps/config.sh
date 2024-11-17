@@ -67,6 +67,8 @@ else
   case $MODE in
     "WORK")
       log "Installing casks (WORK MODE)"
+      cask_install "hiddenbar"
+      cask_install "meetingbar"
       cask_install "sequel-pro"
       
       log "Installing packages (WORK MODE)"
@@ -86,6 +88,7 @@ else
       cask_install "cyberduck"
       cask_install "discord"
       cask_install "drivethrurpg"
+      cask_install "ente-auth"
       cask_install "gimp"
       cask_install "google-chrome"
       cask_install "home-assistant"
