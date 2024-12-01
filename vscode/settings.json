@@ -74,5 +74,7 @@
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "workbench.colorTheme": "Default Dark+",
-  "files.autoSave": "onFocusChange"
+  "files.autoSave": "onFocusChange",
+  "githubPullRequests.pullBranch": "never",
+  "explorer.confirmDragAndDrop": false
 }
