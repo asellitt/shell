@@ -11,5 +11,5 @@ else
   ITERM_PREFERENCES_DIR="${HOME}/Library/Preferences"
 
   log "Installing preferences"
-  link "${ITERM_PREFERENCES_DIR}/com.googlecode.iterm2.plist" "${ITERM_MODULE_DIR}/com.googlecode.iterm2.plist"
+  # link "${ITERM_PREFERENCES_DIR}/com.googlecode.iterm2.plist" "${ITERM_MODULE_DIR}/com.googlecode.iterm2.plist"
 fi
