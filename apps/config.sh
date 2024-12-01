@@ -4,8 +4,6 @@ PREFIX="APPS"
 log "Begin Apps config"
 
 if hash brew 2>/dev/null; then
-  log "  Brew detected, tapping additional casks"
-  brew tap homebrew/cask-fonts
   if [[ $UPDATE == true ]]; then
     log "  Upgrading casks"
     brew upgrade --cask -v
