@@ -36,6 +36,9 @@ if hash asdf 2>/dev/null; then
 
     log "  Installing required python version manager"
     asdf plugin add python
+
+    log "  Installing required bun version manager"
+    asdf plugin add bun
   fi
 
   log "  Installing required erlang version manager"
