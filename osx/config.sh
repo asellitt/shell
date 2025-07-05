@@ -83,6 +83,8 @@ else
   # defaults write com.apple.dock mru-spaces -bool false
 
   log "Setting Finder preferences"
+  log "  Show hidden files in Finder"
+  defaults write com.apple.finder AppleShowAllFiles true
   # log "   Show external hard drives on the desktop"
   # defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
   # log "   Show hard drives on the desktop"
