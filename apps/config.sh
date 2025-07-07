@@ -39,6 +39,7 @@ else
   cask_install "licecap"
   cask_install "macdown"
   cask_install "obsidian"
+  cask_install "raycast"
   cask_install "steam"
   cask_install "visual-studio-code"
   cask_install "wave"
