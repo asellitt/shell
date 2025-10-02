@@ -28,7 +28,6 @@ if [[ ! $INSTALL == true ]]; then
 else
   log "Installing common casks"
   cask_install "affinity-designer"
-  cask_install "barrier"
   cask_install "canva"
   cask_install "firefox"
   cask_install "font-fira-code"
@@ -68,7 +67,6 @@ else
       log "Installing casks (WORK MODE)"
       cask_install "hiddenbar"
       cask_install "meetingbar"
-      cask_install "sequel-pro"
       
       log "Installing packages (WORK MODE)"
       brew_install "watchman"
@@ -78,9 +76,9 @@ else
       ;;
     "PERSONAL")
       log "Installing casks (PERSONAL MODE)"
-      cask_install "authy"
       cask_install "bambu-studio"
       cask_install "bitwarden"
+      cask_install "brave-browser"
       cask_install "caffeine"
       cask_install "calibre"
       cask_install "coconutbattery"
@@ -89,11 +87,10 @@ else
       cask_install "drivethrurpg"
       cask_install "ente-auth"
       cask_install "gimp"
-      cask_install "google-chrome"
       cask_install "home-assistant"
       cask_install "jellyfin-media-player"
       cask_install "krita"
-      cask_install "logitech-myharmony"
+      # cask_install "logitech-myharmony" # doesnt exist
       cask_install "openemu"
       cask_install "sequel-ace"
       cask_install "sigil"
@@ -104,7 +101,7 @@ else
       cask_install "tailscale"
       cask_install "transmission"
       cask_install "vlc"
-      cask_install "zsa-wally"
+      cask_install "zsa-wally" # investigate replacement: keymapp
 
       log "Installing packages (PERSONAL MODE)"
       brew_install "bitwarden-cli"
