@@ -11,7 +11,6 @@ alias ssh='compile-ssh-config && ssh'
 # handy
 alias ..='cd ..'
 alias ~='cd ~'
-alias refresh='source ~/.bashrc'
 alias shutdown='sudo shutdown -h now'
 alias restart='sudo reboot now'
 alias cls='clear'
