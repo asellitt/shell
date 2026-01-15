@@ -21,37 +21,12 @@ alias ag='ag --color --color-match 34\;46 --color-line-number 1\;33\;40 --litera
 
 # diagnostic
 alias duh="sudo du -hxP --max-depth=2 | grep '^[0-9]*\.*[0-9]*G'"
+alias fdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
 # development
-alias bec='GHERKIN_RUBY=true be cucumber'
-alias bew='be unicorn_rails -c config/unicorn.rb'
-alias berc='DISABLE_SPRING=true be rails c'
-alias berr='DISABLE_SPRING=true be rails r'
-alias berp='be pry-remote'
-alias s='bes'
-alias z='zeus'
-alias zt='z test --format documentation'
-alias zs='zt'
-alias zc='GHERKIN_RUBY=true z cucumber'
-alias powrestart='touch ~/.pow/restart.txt'
 alias irb='pry'
 alias readlink='greadlink'
 alias box-sync-lock-files='find ~/Box\ Sync/ -print0 | xargs -0 chflags uchg && find ~/Box\ Sync/ -type d -print0 | xargs -0 chflags nouchg'
-alias run-rufo='git diff --cached --name-only --diff-filter=ACM | grep "\.rb$" | xargs bundle exec rufo'
-
-#ragevelopment
-alias fuckme='npm'
-alias fuck-you-structure-sql='git checkout -- db/structure.sql'
-alias fuck-you-eslint='yarn run eslint:fix'
-alias fuck-you-rubocop='bundle exec rubocop --auto-correct'
-alias fuck-you-rubocrap='bundle exec rubocop --auto-correct'
-alias fuck-you-rufo='git diff --cached --name-only --diff-filter=ACM | grep "\.rb$" | xargs bundle exec rufo'
-alias run-the-fucking-test='yarn wes test:e2e'
-alias show-the-fucking-test='yarn wes test:e2e-show'
-alias run-the-fucking-test-server='yarn wes e2e:dev'
-alias run-the-fucking-account-test='yarn wea test:e2e'
-alias show-the-fucking-account-test='yarn wea test:e2e-show'
-alias run-the-fucking-account-test-server='yarn wea e2e:dev'
 
 # fun
 alias minecraft='pushd .;cd /media/one/games/minecraft;./start.sh;popd'
