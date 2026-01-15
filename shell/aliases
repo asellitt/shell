@@ -1,12 +1,38 @@
-alias rf='rm -rf'
+# defaults
 alias c='j'
-
-alias b='bundle'
-alias be='b exec'
-alias bes='be rspec --color --format documentation'
-alias ber='be rake'
-
+alias du='du -ah'
+alias mkdir='mkdir -p'
+alias rf='rm -rf'
+alias top='htop'
+alias vim="vim -c 'startinsert'"
 alias compile-ssh-config='echo -n > ~/.ssh/config && cat ~/.ssh/*.config > ~/.ssh/config'
 alias ssh='compile-ssh-config && ssh'
 
-alias fuckingrobots='git diff --cached --name-only --diff-filter=ACM | grep -E "^Gemfile$|\.rb$" | xargs bundle exec rufo'
+# handy
+alias ..='cd ..'
+alias ~='cd ~'
+alias refresh='source ~/.bashrc'
+alias shutdown='sudo shutdown -h now'
+alias restart='sudo reboot now'
+alias cls='clear'
+alias x='exit'
+alias ll='ls -alFh'
+alias la='ls -Ah'
+alias v='vim'
+alias l='ll'
+alias f='findhistory'
+alias ag='ag --color --color-match 34\;46 --color-line-number 1\;33\;40 --literal --column --smart-case --numbers --nogroup'
+
+# diagnostic
+alias duh="sudo du -hxP --max-depth=2 | grep '^[0-9]*\.*[0-9]*G'"
+alias fdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+
+# development
+alias irb='pry'
+alias readlink='greadlink'
+alias box-sync-lock-files='find ~/Box\ Sync/ -print0 | xargs -0 chflags uchg && find ~/Box\ Sync/ -type d -print0 | xargs -0 chflags nouchg'
+
+# fun
+alias minecraft='pushd .;cd /media/one/games/minecraft;./start.sh;popd'
+alias mud='emacs -batch -l dunnet'
+alias weather='curl http://wttr.in/'

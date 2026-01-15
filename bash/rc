@@ -148,9 +148,5 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 export GOPATH=$HOME/src/.go
 
-# envato elements shit
-export PATH="/usr/local/opt/elasticsearch@2.4/bin:$PATH"
-export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
-
 # to compile ergodox firmware
 export PATH="/usr/local/opt/avr-gcc@6/bin:$PATH"

@@ -27,3 +27,11 @@ function fix-self-assigned-ip {
   sudo rm /Library/Preferences/SystemConfiguration/NetworkInterfaces.plist*
   sudo rm /Library/Preferences/SystemConfiguration/preferences.plist*
 }
+
+function tabname() {
+  echo -ne "\033]0;$@\007"
+}
+
+function findhistory() {
+  history | grep -i "$@" ;
+}
