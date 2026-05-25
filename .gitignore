@@ -1,3 +1,4 @@
 bash/path/dotfiles
 bash/path/sublime
 secret/
+*.machinespecific
