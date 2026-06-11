@@ -35,3 +35,78 @@ function tabname() {
 function findhistory() {
   history | grep -i "$@" ;
 }
+
+# ── Bitwarden SSH helpers ──────────────────────────────────────────────────────
+# Requires: bw (Bitwarden CLI), jq, sshpass
+# ──────────────────────────────────────────────────────────────────────────────
+
+_bw_save_session() {
+  echo "$BW_SESSION" > ~/.bw_session
+  chmod 600 ~/.bw_session
+}
+
+_bw_ensure_session() {
+  local bw_status
+  bw_status=$(bw status 2>/dev/null | jq -r '.status')
+
+  case "$bw_status" in
+    unauthenticated)
+      echo "[bw] Not logged in — starting login..." >&2
+      local session
+      session=$(bw login --raw 2>/dev/tty)
+      if [[ -z "$session" ]]; then
+        echo "[bw] Login failed." >&2
+        return 1
+      fi
+      export BW_SESSION="$session"
+      _bw_save_session
+      echo "[bw] Logged in." >&2
+      ;;
+    locked)
+      local pw session
+      echo -n "[bw] Vault locked. Master password: " >&2
+      read -rs pw
+      echo >&2
+      session=$(BW_MASTER_PW="$pw" bw unlock --passwordenv BW_MASTER_PW --raw 2>/dev/null)
+      unset pw
+      if [[ -z "$session" ]]; then
+        echo "[bw] Unlock failed — wrong password?" >&2
+        return 1
+      fi
+      export BW_SESSION="$session"
+      _bw_save_session
+      echo "[bw] Vault unlocked." >&2
+      ;;
+    unlocked)
+      :
+      ;;
+    *)
+      echo "[bw] Unexpected bw status: '$bw_status'" >&2
+      return 1
+      ;;
+  esac
+}
+
+_bw_ssh() {
+  local uuid="$1" host="$2"
+  shift 2
+
+  _bw_ensure_session || return 1
+
+  local pw
+  pw=$(bw get password "$uuid" 2>/dev/null)
+
+  if [[ -z "$pw" ]]; then
+    echo "[bw] Could not fetch password for $host (UUID: $uuid)" >&2
+    return 1
+  fi
+
+  if command -v pbcopy &>/dev/null; then
+    echo -n "$pw" | pbcopy
+  fi
+
+  SSHPASS="$pw" sshpass -e ssh "$host" "$@"
+  local exit_code=$?
+  unset pw
+  return $exit_code
+}

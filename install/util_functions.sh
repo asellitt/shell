@@ -71,14 +71,35 @@ log_into_password_manager() {
   if ! hash bw 2>/dev/null || ! hash jq 2>/dev/null; then
     return 0
   fi
+
+  local session_file="${DOTFILES_DIR}/secret/bw_session"
+
+  if [[ -f "$session_file" ]]; then
+    export BW_SESSION="$(cat "$session_file")"
+  fi
+
   local status
   status="$(bw status | jq -r '.status')"
   case "$status" in
-    unauthenticated) log "bitwarden" "Logging in";  bw login ;;
-    locked)          log "bitwarden" "Unlocking";   bw unlock ;;
-    unlocked)        log "bitwarden" "Already unlocked" ;;
-    *)               log_warn "bitwarden" "Unexpected status: $status" ;;
+    unauthenticated)
+      log "bitwarden" "Logging in"
+      export BW_SESSION="$(bw login --raw)"
+      ;;
+    locked)
+      log "bitwarden" "Unlocking"
+      export BW_SESSION="$(bw unlock --raw)"
+      ;;
+    unlocked)
+      log "bitwarden" "Already unlocked"
+      ;;
+    *)
+      log_warn "bitwarden" "Unexpected status: $status"
+      return 1
+      ;;
   esac
+
+  echo "$BW_SESSION" > "$session_file"
+  chmod 600 "$session_file"
   bw sync
 }
 
