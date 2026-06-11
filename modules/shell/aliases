@@ -1,0 +1,34 @@
+# defaults
+alias c='z'
+alias du='du -ah'
+alias mkdir='mkdir -p'
+alias rf='rm -rf'
+alias top='htop'
+alias vim="vim -c 'startinsert'"
+# alias compile-ssh-config='echo -n > ~/.ssh/config && cat ~/.ssh/*.config > ~/.ssh/config'
+# alias ssh='compile-ssh-config && ssh'
+
+# handy
+alias ..='cd ..'
+alias ~='cd ~'
+alias shutdown='sudo shutdown -h now'
+alias restart='sudo reboot now'
+alias cls='clear'
+alias x='exit'
+alias ll='ls -alFh'
+alias la='ls -Ah'
+alias v='vim'
+alias l='ll'
+alias f='findhistory'
+alias ag='ag --color --color-match 34\;46 --color-line-number 1\;33\;40 --literal --column --smart-case --numbers --nogroup'
+
+# diagnostic
+alias duh="sudo du -hxP --max-depth=2 | grep '^[0-9]*\.*[0-9]*G'"
+alias fdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+
+# development
+alias irb='pry'
+
+# fun
+alias mud='emacs -batch -l dunnet'
+alias weather='curl http://wttr.in/'

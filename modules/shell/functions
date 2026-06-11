@@ -1,0 +1,37 @@
+function fuck() {
+  killall -9 $2;
+  if [[ $? -eq 0 ]]; then
+    tableflip $2
+  fi
+}
+
+function tableflip() {
+  echo
+  echo " (╯°□°）╯︵$(echo $1|flip)"
+  echo
+}
+
+function killport() {
+  kill -9 $( lsof -i:$1 -t )
+}
+
+function timeshell() {
+  local shell=${1-$SHELL}
+  for i in $(seq 1 10); do
+    /usr/bin/time $shell -i -c exit | grep real
+  done
+}
+
+function fix-self-assigned-ip {
+  sudo rm /Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist*
+  sudo rm /Library/Preferences/SystemConfiguration/NetworkInterfaces.plist*
+  sudo rm /Library/Preferences/SystemConfiguration/preferences.plist*
+}
+
+function tabname() {
+  echo -ne "\033]0;$@\007"
+}
+
+function findhistory() {
+  history | grep -i "$@" ;
+}

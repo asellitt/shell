@@ -15,10 +15,10 @@ You make github repo!
 #### Create SSH Key
 
 ```bash
-ssh-keygen -t rsa -b 4096 -C "asellitt@newmachine.com"
+ssh-keygen -t ed25519 -C "asellitt@newmachine.com"
 eval "$(ssh-agent -s)"
-ssh-add -K ~/.ssh/id_rsa
-pbcopy < ~/.ssh/id_rsa.pub
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
 #### Add SSH Key
@@ -46,14 +46,11 @@ dotfiles -h
 
 asellitt's dotfiles install script
 
-usage: dotfiles [-b|--banner bannerFile]  Sets up a terminal banner
-                [-h|--help]               Prints this message
-                [-u|--update]             Updates dependencies
-                [-i|--install]            Installs apps
-                [-l|--license]            Open the apple license dialog
+usage: dotfiles [-b|--banner <bannerFile>]  Sets up a terminal banner
+                [-h|--help]                 Prints this message
+                [-u|--update]               Updates dependencies
+                [-i|--install]              Installs apps
+                [-l|--license]              Open the apple license dialog
+                [-m|--mode <WORK|PERSONAL>] Sets install mode
 ```
 
-## Manual Installs
-
-* [Sublime Text 3 (Dev)](https://www.sublimetext.com/3dev) No cask for this, license required.
-* [XChode](https://itunes.apple.com/au/app/xcode/id497799835?mt=12) Version 8 or higher (required for `mas`)

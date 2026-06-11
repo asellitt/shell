@@ -1,0 +1,9 @@
+[include]
+  path = ~/.gitconfig.aliases
+  path = ~/.gitconfig.commands
+  path = ~/.gitconfig.core
+  path = ~/.gitconfig.diff
+  path = ~/.gitconfig.merge
+  path = ~/.gitconfig.push
+  path = ~/.gitconfig.user
+  path = ~/.gitconfig.machinespecific

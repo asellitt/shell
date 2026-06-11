@@ -1,0 +1,6 @@
+# Copy this to ~/.ssh/machinespecific.config and add your host entries.
+
+Host myserver
+  HostName myserver.example.com
+  User myuser
+  IdentityFile ~/.ssh/id_ed25519

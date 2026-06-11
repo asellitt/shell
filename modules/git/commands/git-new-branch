@@ -1,0 +1,27 @@
+#!/bin/bash
+
+CLEAR="\033[1;0m"
+GREEN="\033[1;32m"
+CYAN="\033[1;36m"
+
+if [ "$#" -ne 2 ]; then
+  echo "usage: git nb <branch to branch from> <new branch name>"
+  exit 1
+fi
+
+PREFIX="$(git config user.prefix)"
+BRANCH="${PREFIX:+${PREFIX}--}$2"
+
+echo -e "$GREEN- Starting: new-branch on $1 for '$BRANCH' -$CLEAR"
+
+echo ''
+echo -e "$CYAN- Executing: git checkout $1 -$CLEAR"
+git checkout $1
+
+echo ''
+echo -e "$CYAN- Executing: git update-branch (on '$1') -$CLEAR"
+git update-branch
+
+echo ''
+echo -e "$CYAN- Executing: git checkout -b $BRANCH -$CLEAR"
+git checkout -b $BRANCH

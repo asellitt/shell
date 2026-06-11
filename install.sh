@@ -1,32 +1,32 @@
-#! /bin/zsh
+#!/usr/bin/env bash
 
-exec_loc=$(readlink $0)
-DOTFILES_DIR=$(dirname $exec_loc)
-if [ -z "$DOTFILES_DIR" ] ; then
-  DOTFILES_DIR="`dirname \"$0\"`"
-  DOTFILES_DIR="`( cd \"$DOTFILES_DIR\" && pwd )`"
-  if [ -z "$DOTFILES_DIR" ] ; then
-    echo "Could not determine script location"
-    exit 1
-  fi
+DOTFILES_DIR="$(cd "$(dirname "$(readlink -f "$0" 2>/dev/null || echo "$0")")" && pwd)"
+
+source "${DOTFILES_DIR}/lib/log.sh"
+source "${DOTFILES_DIR}/lib/platform.sh"
+source "${DOTFILES_DIR}/lib/link.sh"
+source "${DOTFILES_DIR}/lib/manifest.sh"
+source "${DOTFILES_DIR}/lib/apps.sh"
+source "${DOTFILES_DIR}/install/util_functions.sh"
+source "${DOTFILES_DIR}/install/modules.sh"
+
+OS="$(detect_os)"
+
+parse_commandline_arguments "$@"
+
+if [[ "$BANNER" == "true" || "$BANNER" == "list" || "$BANNER" == "preview" ]]; then
+  install_banner "$BANNER" "$BANNER_FILE"
+  exit 0
 fi
 
-source "${DOTFILES_DIR}/install/util_functions.sh"
-source "${DOTFILES_DIR}/install/install_functions.sh"
-
-PREFIX="INSTALL"
-
-parse_commandline_arguments $@
-
-log "Linking dotfiles"
-
+log "install" "Detected OS: $OS"
+log "install" "Linking dotfiles"
 create_symlinked_executable
+
 ensure_secret_dir_exists
-agree_to_xcode_license $LICENSE
-update_packages $UPDATE
-install_banner $BANNER $BANNER_FILE
-install_modules
+agree_to_xcode_license "$LICENSE"
 log_into_password_manager
+install_modules "$DOTFILES_DIR" "$OS" "$MODE" "$UPDATE" "$INSTALL" "$DRY_RUN"
 print_post_install_messages
 
 exit 0
