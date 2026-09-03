@@ -36,6 +36,101 @@ function findhistory() {
   history | grep -i "$@" ;
 }
 
+function navidrome_rate_current_song() {
+  local rating="$1"
+
+  if [[ -z "$rating" ]]; then
+    echo "Usage: navidrome_rate_current_song <rating 1-5>" >&2
+    return 1
+  fi
+
+  _bw_ensure_session_noninteractive || return 1
+
+  local item user pass host
+  item=$(bw get item "baf73058-166c-4efa-a632-b168007f35b5")
+  host=$(echo "$item" | jq -r '.login.uris[0].uri')
+  user=$(echo "$item" | jq -r '.login.username')
+  pass=$(echo "$item" | jq -r '.login.password')
+
+  local api_version="1.16.1"
+  local client="dotfiless"
+
+  # 1. Find the currently playing song
+  local np_response
+  np_response=$(curl -sS -G "${host}/rest/getNowPlaying.view" \
+    --data-urlencode "u=${user}" \
+    --data-urlencode "p=${pass}" \
+    --data-urlencode "v=${api_version}" \
+    --data-urlencode "c=${client}" \
+    --data-urlencode "f=json")
+
+  local np_status
+  np_status=$(jq -r '.["subsonic-response"].status' <<< "$np_response")
+  if [[ "$np_status" != "ok" ]]; then
+    echo "Error from getNowPlaying: $(jq -r '.["subsonic-response"].error.message // "unknown error"' <<< "$np_response")" >&2
+    return 1
+  fi
+
+  local song_id
+  song_id=$(jq -r --arg user "$user" '
+    (.["subsonic-response"].nowPlaying.entry // [])
+    | map(select(.username == $user))
+    | sort_by(.minutesAgo)
+    | .[0].id // empty
+  ' <<< "$np_response")
+
+  if [[ -z "$song_id" ]]; then
+    echo "Error: no currently-playing entry found for user '$user'" >&2
+    return 1
+  fi
+
+  # 2. Set the rating
+  local set_response
+  set_response=$(curl -sS -G "${host}/rest/setRating.view" \
+    --data-urlencode "u=${user}" \
+    --data-urlencode "p=${pass}" \
+    --data-urlencode "v=${api_version}" \
+    --data-urlencode "c=${client}" \
+    --data-urlencode "f=json" \
+    --data-urlencode "id=${song_id}" \
+    --data-urlencode "rating=${rating}")
+
+  local set_status
+  set_status=$(jq -r '.["subsonic-response"].status' <<< "$set_response")
+  if [[ "$set_status" != "ok" ]]; then
+    echo "Error from setRating: $(jq -r '.["subsonic-response"].error.message // "unknown error"' <<< "$set_response")" >&2
+    return 1
+  fi
+
+  # 3. Read the rating back
+  local song_response
+  song_response=$(curl -sS -G "${host}/rest/getSong.view" \
+    --data-urlencode "u=${user}" \
+    --data-urlencode "p=${pass}" \
+    --data-urlencode "v=${api_version}" \
+    --data-urlencode "c=${client}" \
+    --data-urlencode "f=json" \
+    --data-urlencode "id=${song_id}")
+
+  local song_status
+  song_status=$(jq -r '.["subsonic-response"].status' <<< "$song_response")
+  if [[ "$song_status" != "ok" ]]; then
+    echo "Error from getSong: $(jq -r '.["subsonic-response"].error.message // "unknown error"' <<< "$song_response")" >&2
+    return 1
+  fi
+
+  jq -c --arg song_id "$song_id" '
+    .["subsonic-response"].song as $s
+    | {
+        rating: ($s.userRating // 0),
+        rated: ($s | has("userRating")),
+        title: ($s.title // ""),
+        artist: ($s.artist // ""),
+        song_id: $song_id
+      }
+  ' <<< "$song_response"
+}
+
 # ── Bitwarden SSH helpers ──────────────────────────────────────────────────────
 # Requires: bw (Bitwarden CLI), jq, sshpass
 # ──────────────────────────────────────────────────────────────────────────────
@@ -85,6 +180,23 @@ _bw_ensure_session() {
       return 1
       ;;
   esac
+}
+
+_bw_ensure_session_noninteractive() {
+  local session_file="$HOME/.bw_session"
+
+  if [[ -f "$session_file" ]]; then
+    export BW_SESSION
+    BW_SESSION=$(<"$session_file")
+  fi
+
+  local bw_status
+  bw_status=$(bw status 2>/dev/null | jq -r '.status')
+
+  if [[ "$bw_status" != "unlocked" ]]; then
+    echo "[bw] Vault not unlocked (status: $bw_status). Run 'bw unlock' in a terminal first — can't prompt interactively from here." >&2
+    return 1
+  fi
 }
 
 _bw_ssh() {
