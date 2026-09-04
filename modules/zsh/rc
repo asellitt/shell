@@ -5,11 +5,7 @@ source "${HOME}/.header" 2>/dev/null || true
 export PATH="${HOME}/path:${HOME}/.git-commands:${PATH}"
 
 # Brew shell completion (macOS only)
-if type brew &>/dev/null; then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-fi
-
-autoload -Uz compinit && compinit
+[[ -n "$HOMEBREW_PREFIX" ]] && FPATH="${HOMEBREW_PREFIX}/share/zsh/site-functions:${FPATH}"
 
 export ZSH="${HOME}/.oh-my-zsh"
 ZSH_THEME="asellitt"
@@ -22,17 +18,31 @@ plugins=(
   direnv
 )
 
+ZSH_DISABLE_COMPFIX=true
+zstyle ':omz:update' mode disabled
 source "${ZSH}/oh-my-zsh.sh"
 
-eval "$(zoxide init zsh)"
+_zc="${XDG_CACHE_HOME:-$HOME/.cache}/zsh-init"
+mkdir -p "$_zc"
+
+if type zoxide &>/dev/null; then
+  [[ -s "$_zc/zoxide.zsh" && "$_zc/zoxide.zsh" -nt "$(command -v zoxide)" ]] || zoxide init zsh > "$_zc/zoxide.zsh"
+  source "$_zc/zoxide.zsh"
+fi
+
+if type fzf &>/dev/null; then
+  [[ -s "$_zc/fzf.zsh" && "$_zc/fzf.zsh" -nt "$(command -v fzf)" ]] || fzf --zsh > "$_zc/fzf.zsh"
+  source "$_zc/fzf.zsh"
+  bindkey "${key[Up]}" fzf-history-widget
+  bindkey '^[[A' fzf-history-widget
+fi
+
+unset _zc
 
 [[ -f "${HOME}/.functions" ]] && source "${HOME}/.functions"
 [[ -f "${HOME}/.aliases"   ]] && source "${HOME}/.aliases"
 [[ -f "${HOME}/.aliases.machinespecific" ]] && source "${HOME}/.aliases.machinespecific"
 
-if type fzf &>/dev/null; then
-  source <(fzf --zsh)
-fi
 
 [[ -e "${HOME}/.nix-profile/etc/profile.d/nix.sh" ]] && \
   source "${HOME}/.nix-profile/etc/profile.d/nix.sh"
