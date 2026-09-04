@@ -12,6 +12,25 @@ install_from_manifest() {
   done < "$manifest"
 }
 
+brew_preclean_python() {
+  local prefix outdated formula version site_dir
+  prefix="$(brew --prefix)"
+  outdated="$(brew outdated --formula --quiet | grep '^python@' || true)"
+  [[ -z "$outdated" ]] && return 0
+
+  for formula in $outdated; do
+    version="${formula#python@}"
+    site_dir="${prefix}/lib/python${version}/site-packages"
+    [[ -d "$site_dir" ]] || continue
+    log "apps" "Pre-cleaning ${site_dir} for fast ${formula} upgrade"
+    rm -rf "$site_dir"/pip "$site_dir"/pip-*.dist-info \
+           "$site_dir"/wheel "$site_dir"/wheel-*.dist-info \
+           "$site_dir"/setuptools "$site_dir"/setuptools-*.dist-info \
+           "$site_dir"/pkg_resources "$site_dir"/_distutils_hack \
+           "$site_dir"/distutils-precedence.pth
+  done
+}
+
 app_install() {
   local app="$1"
   local manifest="${2:-${DOTFILES_DIR}/modules/apps/common.conf}"
@@ -83,6 +102,7 @@ app_update() {
     macos)  
       log "apps" "Updating Homebrew (this may take a while)"
       brew update
+      brew_preclean_python
       log "apps" "Upgrading Homebrew (this may take a while)"
       brew upgrade -v
       ;;
