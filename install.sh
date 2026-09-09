@@ -7,6 +7,7 @@ source "${DOTFILES_DIR}/lib/platform.sh"
 source "${DOTFILES_DIR}/lib/link.sh"
 source "${DOTFILES_DIR}/lib/manifest.sh"
 source "${DOTFILES_DIR}/lib/apps.sh"
+source "${DOTFILES_DIR}/lib/bambuddy.sh"
 source "${DOTFILES_DIR}/install/util_functions.sh"
 source "${DOTFILES_DIR}/install/modules.sh"
 
