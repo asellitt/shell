@@ -28,13 +28,20 @@ _bambuddy_fetch_ca() {
     return 1
   }
 
-  if ! curl -fsS --connect-timeout 5 -H "X-API-Key: ${api_key}" \
-      "${bambuddy_url}/api/v1/virtual-printers/ca-certificate" -o "$cache"; then
+  local response
+  if ! response="$(curl -fsS --connect-timeout 5 -H "X-API-Key: ${api_key}" \
+      "${bambuddy_url}/api/v1/virtual-printers/ca-certificate")"; then
     log_error "bambuddy" "fetch failed — check the API key and ${bambuddy_url}" >&2
+    return 1
+  fi
+
+  printf '%s' "$response" | jq -r '.pem // empty' > "$cache"
+  if [[ ! -s "$cache" ]]; then
+    log_error "bambuddy" "response has no 'pem' field — got: ${response:0:120}" >&2
     rm -f "$cache"
     return 1
   fi
-  
+
   echo "$cache"
 }
 
