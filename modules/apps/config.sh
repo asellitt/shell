@@ -11,7 +11,9 @@ module_install() {
   fi
 
   local apps_dir="${DOTFILES_DIR}/modules/apps"
+  local mode_lower
+  mode_lower="$(echo "$MODE" | tr '[:upper:]' '[:lower:]')"
 
   install_from_manifest "${apps_dir}/common.conf"
-  install_from_manifest "${apps_dir}/${MODE,,}.conf"
+  install_from_manifest "${apps_dir}/${mode_lower}.conf"
 }
