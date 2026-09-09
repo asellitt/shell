@@ -27,12 +27,12 @@ setup() {
   assert_output --partial "brew install firefox"
 }
 
-@test "app_install calls apt on ubuntu" {
+@test "app_install skips on ubuntu when no apt name" {
   UNAME_CMD="echo Linux"
   OS_RELEASE_ID="ubuntu"
   run app_install "firefox" "$FIXTURE_DIR/apps_test.conf"
   assert_success
-  assert_output --partial "apt install -y firefox"
+  assert_output --partial "skip: firefox (not available on ubuntu)"
 }
 
 @test "app_install calls flatpak on steamos" {

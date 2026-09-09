@@ -102,15 +102,38 @@ teardown() {
   assert_success
 }
 
-@test "apps module_install loads macos platform manifest on macos" {
+@test "apps module_install loads common manifest" {
+  UNAME_CMD="echo Darwin"
+  OS_RELEASE_ID=""
+  DOTFILES_DIR="$TEST_TMPDIR"
+
+  mkdir -p "$TEST_TMPDIR/modules/apps"
+  cat > "$TEST_TMPDIR/modules/apps/common.conf" <<'EOF'
+common-app    -    -
+EOF
+  echo "# personal" > "$TEST_TMPDIR/modules/apps/personal.conf"
+
+  app_install() { echo "app_install $*"; }
+  app_update()  { echo "app_update $*"; }
+  export -f app_install app_update
+
+  source "${BATS_TEST_DIRNAME}/../modules/apps/config.sh"
+  UPDATE="false" MODE="PERSONAL" run module_install
+  assert_output --partial "common-app"
+}
+
+@test "apps module_install loads mode manifest" {
   UNAME_CMD="echo Darwin"
   OS_RELEASE_ID=""
   DOTFILES_DIR="$TEST_TMPDIR"
 
   mkdir -p "$TEST_TMPDIR/modules/apps"
   echo "# common" > "$TEST_TMPDIR/modules/apps/common.conf"
-  cat > "$TEST_TMPDIR/modules/apps/macos.conf" <<'EOF'
-macos-only-app    -    -
+  cat > "$TEST_TMPDIR/modules/apps/personal.conf" <<'EOF'
+personal-app    -    -
+EOF
+  cat > "$TEST_TMPDIR/modules/apps/work.conf" <<'EOF'
+work-app    -    -
 EOF
 
   app_install() { echo "app_install $*"; }
@@ -119,25 +142,6 @@ EOF
 
   source "${BATS_TEST_DIRNAME}/../modules/apps/config.sh"
   UPDATE="false" MODE="PERSONAL" run module_install
-  assert_output --partial "macos-only-app"
-}
-
-@test "apps module_install loads ubuntu platform manifest on ubuntu" {
-  UNAME_CMD="echo Linux"
-  OS_RELEASE_ID="ubuntu"
-  DOTFILES_DIR="$TEST_TMPDIR"
-
-  mkdir -p "$TEST_TMPDIR/modules/apps"
-  echo "# common" > "$TEST_TMPDIR/modules/apps/common.conf"
-  cat > "$TEST_TMPDIR/modules/apps/ubuntu.conf" <<'EOF'
-ubuntu-only-app    ubuntu-only-app    -
-EOF
-
-  app_install() { echo "app_install $*"; }
-  app_update()  { echo "app_update $*"; }
-  export -f app_install app_update
-
-  source "${BATS_TEST_DIRNAME}/../modules/apps/config.sh"
-  UPDATE="false" MODE="PERSONAL" run module_install
-  assert_output --partial "ubuntu-only-app"
+  assert_output --partial "personal-app"
+  refute_output --partial "work-app"
 }

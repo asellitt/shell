@@ -24,12 +24,12 @@ setup() {
   assert_output "silversearcher-ag"
 }
 
-@test "resolve_app_name returns brew name when no apt override for ubuntu" {
+@test "resolve_app_name returns '-' when no apt name and on ubuntu" {
   UNAME_CMD="echo Linux"
   OS_RELEASE_ID="ubuntu"
   run resolve_app_name "firefox" "$FIXTURE_DIR/apps_test.conf"
   assert_success
-  assert_output "firefox"
+  assert_equal "$output" "-"
 }
 
 @test "resolve_app_name returns flatpak id for steamos" {
