@@ -27,6 +27,9 @@ create_symlinked_executable
 ensure_secret_dir_exists
 agree_to_xcode_license "$LICENSE"
 log_into_password_manager
+if [[ "$INSTALL" == "true" ]]; then
+  ensure_homebrew
+fi
 install_modules "$DOTFILES_DIR" "$OS" "$MODE" "$UPDATE" "$INSTALL" "$DRY_RUN"
 print_post_install_messages
 

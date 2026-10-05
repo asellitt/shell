@@ -12,6 +12,22 @@ install_from_manifest() {
   done < "$manifest"
 }
 
+ensure_homebrew() {
+  is_macos || return 0
+  command -v brew > /dev/null && return 0
+
+  if [[ ! -x /opt/homebrew/bin/brew && ! -x /usr/local/bin/brew ]]; then
+    log "apps" "Installing Homebrew"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
+
+  if [[ -x /opt/homebrew/bin/brew ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  else
+    eval "$(/usr/local/bin/brew shellenv)"
+  fi
+}
+
 brew_preclean_python() {
   local prefix outdated formula version site_dir
   prefix="$(brew --prefix)"
@@ -99,7 +115,11 @@ app_update() {
   fi
 
   case "$os" in
-    macos)  
+    macos)
+      if ! command -v brew > /dev/null; then
+        log_error "apps" "Homebrew not installed; run with -i first"
+        return 1
+      fi
       log "apps" "Updating Homebrew (this may take a while)"
       brew update
       brew_preclean_python
