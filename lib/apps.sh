@@ -26,6 +26,8 @@ ensure_homebrew() {
   else
     eval "$(/usr/local/bin/brew shellenv)"
   fi
+
+  brew analytics off
 }
 
 brew_preclean_python() {
