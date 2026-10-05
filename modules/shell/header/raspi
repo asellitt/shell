@@ -1,55 +1,56 @@
-                            ``` `-.                                    .-` ```                                                  
-                    `...+sshNNNmNMMNhmdy+o+.                  -+o+ymmdNMMNmNNNhss+..`                                           
-                -//hNNNMMMNNNMddmNddNMmMMMMNh+/.          -++hMMMMNmMNddNmddMNNNMMNNNNy:/-                                      
-              `dMMMMMNyyyhhoossooooooyooddsmMMMNy.      .yNMMMmsdhooyoooooosooodhyyyNMMMMMd                                     
-              `NMNyoooooooooooooooooooooooooyyyNMN/    +NMmshyooooooooooooooooooooooooohMMm`                                    
-              :MMMNsoooooooooooooooooooooooooooodMMo  sMMdoooooooooooooooooooooooooooosNMMN-                                    
-              -NMNyoooooooossyysooooooooooooooooodMM/+MMhooooooooooooooooosyysoooooooooyNMN.                                    
-               hMMNdoooooooooooyhhhsooooooooooooooNMNNMmooooooooooooooyhdhsoooooooooosdNMMy                                     
-               /NMNhooooooooooooooshmmhsoooooooooohMMMMyooooooooooshmmhsoooooooooooooohNMm:                                     
-                +MMNhooooooooooooooooshmNdsooooooodMMMMhoooooooydNmhsoooooooooooooooodNMM:                                      
-                `yMMmysoooooooooooooooooydNNhsooohMMMMMMhooosdNNdsoooooooooooooooooshNMNy`                                      
-                  sMMNhoooooooooooooooooooshNMmmNMMMMMMMMNdmMNhoooooooooooooooooooohNMMo                                        
-                  `omMNmhsoooooooooooooooooosNMMMMMMMMMMMMMMNoooooooooooooooooooshmNMd+`                                        
-                    `sMMNhysoooooooooooooooodMMMMMMMMMMMMMMMMdoooooooooooooooosydNMMo`                                          
-                     `/ydMMNdsoooooooooooshNMMMMMMMMMMMMMMMMMMNhsooooooooooosdNMMds:                                            
-                        `smNMNNNdssyyhdmNNMMMMMMMMMNNNMMMMMMMMMMNNmhyysssdNNNMNdo`                                              
-                         `/yNMMMMNMMMMMMMMMMMMNmdhhhhhhhddmNMMMMMMMMMMMMMMMMNs:`                                                
-                       `+dNMMNNmddhhhhdNMMMNdhhhhhhhhhhhhhhhdmMMMddhhhhddmNMMMmy-                                               
-                      /mMMNmdhhhhhhhhhmMMMdhhhhhhhhhhhhhhhhhhhhNMNhhhhhhhhhhdNMMNy.                                             
-                    `yMMMmhhhhhhhhhhdNMMMNhhhhhhhhhhhhhhhhhhhhhhMMMmhhhhhhhhhhdNMMm:                                            
-                    hMMNdhhhhhhhhhdNMMMMMMmhhhhhhhhhhhhhhhhhhhhmMMMMMmhhhhhhhhhhmMMN:                                           
-                   oMMMhhhhhhhhhdNMMMMMMMMMMNddhhhhhhhhhhhhhdmNMMMMMMMMmdhhhhhhhhmMMm`                                          
-                  `NMMmhhhhhhdmMMMMMMMNNNNNMMMMNNNmmmmmmNNNMMNNNNNNNMMMMMNdhhhhhhhMMM+                                          
-                  .MMMdhhhdmNMMMMMNmdhhhhhhhdmNMMMMMMMMMMMNmdhhhhhhhhdmNMMMNmdhhhhNMMh                                          
-                  /MMMmmmNMMMMMNmhhhhhhhhhhhhhhdNMMMMMMMMmhhhhhhhhhhhhhhdmMMMMNNddNMMm.                                         
-                -oNMMMMMMMMMMMmhhhhhhhhhhhhhhhhhhNMMMMMMdhhhhhhhhhhhhhhhhhdNMMMMMMMMMMms-                                       
-              .yNMMNmdNMMMMMMdhhhhhhhhhhhhhhhhhhhhMMMMMmhhhhhhhhhhhhhhhhhhhhmMMMMMddmNMMNy-                                     
-             +NMMNdhhhhMMMMMdhhhhhhhhhhhhhhhhhhhhhmMMMMdhhhhhhhhhhhhhhhhhhhhhNMMMmhhhhdNMMN+                                    
-            oMMMmhhhhhhmMMMmhhhhhhhhhhhhhhhhhhhhhhmMMMMdhhhhhhhhhhhhhhhhhhhhhdMMMdhhhhhhmMMM+                                   
-           /MMMdhhhhhhhmMMMdhhhhhhhhhhhhhhhhhhhhhhNMMMMmhhhhhhhhhhhhhhhhhhhhhhMMMdhhhhhhhdMMN-                                  
-           mMMmhhhhhhhhmMMMdhhhhhhhhhhhhhhhhhhhhhdMMMMMMdhhhhhhhhhhhhhhhhhhhhhMMMdhhhhhhhhNMMy                                  
-          .MMMdhhhhhhhhNMMMmhhhhhhhhhhhhhhhhhhhhhNMMMMMMMdhhhhhhhhhhhhhhhhhhhdMMMNhhhhhhhhmMMm                                  
-          .MMMdhhhhhhhhMMMMMdhhhhhhhhhhhhhhhhhhdMMMMMMMMMMmhhhhhhhhhhhhhhhhhhNMMMMhhhhhhhhmMMm                                  
-           NMMmhhhhhhhmMMMMMMmhhhhhhhhhhhhhhhdNMMMMMMMMMMMMNmhhhhhhhhhhhhhhdNMMMMMmhhhhhhhNMMy                                  
-           oMMMhhhhhhhMMMMMMMMNmdhhhhhhhhhdmNMMNNmddddddmmNMMMNmdhhhhhhhdmNMMMMMMMMhhhhhhmMMN.                                  
-           `hMMNdhhhhNMMMMMMMMMMMNNNmmmNNMMMNmhhhhhhhhhhhhhhdNMMMMNNNNNMMMMMMMMMMMMNhhhhmMMN/                                   
-            `yMMMmhdNMMMMMMMMMMMMMMMMMMMMMMdhhhhhhhhhhhhhhhhhhdNMMMMMMMMMMMMNmmddmNMNddNMMm:                                    
-              /NMMMMMMmdddddmNMMMMMMMMMMMNhhhhhhhhhhhhhhhhhhhhhhNMMMMMMMMNmdhhhhhhhdMMMMMd`                                     
-               sMMMMMdhhhhhhhhhmNMMMMMMMMdhhhhhhhhhhhhhhhhhhhhhhhMMMMMMNdhhhhhhhhhhhmMMMM:                                      
-               `mMMMNhhhhhhhhhhhhmNMMMMMMhhhhhhhhhhhhhhhhhhhhhhhhNMMMMmhhhhhhhhhhhhhhMMMh                                       
-                :MMMNhhhhhhhhhhhhhhmMMMMMhhhhhhhhhhhhhhhhhhhhhhhhMMMMdhhhhhhhhhhhhhhhMMM/                                       
-                 sMMMhhhhhhhhhhhhhhhdMMMMdhhhhhhhhhhhhhhhhhhhhhhdMMNhhhhhhhhhhhhhhhhdMMM-                                       
-                 .NMMdhhhhhhhhhhhhhhhdMMMMdhhhhhhhhhhhhhhhhhhhhdMMMdhhhhhhhhhhhhhhhhNMMd                                        
-                  oMMMdhhhhhhhhhhhhhhhmMMMMmhhhhhhhhhhhhhhhhhhmMMMmhhhhhhhhhhhhhhhhmMMN-                                        
-                   sMMMdhhhhhhhhhhhhhhdMMMMMMmdhhhhhhhhhhhhdNMMMMMdhhhhhhhhhhhhhhhmMMN:                                         
-                    +NMMNdhhhhhhhhhhhhdMMMMMMMMMNNmmmmmmNNMMMMMMMMdhhhhhhhhhhhhhmMMMd-                                          
-                     .yNMMNmdhhhhhhhhhNMMMMMMMMMMMMMMMMMMMMMMMMMMMNhhhhhhhhhhdNMMMm+`                                           
-                       .omNMMMNmmmdmmMMMMMMMMNNmmmdddddddmmmNMMMMMMMmmmmmmNNMMMNh/`                                             
-                          -+yNMMMMMMMMMMMMmdhhhhhhhhhhhhhhhhhhdmMMMMMMMMMMMmho:`                                                
-                             `/hNMMMMMMMMhhhhhhhhhhhhhhhhhhhhhhhmMMMMMMMmy:`                                                    
-                                `/smNMMMMNhhhhhhhhhhhhhhhhhhhhhmMMMMNdo:`                                                       
-                                    ./odMMMNdhhhhhhhhhhhhhhhhmMMMmo:`                                                           
-                                        :hNMMMNmdhhhhhhhddmNMMMd+`                                                              
-                                          .+hNMMMMMMMMMMMMMNdo-                                                                 
-                                              -/osyhhhyyo/-`                                                                    
+echo -e "                            \`\`\` \`-.                                    .-\` \`\`\`"
+echo -e "                    \`...+sshNNNmNMMNhmdy+o+.                  -+o+ymmdNMMNmNNNhss+..\`"
+echo -e "                -//hNNNMMMNNNMddmNddNMmMMMMNh+/.          -++hMMMMNmMNddNmddMNNNMMNNNNy:/-"
+echo -e "              \`dMMMMMN\033[1;32myyyhhoossooooooyoodds\033[0mMMMNy.      .yNMMM\033[1;32mmsdhooyo0oooosooodhyyy\033[0mNMMMMMd"
+echo -e "              \`NMN\033[1;32myoooooooooooooooooooooooooyyy\033[0mNMN/    +NM\033[1;32mmshyoooooooooooooooooooooooooh\033[0mMMm\`"
+echo -e "              :MMMN\033[1;32msooooooooooooooooooooooooooood\033[0mMMo  sMM\033[1;32mdoooooooooooooooooooooooooooos\033[0mNMMN-"
+echo -e "              -NMN\033[1;32myoooooooossyysoooooooooooooooood\033[0mMM/+MM\033[1;32mhooooooooooooooooosyysoooooooooy\033[0mNMN."
+echo -e "               hMMN\033[1;32mdoooooooooooyhhhsoooooooooooooo\033[0mNMNNM\033[1;32mmooooooooooooooyhdhsoooooooooosd\033[0mNMMy"
+echo -e "               /NMN\033[1;32mhooooooooooooooshmmhsooooooooooh\033[0mMMMM\033[1;32myooooooooooshmmhsooooooooooooooh\033[0mNMm:"
+echo -e "                +MMN\033[1;32mhooooooooooooooooshmNdsoooooood\033[0mMMMM\033[1;32mhoooooooyd\033[0mNm\033[1;32mhsooooooooooooooood\033[0mNMM:"
+echo -e "                \`yMM\033[1;32mmysoooooooooooooooooyd\033[0mNN\033[1;32mhsoooh\033[0mMMMMMM\033[1;32mhooosd\033[0mNN\033[1;32mdsooooooooooooooooosh\033[0mNMNy\`"
+echo -e "                  sMMN\033[1;32mhooooooooooooooooooosh\033[0mNMmmNMMMMMMMMNdmMN\033[1;32mhooooooooooooooooooooh\033[0mNMMo"
+echo -e "                  \`omMN\033[1;32mmhsoooooooooooooooooos\033[0mNMMMMMMMMMMMMMMN\033[1;32moooooooooooooooooooshm\033[0mNMd+\`"
+echo -e "                    \`sMMN\033[1;32mhysooooooooooooooood\033[0mMMMMMMMMMMMMMMMM\033[1;32mdoooooooooooooooosyd\033[0mNMMo\`"
+echo -e "                     \`/ydMMN\033[1;32mdsooooooooooosh\033[0mNMMMMMMMMMMMMMMMMMMN\033[1;32mhsooooooooooosd\033[0mNMMds:"
+echo -e "                        \`smNMNNN\033[1;32mdssyyhdm\033[0mNNMMMMMMMMMNNNMMMMMMMMMMNN\033[1;32mmhyysssd\033[0mNNNMNdo\`"
+echo -e "                         \`/yNMMMMNMMMMMMMMMMMMN\033[1;31mmdhhhhhhddm\033[0mNMMMMMMMMMMMMMMMMNs:\`"
+echo -e "                       \`+dNMMNN\033[1;31mmddhhhhd\033[0mNMMMN\033[1;31mdhhhhhhhhhhhhhhhdm\033[0mMMM\033[1;31mddhhhhddm\033[0mNMMMmy-"
+echo -e "                      /mMMN\033[1;31mmdhhhhhhhhhm\033[0mMMM\033[1;31mdhhhhhhhhhhhhhhhhhhhh\033[0mNMN\033[1;31mhhhhhhhhhhd\033[0mNMMNy."
+echo -e "                    \`yMMMm\033[1;31mhhhhhhhhhhdN\033[0mMMMN\033[1;31mhhhhhhhhhhhhhhhhhhhhhh\033[0mMMMm\033[1;31mhhhhhhhhhhdN\033[0mMMm:"
+echo -e "                    hMMNd\033[1;31mhhhhhhhhhd\033[0mNMMMMMM\033[1;31mmhhhhhhhhhhhhhhhhhhhhm\033[0mMMMMMm\033[1;31mhhhhhhhhhhmM\033[0mMN:"
+echo -e "                   oMMMh\033[1;31mhhhhhhhdN\033[0mMMMMMMMMMMNd\033[1;31mdhhhhhhhhhhhhhdm\033[0mNMMMMMMMMm\033[1;31mdhhhhhhhhmM\033[0mMm\`"
+echo -e "                  \`NMMm\033[1;31mhhhhhhdm\033[0mMMMMMMMNNNNNMMMMNNN\033[1;31mmmmmmm\033[0mNNNMMNNNNNNNMMMMMNd\033[1;31mhhhhhhhM\033[0mMM+"
+echo -e "                  .MMMd\033[1;31mhhhdmN\033[0mMMMMMNm\033[1;31mdhhhhhhhdm\033[0mNMMMMMMMMMMMNm\033[1;31mdhhhhhhhhdm\033[0mNMMMNm\033[1;31mdhhhhN\033[0mMMh"
+echo -e "                  /MMMm\033[1;31mmmN\033[0mMMMMMNm\033[1;31mhhhhhhhhhhhhhhd\033[0mNMMMMMMMMm\033[1;31mhhhhhhhhhhhhhhdm\033[0mMMMMNNddNMMm."
+echo -e "                -oNMMMMMMMMMMMm\033[1;31mhhhhhhhhhhhhhhhhhh\033[0mNMMMMMMd\033[1;31mhhhhhhhhhhhhhhhhhd\033[0mNMMMMMMMMMMMms-"
+echo -e "              .yNMMNmdNMMMMMMd\033[1;31mhhhhhhhhhhhhhhhhhhhh\033[0mMMMMMm\033[1;31mhhhhhhhhhhhhhhhhhhhhmM\033[0mMMMMddmNMMNy-"
+echo -e "             +NMMNd\033[1;31mhhhh\033[0mMMMMMd\033[1;31mhhhhhhhhhhhhhhhhhhhhhm\033[0mMMMMd\033[1;31mhhhhhhhhhhhhhhhhhhhhhN\033[0mMMMm\033[1;31mhhhhd\033[0mNMMN+"
+echo -e "            oMMMm\033[1;31mhhhhhhm\033[0mMMMm\033[1;31mhhhhhhhhhhhhhhhhhhhhhhm\033[0mMMMMd\033[1;31mhhhhhhhhhhhhhhhhhhhhhd\033[0mMMMd\033[1;31mhhhhhhm\033[0mMMM+"
+echo -e "           /MMMd\033[1;31mhhhhhhhm\033[0mMMMd\033[1;31mhhhhhhhhhhhhhhhhhhhhhh\033[0mNMMMMm\033[1;31mhhhhhhhhhhhhhhhhhhhhhh\033[0mMMMd\033[1;31mhhhhhhhd\033[0mMMN-"
+echo -e "           mMMm\033[1;31mhhhhhhhhmM\033[0mMMd\033[1;31mhhhhhhhhhhhhhhhhhhhhhd\033[0mMMMMMMd\033[1;31mhhhhhhhhhhhhhhhhhhhhhM\033[0mMMd\033[1;31mhhhhhhhhN\033[0mMMy"
+echo -e "          .MMMd\033[1;31mhhhhhhhhN\033[0mMMMm\033[1;31mhhhhhhhhhhhhhhhhhhhhhN\033[0mMMMMMMMd\033[1;31mhhhhhhhhhhhhhhhhhhhd\033[0mMMMN\033[1;31mhhhhhhhhm\033[0mMMm"
+echo -e "          .MMMd\033[1;31mhhhhhhhhM\033[0mMMMM\033[1;31mdhhhhhhhhhhhhhhhhhhdM\033[0mMMMMMMMMMm\033[1;31mhhhhhhhhhhhhhhhhhh\033[0mNMMMM\033[1;31mhhhhhhhhm\033[0mMMm"
+echo -e "           NMMm\033[1;31mhhhhhhhm\033[0mMMMMMM\033[1;31mmhhhhhhhhhhhhhhhd\033[0mNMMMMMMMMMMMMNm\033[1;31mhhhhhhhhhhhhhhdN\033[0mMMMMMm\033[1;31mhhhhhhhN\033[0mMMy"
+echo -e "           oMMM\033[1;31mhhhhhhhM\033[0mMMMMMMMNm\033[1;31mdhhhhhhhhhdm\033[0mNMMNNm\033[1;31mddddddmm\033[0mNMMMNm\033[1;31mdhhhhhhhdm\033[0mNMMMMMMM\033[1;31mhhhhhhm\033[0mMMN."
+echo -e "           \`hMMNd\033[1;31mhhhh\033[0mNMMMMMMMMMMMNNNmmmNNMMMNm\033[1;31mhhhhhhhhhhhhhhd\033[0mNMMMMNNNNNMMMMMMMMMMMMN\033[1;31mhhhhm\033[0mMMN/"
+echo -e "            \`yMMMmhdNMMMMMMMMMMMMMMMMMMMMMMd\033[1;31mhhhhhhhhhhhhhhhhhhdN\033[0mMMMMMMMMMMMMNmmddmNMNddNMMm:"
+echo -e "              /NMMMMMMmdddddmNMMMMMMMMMMMNh\033[1;31mhhhhhhhhhhhhhhhhhhhhhh\033[0mNMMMMMMMMNmdhhhhhhdMMMMMd\`"
+echo -e "               sMMMMMd\033[1;31mhhhhhhhhhm\033[0mNMMMMMMMMd\033[1;31mhhhhhhhhhhhhhhhhhhhhhhhM\033[0mMMMMMNd\033[1;31mhhhhhhhhhhhm\033[0mMMMM:"
+echo -e "               \`mMMMN\033[1;31mhhhhhhhhhhhhmN\033[0mMMMMMM\033[1;31mhhhhhhhhhhhhhhhhhhhhhhhhN\033[0mMMMM\033[1;31mmhhhhhhhhhhhhhh\033[0mMMMh"
+echo -e "                :MMMN\033[1;31mhhhhhhhhhhhhhhmM\033[0mMMMM\033[1;31mhhhhhhhhhhhhhhhhhhhhhhhhM\033[0mMMMd\033[1;31mhhhhhhhhhhhhhhhM\033[0mMM/"
+echo -e "                 sMMM\033[1;31mhhhhhhhhhhhhhhhdM\033[0mMMMd\033[1;31mhhhhhhhhhhhhhhhhhhhhhhdM\033[0mMN\033[1;31mhhhhhhhhhhhhhhhhdM\033[0mMM-"
+echo -e "                 .NMMd\033[1;31mhhhhhhhhhhhhhhhd\033[0mMMMM\033[1;31mdhhhhhhhhhhhhhhhhhhhd\033[0mMMMd\033[1;31mhhhhhhhhhhhhhhhhN\033[0mMMd"
+echo -e "                  oMMMd\033[1;31mhhhhhhhhhhhhhhhm\033[0mMMMM\033[1;31mmhhhhhhhhhhhhhhhhhm\033[0mMMMm\033[1;31mhhhhhhhhhhhhhhhhmM\033[0mMN-"
+echo -e "                   sMMM\033[1;31mdhhhhhhhhhhhhhhd\033[0mMMMMMM\033[1;31mmdhhhhhhhhhhhhd\033[0mNMMMMMd\033[1;31mhhhhhhhhhhhhhhhmM\033[0mMN:"
+echo -e "                    +NMMNd\033[1;31mhhhhhhhhhhhhdM\033[0mMMMMMMMMNNmmmmmmNNMMMMMMMM\033[1;31mdhhhhhhhhhhhhmM\033[0mMMd-"
+echo -e "                     .yNMMNm\033[1;31mdhhhhhhhhh\033[0mNMMMMMMMMMMMMMMMMMMMMMMMMMMMN\033[1;31mhhhhhhhhhd\033[0mNMMMm+\`"
+echo -e "                       .omNMMMNmmmdmmMMMMMMMMNN\033[1;31mmmmdddddddmmm\033[0mNMMMMMMMmmmmmmNNMMMNh/\`"
+echo -e "                          -+yNMMMMMMMMMMMMm\033[1;31mdhhhhhhhhhhhhhhhhhhdm\033[0mMMMMMMMMMMMmho:\`"
+echo -e "                             \`/hNMMMMMMMMh\033[1;31mhhhhhhhhhhhhhhhhhhhhhhmM\033[0mMMMMMMMmy:\`"
+echo -e "                                \`/smNMMMMN\033[1;31mhhhhhhhhhhhhhhhhhhhhm\033[0mMMMMNdo:\`"
+echo -e "                                    ./odMMMNd\033[1;31mhhhhhhhhhhhhhhhm\033[0mMMMmo:\`"
+echo -e "                                        :hNMMMNm\033[1;31mdhhhhhhhddm\033[0mNMMMd+\`"
+echo -e "                                          .+hNMMMMMMMMMMMMMNdo-"
+echo -e "                                              -/osyhhhyyo/-\`"
+
