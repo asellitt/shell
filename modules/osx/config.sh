@@ -150,6 +150,13 @@ module_install() {
   defaults write com.apple.dock tilesize -int 16
   defaults write com.apple.dock mru-spaces -bool true
 
+  # Sound settings
+  log "osx" "Setting sound preferences"
+  defaults write com.apple.controlcenter Sound -int 16
+  defaults write com.apple.controlcenter "NSStatusItem VisibleCC Sound" -bool true
+  defaults write com.apple.sound.beep.volume -float 0.5
+  defaults write -g com.apple.sound.beep.sound -string "/System/Library/Sounds/Tink.aiff"
+
   log "osx" "Linking utility applications"
   local app_dir="${HOME}/Applications"
   local osx_app_dir="${DOTFILES_DIR}/modules/osx/apps"
