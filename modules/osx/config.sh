@@ -130,11 +130,13 @@ module_install() {
 
   # Internal keyboard caps lock -> escape (same storage the Settings GUI uses)
   log "osx" "Remapping internal keyboard caps lock to escape"
-  read -r vid pid < <(hidutil list --matching '{"Transport":"SPI"}' \
-    | awk '$14 == 1 && /Keyboard/ { print strtonum($1), strtonum($2); exit }')
-  defaults -currentHost write -g "com.apple.keyboard.modifiermapping.${vid}-${pid}-0" -array \
+  local vid_hex pid_hex
+  read -r vid_hex pid_hex < <(hidutil list --matching '{"Transport":"SPI"}' \
+    | awk '$4 == 1 && $5 == 6 { print $1, $2; exit }')
+  defaults -currentHost write -g "com.apple.keyboard.modifiermapping.$((vid_hex))-$((pid_hex))-0" -array \
     '<dict><key>HIDKeyboardModifierMappingSrc</key><integer>30064771129</integer>
           <key>HIDKeyboardModifierMappingDst</key><integer>30064771113</integer></dict>'
+
 
   # Ergodox modifier key remapping (left control <-> left command, left option <-> left command)
   log "osx" "Remapping ergodox left control <-> left command"
@@ -177,5 +179,4 @@ module_install() {
   killall Finder         2>/dev/null || true
   killall SystemUIServer 2>/dev/null || true
   killall Dock           2>/dev/null || true
-  killall cfprefsd       2>/dev/null || true
 }
