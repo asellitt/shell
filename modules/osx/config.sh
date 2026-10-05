@@ -59,27 +59,6 @@ module_install() {
   # defaults write com.apple.AppleMultitouchTrackpad ActuateDetents -bool false
   # defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerTapGesture -int 2
 
-  # log "Setting Dock preferences"
-  # log "   Enable 2D dock"
-  # defaults write com.apple.dock no-glass -bool true
-  # log "   Enable autohide"
-  # defaults write com.apple.dock autohide  -bool true
-  # log "   Add Launchpad to the dock"
-  # defaults write com.apple.dock checked-for-launchpad -bool true
-  # log "   Remove all default app icons from dock"
-  # defaults write com.apple.dock persistent-apps '()'
-  # log "   Remove all process running indicators from dock"
-  # defaults write com.apple.dock show-process-indicators -bool false
-  # log "   Tiny tiles"
-  # defaults write com.apple.dock tilesize -int 36
-  # log "   Don't show Dashboard as a Space"
-  # defaults write com.apple.dock dashboard-in-overlay -bool true
-  # log "   Don't automatically rearrange Spaces based on most recent use"
-  # defaults write com.apple.dock mru-spaces -bool false
-
-  log "osx" "Setting Finder preferences"
-  log "osx" "  Show hidden files in Finder"
-  defaults write com.apple.finder AppleShowAllFiles true
   # log "   Show external hard drives on the desktop"
   # defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
   # log "   Show hard drives on the desktop"
@@ -133,6 +112,10 @@ module_install() {
   # log "   Disable that weird arse dictionary popup crap (cmd+ctrl+D)"
   # defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 70 '<dict><key>enabled</key><false/></dict>'
 
+  log "osx" "Setting Finder preferences"
+  log "osx" "  Show hidden files in Finder"
+  defaults write com.apple.finder AppleShowAllFiles true
+  
   log "osx" "Disable mission control shortcuts"
   defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 32 '<dict><key>enabled</key><false/></dict>'
   defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 34 '<dict><key>enabled</key><false/></dict>'
@@ -171,6 +154,14 @@ module_install() {
   log "osx" "Setting trackball pointer speed"
   defaults write -g com.apple.mouse.scaling -float 3.0
   defaults write -g com.apple.trackpad.scaling -float 3.0
+
+  # Dock settingsP
+  log "osx" "Setting Dock preferences"
+  defaults write com.apple.dock autohide  -bool true
+  defaults write com.apple.dock magnification  -bool true
+  defaults write com.apple.dock largesize -int 128
+  defaults write com.apple.dock tilesize -int 16
+  defaults write com.apple.dock mru-spaces -bool
 
   log "osx" "Linking utility applications"
   local app_dir="${HOME}/Applications"
