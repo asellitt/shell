@@ -130,16 +130,41 @@ module_install() {
   # defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
   # log "   Disable useless Dashboard"
   # defaults write com.apple.dashboard mcx-disabled -bool true
-  # log "   Disable mission control shortcuts"
-  # defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 33 '<dict><key>enabled</key><false/></dict>'
-  # defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 35 '<dict><key>enabled</key><false/></dict>'
   # log "   Disable that weird arse dictionary popup crap (cmd+ctrl+D)"
   # defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 70 '<dict><key>enabled</key><false/></dict>'
+
+  log "osx" "Disable mission control shortcuts"
+  defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 32 '<dict><key>enabled</key><false/></dict>'
+  defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 34 '<dict><key>enabled</key><false/></dict>'
+  log "osx" "Disable Application windows shortcuts"
+  defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 33 '<dict><key>enabled</key><false/></dict>'
+  defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 35 '<dict><key>enabled</key><false/></dict>'
 
   log "osx" "Fixing HOME/END key behaviour"
   local key_dir="${HOME}/Library/KeyBindings"
   mkdir -p "$key_dir"
   link "${key_dir}/DefaultKeyBinding.dict" "${DOTFILES_DIR}/modules/osx/DefaultKeyBinding.dict"
+
+# Internal keyboard caps lock -> escape (same storage the Settings GUI uses)
+  log "osx" "Remapping internal keyboard caps lock to escape"
+  read -r vid pid < <(hidutil list --matching '{"Transport":"SPI"}' \
+    | awk '$14 == 1 && /Keyboard/ { print strtonum($1), strtonum($2); exit }')
+  defaults -currentHost write -g "com.apple.keyboard.modifiermapping.${vid}-${pid}-0" -array \
+    '<dict><key>HIDKeyboardModifierMappingSrc</key><integer>30064771129</integer>
+          <key>HIDKeyboardModifierMappingDst</key><integer>30064771113</integer></dict>'
+
+  log "osx" "Remapping ergodox left control <-> left command"
+  defaults -currentHost write -g com.apple.keyboard.modifiermapping.12951-18804-0 -array \
+    '<dict><key>HIDKeyboardModifierMappingSrc</key><integer>30064771296</integer><key>HIDKeyboardModifierMappingDst</key><integer>30064771299</integer></dict>' \
+    '<dict><key>HIDKeyboardModifierMappingSrc</key><integer>30064771299</integer><key>HIDKeyboardModifierMappingDst</key><integer>30064771296</integer></dict>' \
+    '<dict><key>HIDKeyboardModifierMappingSrc</key><integer>30064771300</integer><key>HIDKeyboardModifierMappingDst</key><integer>30064771303</integer></dict>' \
+    '<dict><key>HIDKeyboardModifierMappingSrc</key><integer>30064771303</integer><key>HIDKeyboardModifierMappingDst</key><integer>30064771300</integer></dict>'
+
+  hidutil property --matching '{"VendorID":12951,"ProductID":18804}' --set '{"UserKeyMapping":[
+    {"HIDKeyboardModifierMappingSrc":0x7000000E0,"HIDKeyboardModifierMappingDst":0x7000000E3},
+    {"HIDKeyboardModifierMappingSrc":0x7000000E3,"HIDKeyboardModifierMappingDst":0x7000000E0},
+    {"HIDKeyboardModifierMappingSrc":0x7000000E4,"HIDKeyboardModifierMappingDst":0x7000000E7},
+    {"HIDKeyboardModifierMappingSrc":0x7000000E7,"HIDKeyboardModifierMappingDst":0x7000000E4}]}'
 
   log "osx" "Linking utility applications"
   local app_dir="${HOME}/Applications"
@@ -156,12 +181,4 @@ module_install() {
   killall SystemUIServer 2>/dev/null || true
   killall Dock           2>/dev/null || true
   killall cfprefsd       2>/dev/null || true
-
-  post_install_message "osx" "Dont forget to update your keyboard settings:"
-  post_install_message "osx" "Keyboard->Modifier Keys->Apple Internal Keyboard->Caps Lock Key => Escape"
-  post_install_message "osx" "Keyboard->Modifier Keys->Ergodox->Control => Command"
-  post_install_message "osx" "Keyboard->Modifier Keys->Ergodox->Command => Control"
-  post_install_message "osx" "Keyboard->Touch Bar shows => Expanded Control Strip"
-  post_install_message "osx" "Keyboard->Shortcuts->Mission Control->Mission Control Enabled => Disable"
-  post_install_message "osx" "Keyboard->Shortcuts->Mission Control->Application windows Enabled => Disable"
 }
