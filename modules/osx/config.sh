@@ -110,12 +110,10 @@ module_install() {
   # log "   Disable that weird arse dictionary popup crap (cmd+ctrl+D)"
   # defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 70 '<dict><key>enabled</key><false/></dict>'
 
-  
   log "osx" "Enable the dark theme"
-  defaults write NSGlobalDomain AppleInterfaceStyle Dark
+  defaults write -g AppleInterfaceStyle Dark
 
   log "osx" "Setting Finder preferences"
-  log "osx" "  Show hidden files in Finder"
   defaults write com.apple.finder AppleShowAllFiles true
   
   log "osx" "Disable mission control shortcuts"
