@@ -23,7 +23,8 @@ log() {
 log_warn() {
   local module="$1"
   local message="$2"
-  log "$module" "WARN: $message"
+  local yellow=$'\033[1;33m' reset=$'\033[0m'
+  log "$module" "${yellow}WARN: ${message}${reset}"
 }
 
 log_error() {

@@ -47,7 +47,7 @@ teardown() {
   assert_equal "$(readlink "$target")" "$src2"
 }
 
-@test "link replaces an existing regular file" {
+@test "link leaves an existing regular file in place and warns" {
   local src="$TEST_TMPDIR/source_file"
   local target="$TEST_TMPDIR/target_file"
   echo "content" > "$src"
@@ -55,7 +55,9 @@ teardown() {
 
   run link "$target" "$src"
   assert_success
-  [ -L "$target" ]
+  assert_output --partial "WARN"
+  [ ! -L "$target" ]
+  assert_equal "$(cat "$target")" "old"
 }
 
 @test "link fails if source does not exist" {

@@ -9,6 +9,11 @@ link() {
     return 1
   fi
 
+  if [[ -e "$target" && ! -L "$target" ]]; then
+    log_warn "link" "not a symlink, leaving in place: $target"
+    return 0
+  fi
+
   rm -f "$target"
   ln -s "$src" "$target"
 }
