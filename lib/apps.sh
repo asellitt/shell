@@ -3,10 +3,11 @@
 install_from_manifest() {
   local manifest="$1"
   [[ -f "$manifest" ]] || return 0
-  while IFS= read -r line; do
-    [[ "$line" =~ ^[[:space:]]*# ]] && continue
-    [[ -z "${line// }" ]]           && continue
-    local name
+
+  local line name
+  _read_manifest_line "$manifest"
+  for line in ${<MANIFEST_LINES[@]}; do
+    _parse_manifest_line "$line" || continue
     name="$(echo "$line" | awk '{print $1}')"
     app_install "$name" "$manifest"
   done < "$manifest"

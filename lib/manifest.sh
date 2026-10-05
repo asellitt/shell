@@ -7,6 +7,16 @@ _parse_manifest_line() {
   return 0
 }
 
+_read_manifest_line() {
+  local manifest="$1"
+  local old_ifs="$IFS"
+  set -f
+  IFS=$'\n'
+  MANIFEST_LINES=($(<"$manifest"))
+  set +f
+  IFS="$old_ifs"
+}
+
 # Resolve the install name for the current platform from a manifest file.
 # Returns '-' if the app is known but unavailable on this platform.
 # Returns '' if the app is not in the manifest at all.
