@@ -111,7 +111,7 @@ module_install() {
   # defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 70 '<dict><key>enabled</key><false/></dict>'
 
   log "osx" "Enable the dark theme"
-  defaults write -g AppleInterfaceStyle Dark
+  osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to true'
 
   log "osx" "Setting Finder preferences"
   defaults write com.apple.finder AppleShowAllFiles true
