@@ -142,13 +142,13 @@ module_install() {
   defaults write -g com.apple.mouse.scaling -float 3.0
   defaults write -g com.apple.trackpad.scaling -float 3.0
 
-  # Dock settingsP
+  # Dock settings
   log "osx" "Setting Dock preferences"
   defaults write com.apple.dock autohide  -bool true
   defaults write com.apple.dock magnification  -bool true
   defaults write com.apple.dock largesize -int 128
   defaults write com.apple.dock tilesize -int 16
-  defaults write com.apple.dock mru-spaces -bool
+  defaults write com.apple.dock mru-spaces -bool true
 
   log "osx" "Linking utility applications"
   local app_dir="${HOME}/Applications"
