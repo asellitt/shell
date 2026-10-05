@@ -8,8 +8,6 @@ module_install() {
   # log "Setting Global preferences"
   # log "   Make the Library visible"
   # chflags nohidden ~/Library
-  # log "   Enable the dark theme"
-  # defaults write NSGlobalDomain AppleInterfaceStyle Dark
   # log "   Expand the print panel by default"
   # defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
   # log "   Expand save panel by default"
@@ -111,6 +109,10 @@ module_install() {
   # defaults write com.apple.dashboard mcx-disabled -bool true
   # log "   Disable that weird arse dictionary popup crap (cmd+ctrl+D)"
   # defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 70 '<dict><key>enabled</key><false/></dict>'
+
+  
+  log "osx" "Enable the dark theme"
+  defaults write NSGlobalDomain AppleInterfaceStyle Dark
 
   log "osx" "Setting Finder preferences"
   log "osx" "  Show hidden files in Finder"
