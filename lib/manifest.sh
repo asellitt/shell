@@ -26,7 +26,8 @@ resolve_app_name() {
   local os
   os="$(detect_os)"
 
-  while IFS= read -r raw_line; do
+  _read_manifest_line "$manifest"
+  for raw_line in "${MANIFEST_LINES[@]}"; do
     _parse_manifest_line "$raw_line" || continue
 
     local name apt_name flatpak_id
@@ -56,7 +57,7 @@ resolve_app_name() {
         ;;
     esac
     return 0
-  done < "$manifest"
+  done
 
   echo ""
 }
