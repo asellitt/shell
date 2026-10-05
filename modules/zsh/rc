@@ -5,6 +5,7 @@ source "${HOME}/.header" 2>/dev/null || true
 export PATH="${HOME}/path:${HOME}/.git-commands:${PATH}"
 
 # Brew shell completion (macOS only)
+export HOMEBREW_NO_ANALYTICS=1
 [[ -n "$HOMEBREW_PREFIX" ]] && FPATH="${HOMEBREW_PREFIX}/share/zsh/site-functions:${FPATH}"
 
 export ZSH="${HOME}/.oh-my-zsh"
