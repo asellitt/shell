@@ -6,7 +6,7 @@ install_from_manifest() {
 
   local line name
   _read_manifest_line "$manifest"
-  for line in ${MANIFEST_LINES[@]}; do
+  for line in "${MANIFEST_LINES[@]}"; do
     _parse_manifest_line "$line" || continue
     name="$(echo "$line" | awk '{print $1}')"
     app_install "$name" "$manifest"
