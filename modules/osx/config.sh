@@ -145,7 +145,7 @@ module_install() {
   mkdir -p "$key_dir"
   link "${key_dir}/DefaultKeyBinding.dict" "${DOTFILES_DIR}/modules/osx/DefaultKeyBinding.dict"
 
-# Internal keyboard caps lock -> escape (same storage the Settings GUI uses)
+  # Internal keyboard caps lock -> escape (same storage the Settings GUI uses)
   log "osx" "Remapping internal keyboard caps lock to escape"
   read -r vid pid < <(hidutil list --matching '{"Transport":"SPI"}' \
     | awk '$14 == 1 && /Keyboard/ { print strtonum($1), strtonum($2); exit }')
@@ -153,6 +153,7 @@ module_install() {
     '<dict><key>HIDKeyboardModifierMappingSrc</key><integer>30064771129</integer>
           <key>HIDKeyboardModifierMappingDst</key><integer>30064771113</integer></dict>'
 
+  # Ergodox modifier key remapping (left control <-> left command, left option <-> left command)
   log "osx" "Remapping ergodox left control <-> left command"
   defaults -currentHost write -g com.apple.keyboard.modifiermapping.12951-18804-0 -array \
     '<dict><key>HIDKeyboardModifierMappingSrc</key><integer>30064771296</integer><key>HIDKeyboardModifierMappingDst</key><integer>30064771299</integer></dict>' \
@@ -165,6 +166,11 @@ module_install() {
     {"HIDKeyboardModifierMappingSrc":0x7000000E3,"HIDKeyboardModifierMappingDst":0x7000000E0},
     {"HIDKeyboardModifierMappingSrc":0x7000000E4,"HIDKeyboardModifierMappingDst":0x7000000E7},
     {"HIDKeyboardModifierMappingSrc":0x7000000E7,"HIDKeyboardModifierMappingDst":0x7000000E4}]}'
+
+  # Trackball pointer speed
+  log "osx" "Setting trackball pointer speed"
+  defaults write -g com.apple.mouse.scaling -float 3.0
+  defaults write -g com.apple.trackpad.scaling -float 3.0
 
   log "osx" "Linking utility applications"
   local app_dir="${HOME}/Applications"
