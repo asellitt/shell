@@ -1,0 +1,27 @@
+<keymap version="1" name="Sublime Text (asellitt)" parent="Sublime Text (Mac OS X)">
+  <action id="DatabaseView.PropertiesAction" />
+  <action id="EditorUnindentSelection">
+    <keyboard-shortcut first-keystroke="meta open_bracket" />
+    <keyboard-shortcut first-keystroke="shift tab" />
+  </action>
+  <action id="GotoDeclaration">
+    <keyboard-shortcut first-keystroke="f12" />
+    <keyboard-shortcut first-keystroke="meta alt down" />
+    <mouse-shortcut keystroke="button2" />
+    <mouse-shortcut keystroke="shift meta button1" />
+    <keyboard-shortcut first-keystroke="meta i" />
+  </action>
+  <action id="HideAllWindows">
+    <keyboard-shortcut first-keystroke="shift meta f12" />
+    <keyboard-shortcut first-keystroke="shift ctrl meta alt h" />
+  </action>
+  <action id="IncrementalSearch" />
+  <action id="ParameterInfo">
+    <keyboard-shortcut first-keystroke="ctrl slash" />
+  </action>
+  <action id="PrevParameter" />
+  <action id="PreviousTemplateVariable" />
+  <action id="SearchEverywhere.PrevTab" />
+  <action id="SplitChooser.PreviousWindow" />
+  <action id="org.intellij.plugins.markdown.ui.actions.styling.ToggleItalicAction" />
+</keymap>
