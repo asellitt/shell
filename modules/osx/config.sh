@@ -119,9 +119,13 @@ module_install() {
   log "osx" "Disable mission control shortcuts"
   defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 32 '<dict><key>enabled</key><false/></dict>'
   defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 34 '<dict><key>enabled</key><false/></dict>'
+  
   log "osx" "Disable Application windows shortcuts"
   defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 33 '<dict><key>enabled</key><false/></dict>'
   defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 35 '<dict><key>enabled</key><false/></dict>'
+
+  log "osx" "Window manager preferences"
+  defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool true
 
   log "osx" "Fixing HOME/END key behaviour"
   local key_dir="${HOME}/Library/KeyBindings"
