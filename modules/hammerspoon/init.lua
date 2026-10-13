@@ -67,4 +67,18 @@ hs.hotkey.bind(modsD, "left", function()
   if win then win:moveToScreen(win:screen():previous(), true, true) end
 end)
 
+-- audio output toggle
+hs.hotkey.bind({ "ctrl", "alt", "shift", "cmd" }, "a", function()
+  local rode = hs.audiodevice.findOutputByName("RØDE NT-USB+")
+  if not rode then return end
+  local target = rode
+  if hs.audiodevice.defaultOutputDevice():name() == rode:name() then
+    target = hs.audiodevice.findOutputByName("MacBook Pro Speakers")
+  end
+  if target then
+    target:setDefaultOutputDevice()
+    hs.alert.show("Audio: " .. target:name())
+  end
+end)
+
 hs.alert.show("Hammerspoon config loaded")
