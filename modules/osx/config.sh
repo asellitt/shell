@@ -152,7 +152,7 @@ module_install() {
   defaults write com.apple.dock magnification  -bool true
   defaults write com.apple.dock largesize -int 128
   defaults write com.apple.dock tilesize -int 16
-  defaults write com.apple.dock mru-spaces -bool true
+  defaults write com.apple.dock mru-spaces -bool false
 
   # Sound settings
   log "osx" "Setting sound preferences"
