@@ -22,7 +22,6 @@ module_install() {
   link "${HOME}/.gitconfig.core"      "${DOTFILES_DIR}/modules/git/gitconfig/core"
   link "${HOME}/.gitconfig.diff"      "${DOTFILES_DIR}/modules/git/gitconfig/diff"
   link "${HOME}/.gitconfig.merge"     "${DOTFILES_DIR}/modules/git/gitconfig/merge"
-  link "${HOME}/.gitconfig.user"      "${DOTFILES_DIR}/modules/git/gitconfig/user"
   link "${HOME}/.gitignore"           "${DOTFILES_DIR}/modules/git/ignore"
   link "${HOME}/.git-completion.bash" "${DOTFILES_DIR}/modules/git/completion.bash"
   link "${HOME}/.gitattributes"       "${DOTFILES_DIR}/modules/git/attributes"
@@ -31,8 +30,16 @@ module_install() {
   chmod -RH u+x "${HOME}/.git-commands"
 
   if hash bw 2>/dev/null && hash jq 2>/dev/null; then
+    log "git" "Fetching git.config.user from Bitwarden"
+    rm -rf "${HOME}/.gitconfig.user"
+    bw get item git.config.user | \
+      jq -r ".notes" > "${HOME}/.gitconfig.user"
     log "git" "Fetching git.config.secret from Bitwarden"
+    rm -rf "${HOME}/.gitconfig.secret"
     bw get item git.config.secret | \
-      jq -r ".notes" > "${DOTFILES_DIR}/secret/git.config.secret"
+      jq -r ".notes" > "${HOME}/.gitconfig.secret"
+  else
+    log "git" "Bitwarden unavailable: git config cannot be fetched"
+    post_install_message "git" "Bitwarden unavailable: git config cannot be fetched"
   fi
 }

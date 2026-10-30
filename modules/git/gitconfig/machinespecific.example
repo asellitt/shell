@@ -1,4 +1,6 @@
 # Copy this to ~/.gitconfig.machinespecific and fill in your values.
 
 [user]
-  prefix = yourname   # used by git nb (git-new-branch) for branch prefixes
+  prefix = yourprefix   # used by git nb (git-new-branch) for branch prefixes
+  name = yourname
+  email = your@email.address
